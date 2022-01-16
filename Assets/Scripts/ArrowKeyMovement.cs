@@ -21,7 +21,7 @@ public class ArrowKeyMovement : MonoBehaviour
         rb.velocity = current_input * Movement_speed;
     }
 
-    Vector2 GetInput() 
+    private Vector2 GetInput() 
     {
         float horizontal_input = Input.GetAxisRaw("Horizontal");
         float vertical_input = Input.GetAxisRaw("Vertical");

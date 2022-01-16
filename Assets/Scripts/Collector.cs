@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collector : MonoBehaviour
 {
     public AudioClip rupee_collection_sound_clip;
+    public AudioClip health_collection_sound_clip;
     Inventory inventory;
 
     void Start() 
@@ -26,6 +27,13 @@ public class Collector : MonoBehaviour
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (rupee_collection_sound_clip, Camera.main.transform.position);
+        }
+        else if (object_collide_with.tag == "health")
+        {
+            inventory.Add_health(1.0f);
+            Destroy(object_collide_with);
+
+            AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);
         }
     }
 }

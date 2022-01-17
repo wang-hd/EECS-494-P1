@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class TextDisplayer : MonoBehaviour
 {
     public Inventory inventory;
+    public HasHealth player_health;
     Text text_component;
 
     // Start is called before the first frame update
     void Start()
     {
-        text_component = GetComponent<Text>();    
+        text_component = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class TextDisplayer : MonoBehaviour
     {
         if (gameObject.name == "HealthText")
         {
-            text_component.text = "Health:" + inventory.Get_health().ToString();
+            text_component.text = "Health:" + player_health.Get_health().ToString();
         }
         
         if (gameObject.name == "RupeeText")

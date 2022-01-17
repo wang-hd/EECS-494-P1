@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    Inventory inventory;
+    HasHealth player_health;
     private Rigidbody player_rb;
     public AudioClip enemy_attack_sound_clip;
     public AudioClip game_over_sound_clip;
+    public AudioSource audioSource;
     private bool game_over = false;
+    private bool is_invincible = false;
     private SpriteRenderer player_sprite;
     private Color player_origin_color;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GetComponent<Inventory>(); 
+        player_health = GetComponent<HasHealth>(); 
         player_rb = GetComponent<Rigidbody>(); 
         player_sprite = GetComponent<SpriteRenderer>();
         player_origin_color = player_sprite.color;
@@ -27,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (game_over == true)
         {
-            AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
+            
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -40,23 +42,36 @@ public class PlayerInteraction : MonoBehaviour
         if (object_collider_with.CompareTag("enemy"))
         {
             EnemyController enemy = object_collider_with.GetComponent<EnemyController>();
-            inventory.Lose_health(enemy.Get_attack());
-            AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
-            Color player_origin_color = player_sprite.color;
-            player_sprite.color = new Color(1, 0, 0, 1);
-            StartCoroutine(Change_color());
-            if (inventory.Get_health() <= 0.0f)
-            {
-                game_over = true;
-            }
             Hit_stun(object_collider_with, enemy.Get_force());
+
+            if (!is_invincible)
+            {
+                player_health.Lose_health(enemy.Get_attack());
+                is_invincible = true;
+                AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
+                Color player_origin_color = player_sprite.color;
+                player_sprite.color = new Color(1, 0, 0, 1);
+                StartCoroutine(Change_color());
+                if (player_health.Is_dead())
+                {
+                    game_over = true;
+                    audioSource.Stop();
+                    AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
+                }
+                StartCoroutine(Become_invincible());
+            }
         }
     }
-
     IEnumerator Change_color()
     {
         yield return new WaitForSeconds(0.1f);
         player_sprite.color = player_origin_color;
+    }
+
+    IEnumerator Become_invincible()
+    {
+        yield return new WaitForSeconds(1f);
+        is_invincible  = false;
     }
 
     private void Hit_stun(GameObject enemy, float hit_force)

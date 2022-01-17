@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     private float attack = 0.5f;
     private float hit_force = 50f;
-    private float health = 1.0f;
+    private HasHealth health;
     // Start is called before the first frame update
     void Start()
     {

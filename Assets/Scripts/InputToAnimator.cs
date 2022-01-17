@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputToAnimator : MonoBehaviour
 {
     Animator animator;
+    public HasHealth player_health;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,15 @@ public class InputToAnimator : MonoBehaviour
         {
             animator.ResetTrigger("attack");
             animator.SetTrigger("attack");
+            animator.speed = 1f;
             Debug.Log(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
             Debug.Log("Pressed X");
+        }
+
+        if (player_health.Is_dead())
+        {
+            animator.speed = 1f;
+            animator.SetBool("is_dead", true);
         }
     }
 }

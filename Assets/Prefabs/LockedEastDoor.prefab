@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383823592ab4ac34496920b97c5423a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 8300000, guid: eee2450d802f2844ca9145594b53ca11, type: 3}
 --- !u!1001 &1757651383767289456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,7 +76,7 @@ PrefabInstance:
       objectReference: {fileID: -6156567986236837295, guid: bb34205738cfd394d884a96afc540d64, type: 3}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingLayerID

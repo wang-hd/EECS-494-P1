@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
 
         /* Transition to new "room" */
         yield return StartCoroutine(
-            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 2)
+            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 1.75f)
         );
     }
 }

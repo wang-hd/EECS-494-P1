@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collector : MonoBehaviour
 {
     public AudioClip rupee_collection_sound_clip;
+    public AudioClip keyCollectSound;
     Inventory inventory;
 
     void Start() 
@@ -31,6 +32,8 @@ public class Collector : MonoBehaviour
         {
             if (inventory != null) inventory.add_keys(1);
             Destroy(object_collide_with);
+
+            AudioSource.PlayClipAtPoint(keyCollectSound, Camera.main.transform.position);
         }
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public string prev_transition = "";
     public IEnumerator PlayerRoomTransition(Vector3 direction)
     {
         ArrowKeyMovement.player_control = false;
-        // GetComponent<BoxCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         Debug.Log("Moving player");
 
         Vector3 initial_position = transform.position;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         // Wait for player to finish moving
         yield return new WaitForSeconds(0.5f);
 
-        // GetComponent<BoxCollider>().enabled = true;
+        GetComponent<BoxCollider>().enabled = true;
         ArrowKeyMovement.player_control = true;
     }
 }

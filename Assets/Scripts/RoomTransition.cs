@@ -36,33 +36,64 @@ public class RoomTransition : MonoBehaviour
             if (ArrowKeyMovement.player_control)
             {
                 Debug.Log("Do transition");
-                other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                other.GetComponent<Animator>().speed = 0.0f;                
+                other.GetComponent<Rigidbody>().velocity = Vector3.zero;          
 
                 if (this.CompareTag("NorthDoor"))
                 {
-                    other.transform.position = transform.position - new Vector3(0, 0.5f, 0);
-                    StartCoroutine(playerControl.PlayerRoomTransition(playerNorth));
-                    StartCoroutine(cameraControl.CameraRoomTransition(cameraNorth));
+                    if (playerControl.prev_transition != "s")
+                    {
+                        other.transform.position = transform.position - new Vector3(0, 0.5f, 0);
+                        StartCoroutine(playerControl.PlayerRoomTransition(playerNorth));
+                        StartCoroutine(cameraControl.CameraRoomTransition(cameraNorth));
+                        playerControl.prev_transition = "n";
+                    }
+                    else
+                    {
+                        playerControl.prev_transition = "";
+                    }
                 }
                 else if (this.CompareTag("EastDoor"))
                 {
-                    other.transform.position = transform.position - new Vector3(0.5f, 0, 0);
-                    StartCoroutine(playerControl.PlayerRoomTransition(playerEast));
-                    StartCoroutine(cameraControl.CameraRoomTransition(cameraEast));
+                    if (playerControl.prev_transition != "w")
+                    {
+                        other.transform.position = transform.position - new Vector3(0.5f, 0, 0);
+                        StartCoroutine(playerControl.PlayerRoomTransition(playerEast));
+                        StartCoroutine(cameraControl.CameraRoomTransition(cameraEast));
+                        playerControl.prev_transition = "e";
+                    }
+                    else
+                    {
+                        playerControl.prev_transition = "";
+                    }
                 }
                 else if (this.CompareTag("SouthDoor"))
                 {
-                    other.transform.position = transform.position - new Vector3(0, -0.5f, 0);
-                    StartCoroutine(playerControl.PlayerRoomTransition(playerSouth));
-                    StartCoroutine(cameraControl.CameraRoomTransition(cameraSouth));
+                    if (playerControl.prev_transition != "n")
+                    {
+                        other.transform.position = transform.position - new Vector3(0, -0.5f, 0);
+                        StartCoroutine(playerControl.PlayerRoomTransition(playerSouth));
+                        StartCoroutine(cameraControl.CameraRoomTransition(cameraSouth));
+                        playerControl.prev_transition = "s";
+                    }
+                    else
+                    {
+                        playerControl.prev_transition = "";
+                    }
                 }
                 else if (this.CompareTag("WestDoor"))
                 {
-                    other.transform.position = transform.position - new Vector3(-0.5f, 0, 0);
-                    StartCoroutine(playerControl.PlayerRoomTransition(playerWest));
-                    StartCoroutine(cameraControl.CameraRoomTransition(cameraWest));
-                }
+                    if (playerControl.prev_transition != "e")
+                    {
+                        other.transform.position = transform.position - new Vector3(-0.5f, 0, 0);
+                        StartCoroutine(playerControl.PlayerRoomTransition(playerWest));
+                        StartCoroutine(cameraControl.CameraRoomTransition(cameraWest));
+                        playerControl.prev_transition = "w";
+                    }
+                    else
+                    {
+                        playerControl.prev_transition = "";
+                    }
+                }                
             }
             else
             {

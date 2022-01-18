@@ -6,6 +6,7 @@ public class Collector : MonoBehaviour
 {
     public AudioClip rupee_collection_sound_clip;
     public AudioClip health_collection_sound_clip;
+    public AudioClip bomb_collection_sound_clip;
     Inventory inventory;
     HasHealth player_health;
 
@@ -36,6 +37,14 @@ public class Collector : MonoBehaviour
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);
+        }
+        if (object_collide_with.tag == "bomb")
+        {
+            if (inventory != null)
+                inventory.Add_bombs(1);
+            Destroy(object_collide_with);
+
+            AudioSource.PlayClipAtPoint (bomb_collection_sound_clip, Camera.main.transform.position);
         }
     }
 }

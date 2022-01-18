@@ -22,11 +22,16 @@ public class TextDisplayer : MonoBehaviour
         {
             text_component.text = "Health:" + player_health.Get_health().ToString();
         }
-        
         if (gameObject.name == "RupeeText")
         {
             if (inventory != null && text_component != null) {
                 text_component.text = "Rupees: " + inventory.Get_rupees().ToString();
+            }
+        }
+        if (gameObject.name == "BombText")
+        {
+            if (inventory != null && text_component != null) {
+                text_component.text = "Bombs: " + inventory.Get_bombs().ToString();
             }
         }
     }

@@ -9,6 +9,7 @@ TagManager:
   - SouthDoor
   - EastDoor
   - WestDoor
+  - key
   layers:
   - Default
   - TransparentFX
@@ -45,9 +46,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: LockedDoors
-    uniqueID: 1082164169
     locked: 0
   - name: RoomTransition
     uniqueID: 2217210291

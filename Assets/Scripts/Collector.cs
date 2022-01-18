@@ -27,5 +27,10 @@ public class Collector : MonoBehaviour
 
             AudioSource.PlayClipAtPoint (rupee_collection_sound_clip, Camera.main.transform.position);
         }
+        else if (object_collide_with.tag == "key")
+        {
+            if (inventory != null) inventory.add_keys(1);
+            Destroy(object_collide_with);
+        }
     }
 }

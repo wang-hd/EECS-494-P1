@@ -4,21 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public IEnumerator PlayerRoomTransition(Vector3 direction)
     {
         ArrowKeyMovement.player_control = false;
+        // GetComponent<BoxCollider>().enabled = false;
         Debug.Log("Moving player");
 
         Vector3 initial_position = transform.position;
@@ -27,10 +17,10 @@ public class PlayerController : MonoBehaviour
 
         /* Transition to new "room" */
         yield return StartCoroutine(
-            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 0.6f)
+            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 0.5f)
         );
 
-        // Wait for camera to finish moving
+        // Wait for camera to finish moving to the new room
         yield return new WaitForSeconds(2);
 
         Debug.Log("Moving player again");
@@ -40,9 +30,13 @@ public class PlayerController : MonoBehaviour
 
         /* Transition to new "room" */
         yield return StartCoroutine(
-            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 0.6f)
+            CoroutineUtilities.MoveObjectOverTime(transform, initial_position, final_position, 0.5f)
         );
 
+        // Wait for player to finish moving
+        yield return new WaitForSeconds(0.5f);
+
+        // GetComponent<BoxCollider>().enabled = true;
         ArrowKeyMovement.player_control = true;
     }
 }

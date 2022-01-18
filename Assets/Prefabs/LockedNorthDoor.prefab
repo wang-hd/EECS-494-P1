@@ -45,7 +45,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.025, z: 1}
+  m_Size: {x: 1, y: 0.025, z: 1}
   m_Center: {x: 7.5, y: 8.5, z: 0}
 --- !u!114 &682392933686687591
 MonoBehaviour:
@@ -88,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1082164169
+      value: -2077757005
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1082164169
+      value: -2077757005
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_WasSpriteAssigned

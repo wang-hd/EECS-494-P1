@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - rupee
+  - NorthDoor
+  - SouthDoor
+  - EastDoor
+  - WestDoor
+  - key
   layers:
   - Default
   - TransparentFX
@@ -41,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: RoomTransition
+    uniqueID: 2217210291
     locked: 0

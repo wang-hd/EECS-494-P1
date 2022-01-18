@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
 {
     int rupee_count = 0;
     int bomb_count = 0;
-
+    public int keys = 0;
     public void Add_rupees (int num_rupees)
     {
         rupee_count += num_rupees;
@@ -20,8 +20,19 @@ public class Inventory : MonoBehaviour
     {
         return rupee_count;
     }
+
     public int Get_bombs()
     {
         return bomb_count;
+    }
+
+    public void add_keys(int num_keys)
+    {
+        keys += num_keys;
+    }
+
+    public int get_keys()
+    {
+        return keys;
     }
 }

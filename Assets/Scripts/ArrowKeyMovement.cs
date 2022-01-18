@@ -6,6 +6,7 @@ public class ArrowKeyMovement : MonoBehaviour
 {
 
     public float Movement_speed = 4;
+    public static bool player_control = true;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -17,8 +18,11 @@ public class ArrowKeyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 current_input = GetInput();
-        rb.velocity = current_input * Movement_speed;
+        if (player_control)
+        {
+            Vector2 current_input = GetInput();
+            rb.velocity = current_input * Movement_speed;
+        }
     }
 
     private Vector2 GetInput() 

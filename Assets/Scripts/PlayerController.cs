@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         );
 
         // Wait for camera to finish moving to the new room
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.9f);
 
         Debug.Log("Moving player again");
         initial_position = transform.position;

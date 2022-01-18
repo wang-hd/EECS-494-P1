@@ -41,12 +41,13 @@ public class InputToAnimator : MonoBehaviour
                 Debug.Log(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
                 Debug.Log("Pressed X");
             }
-
-            if (player_health.Is_dead())
-            {
-                animator.speed = 1f;
-                animator.SetBool("is_dead", true);
-            }
+        }
+        if (player_health.Is_dead())
+        {
+            animator.SetFloat("horizontal_input", 0f);
+            animator.SetFloat("vertical_input", 0f);
+            animator.speed = 1f;
+            animator.SetBool("is_dead", true);
         }
     }
 }

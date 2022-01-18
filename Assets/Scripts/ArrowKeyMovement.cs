@@ -35,4 +35,13 @@ public class ArrowKeyMovement : MonoBehaviour
 
         return new Vector2(horizontal_input, vertical_input);
     }
+
+    public void SetPlayerControl(bool value)
+    {
+        player_control = value;
+    }
+    public bool GetPlayerControl()
+    {
+        return player_control;
+    }
 }

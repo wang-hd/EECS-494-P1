@@ -31,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (game_over == true)
+        if (game_over)
         {
             
             if (Input.GetKeyDown(KeyCode.Return))
@@ -52,7 +52,6 @@ public class PlayerInteraction : MonoBehaviour
 
             if (!is_invincible)
             {
-                hit_stun(object_collider_with, enemy.get_force());
                 player_health.lose_health(enemy.get_attack());
                 if (player_health.is_dead())
                 {
@@ -63,6 +62,7 @@ public class PlayerInteraction : MonoBehaviour
                     player_control.SetPlayerControl(false);
                     return;
                 }
+                hit_stun(object_collider_with, enemy.get_force());
                 StartCoroutine(become_invincible());
                 AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
                 StartCoroutine(change_color());

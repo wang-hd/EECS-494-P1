@@ -54,11 +54,6 @@ public class PlayerInteraction : MonoBehaviour
             {
                 hit_stun(object_collider_with, enemy.get_force());
                 player_health.lose_health(enemy.get_attack());
-                is_invincible = true;
-                AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
-                Color player_origin_color = player_sprite.color;
-                player_sprite.color = new Color(1, 0, 0, 1);
-                StartCoroutine(change_color());
                 if (player_health.is_dead())
                 {
                     game_over = true;
@@ -68,9 +63,9 @@ public class PlayerInteraction : MonoBehaviour
                     player_control.SetPlayerControl(false);
                     return;
                 }
+                StartCoroutine(become_invincible());
                 AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
                 StartCoroutine(change_color());
-                StartCoroutine(become_invincible());
             }
         }
     }
@@ -84,6 +79,7 @@ public class PlayerInteraction : MonoBehaviour
 
     IEnumerator become_invincible()
     {
+        is_invincible = true;
         yield return new WaitForSeconds(0.8f);
         is_invincible  = false;
     }

@@ -6,10 +6,18 @@ public class HasHealth : MonoBehaviour
 {
     private float curr_health = 3.0f;
     private float max_health = 3.0f;
-    // Start is called before the first frame update
+
+    public bool God_Mode;
+    
     void Start()
     {
         
+    }
+
+    //TODO: This function is to change the player into god mode;
+    public void God_health(){
+        curr_health = 100000000f;
+        max_health = curr_health;
     }
 
     public void Add_health (float num_health)

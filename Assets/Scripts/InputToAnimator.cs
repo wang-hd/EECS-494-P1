@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class InputToAnimator : MonoBehaviour
 {
-    Animator animator;
     public HasHealth player_health;
+    public GameObject weapon_controll;
+
+    int direction=0;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -16,30 +19,25 @@ public class InputToAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ArrowKeyMovement.player_control)
-        {
+        if (ArrowKeyMovement.player_control){
             animator.SetFloat("horizontal_input", Input.GetAxisRaw("Horizontal"));
             animator.SetFloat("vertical_input", Input.GetAxisRaw("Vertical"));
 
-            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0&&!(animator.GetBool("is_attack")||animator.GetCurrentAnimatorStateInfo(0).IsTag("attack")))
             {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-                {
-                    animator.speed = 0.0f;
-                }
+                animator.speed = 0.0f;
             }
             else
             {
                 animator.speed = 1.0f;
+                if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){
+                    direction = GetDirection(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+                }
             }
-            
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                animator.ResetTrigger("attack");
-                animator.SetTrigger("attack");
-                animator.speed = 1f;
-                Debug.Log(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
-                Debug.Log("Pressed X");
+    
+            // To detect whether Link is attacking
+            if (Input.GetKeyDown(KeyCode.J)||Input.GetKeyDown(KeyCode.K)){
+                weapon_controll.GetComponent<WeaponControl>().attack(direction,Input.GetKeyDown(KeyCode.K),transform.position.x,transform.position.y);
             }
         }
         if (player_health.Is_dead())
@@ -49,5 +47,21 @@ public class InputToAnimator : MonoBehaviour
             animator.speed = 1f;
             animator.SetBool("is_dead", true);
         }
+        
+    }
+
+    //TODO: This function is to generate the direction which will be parsed into the weapon component.
+    private int GetDirection(float horizontal,float vertical){
+        if(vertical>0){
+            return 0;
+        }else if(horizontal>0){
+            return 1;
+        }else if(vertical<0){
+            return 2;
+        }else if(horizontal<0){
+            return 3;
+        }
+        return 4;
     }
 }
+

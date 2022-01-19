@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     public virtual void attack(int direction,float horizontal,float vertical){
 
     }
-    protected virtual void Update(){
+    void Update(){
         if(is_attack){
             // swords' transform move along the direction
             switch(direction_weapon){

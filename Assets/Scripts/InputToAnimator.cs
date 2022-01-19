@@ -30,7 +30,9 @@ public class InputToAnimator : MonoBehaviour
             else
             {
                 animator.speed = 1.0f;
-                direction=GetDirection(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+                if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){
+                    direction = GetDirection(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+                }
             }
     
             // To detect whether Link is attacking

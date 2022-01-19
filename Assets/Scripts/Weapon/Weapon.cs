@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     public virtual void attack(int direction,float horizontal,float vertical){
 
     }
-    protected virtual void Update(){
+    void Update(){
         if(is_attack){
             // swords' transform move along the direction
             switch(direction_weapon){
@@ -60,8 +60,9 @@ public class Weapon : MonoBehaviour
     //TODO: destroy or give every object a certain hurt when it collide with the enemy
     private void OnTriggerEnter(Collider other) {
         //if(other's tag is enemy)
-        //then hurt a certain amount of the enemy.
-        //may add the collider to the bow or swords.
+        if(other.tag=="enemy"){
+           other.gameObject.GetComponent<EnemyController>().Get_hurt(1.0f);
+        }
     }
 
 }

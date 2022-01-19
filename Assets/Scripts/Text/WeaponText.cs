@@ -18,10 +18,10 @@ public class WeaponText : MonoBehaviour
     void Update()
     {
         if(weapon_controller!=null&&text_content!=null){
-            text_content.text="weapon_1 is: "+weapon_controller.returnNameA()+"\r\n";
+            text_content.text="Primary weapon: "+weapon_controller.returnNameA()+"\r\n";
         }
         if(weapon_controller!=null&&text_content!=null){
-            text_content.text+="weapon_2 is: "+weapon_controller.returnNameB();
+            text_content.text+="Secondary weapon: "+weapon_controller.returnNameB();
         }
     }
 }

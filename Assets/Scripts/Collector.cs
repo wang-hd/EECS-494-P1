@@ -28,14 +28,14 @@ public class Collector : MonoBehaviour
         if (object_collide_with.tag == "rupee")
         {
             if (inventory != null)
-                inventory.Add_rupees(1);
+                inventory.add_rupees(1);
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (rupee_collection_sound_clip, Camera.main.transform.position);
         }
         else if (object_collide_with.tag == "health")
         {
-            player_health.Add_health(1.0f);
+            player_health.add_health(1.0f);
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);
@@ -43,7 +43,7 @@ public class Collector : MonoBehaviour
         else if (object_collide_with.tag == "bomb")
         {
             if (inventory != null)
-                inventory.Add_bombs(1);
+                inventory.add_bombs(1);
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (bomb_collection_sound_clip, Camera.main.transform.position);

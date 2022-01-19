@@ -7,7 +7,7 @@ public class Bows : Weapon
 {
     public Animator player_animator;
 
-    string name = "bows";
+    string name = "Bow";
     int number = 2;
 
     private IEnumerator coroutine;

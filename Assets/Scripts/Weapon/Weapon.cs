@@ -61,7 +61,7 @@ public class Weapon : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         //if(other's tag is enemy)
         if(other.tag=="enemy"){
-           other.gameObject.GetComponent<EnemyController>().Get_hurt(1.0f);
+           other.gameObject.GetComponent<EnemyController>().get_hurt(1.0f);
         }
     }
 

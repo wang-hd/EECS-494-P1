@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 608338027086030225, guid: bb34205738cfd394d884a96afc540d64, type: 3}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 608338027086030225, guid: bb34205738cfd394d884a96afc540d64, type: 3}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7497374470032113339, guid: e805523ec51b1c14bb22a872180bfe5e, type: 3}
       propertyPath: m_WasSpriteAssigned

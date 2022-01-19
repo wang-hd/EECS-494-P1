@@ -22,23 +22,23 @@ public class EnemyController : MonoBehaviour
         GameObject object_collide_with = other.gameObject;
         
     }
-    public float Get_attack()
+    public float get_attack()
     {
         return attack;
     }
 
-    public float Get_force()
+    public float get_force()
     {
         return hit_force;
     }
 
     //TODO: This function is used when enemy get heart
     //TODO: Thereofore, for normal swords, the hurt is 1, and for higher level weapon, the hurt could be 2.
-    public void Get_hurt(float n){
+    public void get_hurt(float n){
         health = GetComponent<HasHealth>();
-        if(health != null){
-            health.Lose_health(1.5f*n);
-            Debug.Log($"[EnemyController.Gethurt] Current Health is {health.Get_health()}");
+        if (health != null){
+            health.lose_health(1.5f*n);
+            Debug.Log($"[EnemyController.Gethurt] Current Health is {health.get_health()}");
         }else{
             Debug.Log("[EnemyController.Gethurt] uhhhh, health couldn't be found....");
         }

@@ -19,7 +19,7 @@ public class LinkAttack : MonoBehaviour
         layerMask = ~layerMask;
         RaycastHit hit;
         if(player_animator.tag=="attack"&&Physics.Raycast(transform.position,transform.forward,out hit, 1.0f, layerMask)){
-            hit.collider.gameObject.GetComponent<EnemyController>().Get_hurt(1f);
+            hit.collider.gameObject.GetComponent<EnemyController>().get_hurt(1f);
         }
     }
 }

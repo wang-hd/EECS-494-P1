@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputToAnimator : MonoBehaviour
 {
     public HasHealth player_health;
-    public GameObject weapon_controll;
+    public WeaponControl weapon_control;
 
     int direction=0;
     Animator animator;
@@ -36,11 +36,11 @@ public class InputToAnimator : MonoBehaviour
             }
     
             // To detect whether Link is attacking
-            if (Input.GetKeyDown(KeyCode.J)||Input.GetKeyDown(KeyCode.K)){
-                weapon_controll.GetComponent<WeaponControl>().attack(direction,Input.GetKeyDown(KeyCode.K),transform.position.x,transform.position.y);
+            if (Input.GetKeyDown(KeyCode.X)||Input.GetKeyDown(KeyCode.Z)){
+                weapon_control.GetComponent<WeaponControl>().attack(direction,Input.GetKeyDown(KeyCode.X),transform.position.x,transform.position.y);
             }
 
-            if (player_health.Is_dead())
+            if (player_health.is_dead())
             {
                 animator.speed = 1f;
                 animator.SetBool("is_dead", true);

@@ -11,9 +11,8 @@ public class OpenWithKey : MonoBehaviour
         {
             Debug.Log("Player hit locked door");
             Inventory playerInventory = other.GetComponent<Inventory>();
-            Debug.Log("Player has " + playerInventory.keys + " keys");
-            if (playerInventory != null && playerInventory.keys > 0) {
-                playerInventory.keys--;
+            if (playerInventory != null && playerInventory.get_keys() > 0) {
+                if (!Inventory.god_mode) playerInventory.add_keys(-1);
                 Destroy(this.gameObject);
                 AudioSource.PlayClipAtPoint(doorOpenSound, Camera.main.transform.position);
             }

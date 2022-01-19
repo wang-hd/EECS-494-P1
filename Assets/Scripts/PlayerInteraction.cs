@@ -37,10 +37,7 @@ public class PlayerInteraction : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-        if(!is_invincible&&player_invent.God_Mode){
-            player_health.God_health();
-        }
-        is_invincible = player_invent.God_Mode;
+        is_invincible = Inventory.god_mode;
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -48,45 +45,46 @@ public class PlayerInteraction : MonoBehaviour
         if (object_collider_with.CompareTag("enemy"))
         {
             EnemyController enemy = object_collider_with.GetComponent<EnemyController>();
-            Hit_stun(object_collider_with, enemy.Get_force());
 
             if (!is_invincible)
             {
-                player_health.Lose_health(enemy.Get_attack());
+                hit_stun(object_collider_with, enemy.get_force());
+                player_health.lose_health(enemy.get_attack());
                 is_invincible = true;
                 AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
                 Color player_origin_color = player_sprite.color;
                 player_sprite.color = new Color(1, 0, 0, 1);
-                StartCoroutine(Change_color());
-                if (player_health.Is_dead())
+                StartCoroutine(change_color());
+                if (player_health.is_dead())
                 {
                     game_over = true;
+                    ArrowKeyMovement.player_control = false;
                     audioSource.Stop();
                     AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
                 }
-                StartCoroutine(Become_invincible());
+                StartCoroutine(become_invincible());
             }
         }
     }
-    IEnumerator Change_color()
+    IEnumerator change_color()
     {
         yield return new WaitForSeconds(0.1f);
         player_sprite.color = player_origin_color;
     }
 
-    IEnumerator Become_invincible()
+    IEnumerator become_invincible()
     {
         yield return new WaitForSeconds(1f);
         is_invincible  = false;
     }
 
-    private void Hit_stun(GameObject enemy, float hit_force)
+    private void hit_stun(GameObject enemy, float hit_force)
     {
-        player_rb.AddForce(Vector3.Normalize(ReturnDirection(enemy)) * (-hit_force), ForceMode.Impulse);
-        Debug.Log("add force" + Vector3.Normalize(ReturnDirection(enemy)).ToString());
+        player_rb.AddForce(Vector3.Normalize(returnDirection(enemy)) * (-hit_force), ForceMode.Impulse);
+        Debug.Log("add force" + Vector3.Normalize(returnDirection(enemy)).ToString());
     }
 
-    private Vector2 ReturnDirection( GameObject ObjectHit )
+    private Vector2 returnDirection( GameObject ObjectHit )
     {    
         RaycastHit MyRayHit;
         Vector3 direction = ( transform.position - ObjectHit.transform.position ).normalized;

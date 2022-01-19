@@ -8,7 +8,7 @@ public class Swords : Weapon
     public Animator player_animator;
     public HasHealth player_health;
 
-    string name = "swords";
+    string name = "sword";
     int number = 1;
 
     private IEnumerator coroutine;
@@ -22,7 +22,7 @@ public class Swords : Weapon
         player_animator.SetBool("is_attack", true);
         
         // player has full health, call the shooting function from the base
-        if(player_health.Is_full_health()){
+        if(player_health.is_full_health()){
             base.swapIn(direction,horizontal,vertical);
         }
     }

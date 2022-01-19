@@ -10,6 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     public AudioClip enemy_attack_sound_clip;
     public AudioClip game_over_sound_clip;
     public AudioSource audioSource;
+    public Inventory player_invent;
+
     private bool game_over = false;
     private bool is_invincible = false;
     private SpriteRenderer player_sprite;
@@ -35,6 +37,10 @@ public class PlayerInteraction : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+        if(!is_invincible&&player_invent.God_Mode){
+            player_health.God_health();
+        }
+        is_invincible = player_invent.God_Mode;
     }
 
     private void OnCollisionEnter(Collision other) {

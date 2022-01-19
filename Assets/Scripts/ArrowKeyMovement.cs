@@ -17,8 +17,9 @@ public class ArrowKeyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 current_input = GetInput();
+        Vector2 current_input = GetInput();     
         rb.velocity = current_input * Movement_speed;
+
     }
 
     private Vector2 GetInput() 

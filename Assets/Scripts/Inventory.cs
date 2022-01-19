@@ -7,18 +7,22 @@ public class Inventory : MonoBehaviour
     int rupee_count = 0;
     int bomb_count = 0;
     public int keys = 0;
+
     public static bool god_mode = false;
     
     //TODO: This function is to toggle the God mode
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Keypad1)||Input.GetKeyDown(KeyCode.Alpha1)){
+        if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
+        {
             god_mode = !god_mode;
         }
     }
+
     public void add_rupees(int num_rupees)
     {
         rupee_count += num_rupees;
     }
+    
     public void add_bombs (int num_bombs)
     {
         bomb_count += num_bombs;

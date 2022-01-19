@@ -20,24 +20,24 @@ public class TextDisplayer : MonoBehaviour
     {
         if (gameObject.name == "HealthText")
         {
-            text_component.text = "Health:" + player_health.get_health().ToString();
+            text_component.text = player_health.get_health().ToString();
         }
         if (gameObject.name == "RupeeText")
         {
             if (inventory != null && text_component != null) {
-                text_component.text = "Rupees: " + inventory.get_rupees().ToString();
+                text_component.text = inventory.get_rupees().ToString();
             }
         }
         if (gameObject.name == "BombText")
         {
             if (inventory != null && text_component != null) {
-                text_component.text = "Bombs: " + inventory.get_bombs().ToString();
+                text_component.text = inventory.get_bombs().ToString();
             }
         }
         if (gameObject.name == "KeyText")
         {
             if (inventory != null && text_component != null) {
-                text_component.text = "Keys: " + inventory.get_keys().ToString();
+                text_component.text = inventory.get_keys().ToString();
             }
         }
     }

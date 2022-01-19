@@ -6,7 +6,6 @@ public class HasHealth : MonoBehaviour
 {
     private float curr_health = 3.0f;
     private float max_health = 3.0f;
-
     public void add_health (float num_health)
     {
         curr_health += num_health;

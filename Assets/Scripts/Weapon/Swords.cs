@@ -22,7 +22,8 @@ public class Swords : Weapon
         player_animator.SetBool("is_attack", true);
         
         // player has full health, call the shooting function from the base
-        if(player_health.is_full_health()){
+        if (player_health.is_full_health())
+        {
             base.swapIn(direction,horizontal,vertical);
         }
     }

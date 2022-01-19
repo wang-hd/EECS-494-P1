@@ -7,6 +7,7 @@ public class InputToAnimator : MonoBehaviour
     public HasHealth player_health;
     public WeaponControl weapon_control;
 
+
     int direction=0;
     Animator animator;
 
@@ -37,16 +38,16 @@ public class InputToAnimator : MonoBehaviour
     
             // To detect whether Link is attacking
             if (Input.GetKeyDown(KeyCode.X)||Input.GetKeyDown(KeyCode.Z)){
-                weapon_control.GetComponent<WeaponControl>().attack(direction,Input.GetKeyDown(KeyCode.X),transform.position.x,transform.position.y);
-            }
-
-            if (player_health.is_dead())
-            {
-                animator.speed = 1f;
-                animator.SetBool("is_dead", true);
+                weapon_control.attack(direction,Input.GetKeyDown(KeyCode.X),transform.position.x,transform.position.y);
             }
         }
-        
+        if (player_health.is_dead())
+        {
+            animator.SetFloat("horizontal_input", 0f);
+            animator.SetFloat("vertical_input", 0f);
+            animator.speed = 1f;
+            animator.SetBool("is_dead", true);
+        }
     }
 
     //TODO: This function is to generate the direction which will be parsed into the weapon component.

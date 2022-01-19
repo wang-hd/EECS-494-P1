@@ -17,11 +17,13 @@ public class WeaponText : MonoBehaviour
     // TODO: This function updates the name of weapon and shows it on the screen
     void Update()
     {
-        if(weapon_controller!=null&&text_content!=null){
-            text_content.text="Primary weapon: "+weapon_controller.returnNameA()+"\r\n";
+        if (weapon_controller!=null && text_content!=null && this.CompareTag("weapon"))
+        {
+            text_content.text = weapon_controller.returnNameA();
         }
-        if(weapon_controller!=null&&text_content!=null){
-            text_content.text+="Secondary weapon: "+weapon_controller.returnNameB();
+        else if (weapon_controller!=null && text_content!=null && this.CompareTag("weapon_b"))
+        {
+            text_content.text = weapon_controller.returnNameB();
         }
     }
 }

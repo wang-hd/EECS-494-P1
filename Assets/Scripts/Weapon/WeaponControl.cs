@@ -6,15 +6,38 @@ public class WeaponControl : MonoBehaviour
 //This class controls all of the weapon inventory, when to create weapon and when to destroy them
 {
     public Weapon weapon_a;
-    public Weapon weapon_b;
+    public List<Weapon> weapon_b;
+    public int secondary_index = 0;
+    public Inventory inventory;
 
-    public GameObject prefab_1;//This prefab stores swords
-    public GameObject prefab_0;//This prefab stores bows
+    public GameObject prefab_1; //This prefab stores swords
+    public GameObject prefab_0; //This prefab stores bows
+
+    void Start()
+    {
+        inventory = GetComponentInParent<Inventory>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown("space") && weapon_b.Count > 1)
+        {
+            if (secondary_index == weapon_b.Count)
+            {
+                secondary_index = 0;
+            }
+            else
+            {
+                secondary_index += 1;
+            }
+        }
+    }
 
     public void createNewWeapon(string weapon_name, bool weapon_type){
         //INPUT: string - weapon name; bool - which weapon will be substitute
         //TODO: This function creates new weapon according to the input and destroy the origin weapon if they are not null
-        if(weapon_type){
+        if(weapon_type)
+        {
             if(weapon_a!=null){
                 Destroy(weapon_a);  
             }
@@ -22,28 +45,22 @@ public class WeaponControl : MonoBehaviour
                 case "sword":
                 weapon_a = Instantiate(prefab_1, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
                 break;
-                case "bow":
-                weapon_a = Instantiate(prefab_0, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
-                break;
-                default:
-                break;
-                }
-        }else{
+            }
+        }
+        else
+        {
             if(weapon_b!=null){
-                Destroy(weapon_b);  
+                Destroy(weapon_b[secondary_index]);  
             }
             switch(weapon_name){
-                case "sword":
-                weapon_b = Instantiate(prefab_1, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
-                break;
                 case "bow":
-                weapon_b = Instantiate(prefab_0, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
+                weapon_b[secondary_index] = Instantiate(prefab_0, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
                 break;
                 default:
                 break;
-        }
+            }
         
-    }
+        }
     }
 
     public string returnNameA(){
@@ -58,7 +75,7 @@ public class WeaponControl : MonoBehaviour
     public string returnNameB(){
         //TODO: This function returns the name of weapon B
         if(weapon_b!=null){
-            return weapon_b.name;
+            return weapon_b[secondary_index].name;
         }else{
             return "[WeaponControl.returnNameB] no weapon B";
         }
@@ -73,8 +90,9 @@ public class WeaponControl : MonoBehaviour
                 Debug.Log("[WeaponControl.attack] There is no weapon A in Inventory");
             }
         }else{
-            if(weapon_b!=null){
-                weapon_b.attack(direction,horizontal,vertical);
+            if(weapon_b!=null && inventory.get_rupees() > 0){
+                weapon_b[secondary_index].attack(direction,horizontal,vertical);
+                inventory.add_rupees(-1);
             }else{
                 Debug.Log("[WeaponControl.attack] There is no weapon B in Inventory");
             }

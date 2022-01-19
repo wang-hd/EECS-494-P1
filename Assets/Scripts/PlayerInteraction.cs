@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    ArrowKeyMovement player_control;
     HasHealth player_health;
     private Rigidbody player_rb;
     public AudioClip enemy_attack_sound_clip;
@@ -20,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player_control = GetComponent<ArrowKeyMovement>();
         player_health = GetComponent<HasHealth>(); 
         player_rb = GetComponent<Rigidbody>(); 
         player_sprite = GetComponent<SpriteRenderer>();
@@ -35,8 +37,10 @@ public class PlayerInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                player_control.SetPlayerControl(true);
             }
         }
+
         is_invincible = Inventory.god_mode;
     }
 
@@ -61,20 +65,26 @@ public class PlayerInteraction : MonoBehaviour
                     ArrowKeyMovement.player_control = false;
                     audioSource.Stop();
                     AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
+                    player_control.SetPlayerControl(false);
+                    return;
                 }
+                AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
+                StartCoroutine(change_color());
                 StartCoroutine(become_invincible());
             }
         }
     }
     IEnumerator change_color()
     {
+        Color player_origin_color = player_sprite.color;
+        player_sprite.color = new Color(1, 0, 0, 1);
         yield return new WaitForSeconds(0.1f);
         player_sprite.color = player_origin_color;
     }
 
     IEnumerator become_invincible()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         is_invincible  = false;
     }
 

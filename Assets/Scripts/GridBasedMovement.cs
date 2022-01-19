@@ -29,7 +29,6 @@ public class GridBasedMovement : MonoBehaviour
                 new_vertical_position = vertical_position - deviation_with_tile + 1f * vertical_position / Mathf.Abs(vertical_position);
             }
             transform.position = new Vector2(horizontal_position, new_vertical_position);
-            Debug.Log("Original vertical position was"+vertical_position.ToString()+", now is "+new_vertical_position.ToString());
         }
 
         if (Input.GetAxisRaw("Vertical")!=0.0f)

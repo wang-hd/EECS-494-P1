@@ -37,7 +37,8 @@ public class InputToAnimator : MonoBehaviour
             }
     
             // To detect whether Link is attacking
-            if (Input.GetKeyDown(KeyCode.X)||Input.GetKeyDown(KeyCode.Z)){
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z))
+            {
                 weapon_control.attack(direction,Input.GetKeyDown(KeyCode.X),transform.position.x,transform.position.y);
             }
         }

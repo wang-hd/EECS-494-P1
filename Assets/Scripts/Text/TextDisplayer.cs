@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class TextDisplayer : MonoBehaviour
 {
-    public Inventory inventory;
-    public HasHealth player_health;
+    Inventory inventory;
+    HasHealth player_health;
     Text text_component;
 
     // Start is called before the first frame update
     void Start()
     {
         text_component = GetComponent<Text>();
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
+        player_health = GameObject.Find("Player").GetComponent<HasHealth>();
     }
 
     // Update is called once per frame

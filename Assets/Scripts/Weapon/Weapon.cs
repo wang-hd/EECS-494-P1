@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 {
     bool is_attack = false;
     int direction_weapon = 0;
+    bool in_flight = false;
 
     private IEnumerator coroutine;
 
@@ -51,19 +52,18 @@ public class Weapon : MonoBehaviour
         transform.position = new Vector3(horizontal,vertical,0);
     }
 
-    private IEnumerator WaitAndPrint(float waitTime){
+    public virtual IEnumerator WaitAndPrint(float waitTime){
         yield return new WaitForSeconds(waitTime);
         GetComponent<Animator>().SetBool("is_attack",false);
         is_attack = false;
     }
 
     //TODO: destroy or give every object a certain hurt when it collide with the enemy
-    private void OnTriggerEnter(Collider other) {
+    public virtual void OnTriggerEnter(Collider other) {
         //if other's tag is enemy)
-        if(other.CompareTag("enemy"))
+        if (other.CompareTag("enemy"))
         {
            other.gameObject.GetComponent<EnemyController>().get_hurt(1.0f);
         }
     }
-
 }

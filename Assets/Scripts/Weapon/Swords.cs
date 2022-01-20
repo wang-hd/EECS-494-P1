@@ -11,12 +11,9 @@ public class Swords : Weapon
     string name = "sword";
     int number = 1;
 
-    private IEnumerator coroutine;
-
     //TODO: if player has full health, then call the shooting function of weapon;
     public override void attack(int direction, float horizontal,float vertical){
-        coroutine = WaitAndPrint(0.2f);
-        StartCoroutine(coroutine);
+        StartCoroutine(WaitAndPrint(0.2f));
 
         player_animator.SetInteger("no_of_weapon", number);
         player_animator.SetBool("is_attack", true);
@@ -28,9 +25,17 @@ public class Swords : Weapon
         }
     }
 
-    private IEnumerator WaitAndPrint(float waitTime){
+    public override IEnumerator WaitAndPrint(float waitTime){
         yield return new WaitForSeconds(waitTime);
         player_animator.SetBool("is_attack", false);
     }
 
+    public override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+        if (other.CompareTag("enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

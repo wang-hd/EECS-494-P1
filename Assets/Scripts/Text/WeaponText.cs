@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class WeaponText : MonoBehaviour
 {
-    public WeaponControl weapon_controller;
+    WeaponControl weapon_controller;
     Text text_content;
     GameObject weapon;
     
     void Start()
     {
-        text_content=GetComponent<Text>();
+        text_content = GetComponent<Text>();
+        weapon_controller = GameObject.Find("Player").GetComponentInChildren<WeaponControl>();
     }
 
     // TODO: This function updates the name of weapon and shows it on the screen

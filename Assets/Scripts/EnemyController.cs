@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private float attack = 1f;
-    private float hit_force = 50f;
+    private float hit_force = 25f;
     public float speed = 2f;
     Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
     Vector2 waypoint;

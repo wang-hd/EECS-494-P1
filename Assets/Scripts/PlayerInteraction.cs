@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    ArrowKeyMovement player_control;
+    PlayerMovement player_control;
     HasHealth player_health;
-    private Rigidbody player_rb;
+    Animator animator;
+   Rigidbody player_rb;
     public AudioClip enemy_attack_sound_clip;
     public AudioClip game_over_sound_clip;
-    public AudioSource audioSource;
-    public Inventory player_invent;
+    AudioSource audioSource;
 
     private bool game_over = false;
     private bool is_invincible = false;
@@ -21,11 +21,15 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player_control = GetComponent<ArrowKeyMovement>();
-        player_health = GetComponent<HasHealth>(); 
-        player_rb = GetComponent<Rigidbody>(); 
+        player_control = GetComponent<PlayerMovement>();
+        player_health = GetComponent<HasHealth>();
+
+        player_rb = GetComponent<Rigidbody>();
         player_sprite = GetComponent<SpriteRenderer>();
         player_origin_color = player_sprite.color;
+
+        animator = GetComponent<Animator>();
+        audioSource = Camera.main.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 player_control.SetPlayerControl(true);
+                is_invincible = false;
             }
         }
 
@@ -56,15 +61,21 @@ public class PlayerInteraction : MonoBehaviour
                 if (player_health.is_dead())
                 {
                     game_over = true;
-                    ArrowKeyMovement.player_control = false;
+                    is_invincible = true;
+                    PlayerMovement.player_control = false;
+
                     audioSource.Stop();
                     AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
-                    player_control.SetPlayerControl(false);
+
+                    animator.SetFloat("horizontal_input", 0f);
+                    animator.SetFloat("vertical_input", 0f);
+                    animator.speed = 1f;
+                    animator.SetTrigger("die");
                     return;
                 }
                 hit_stun(object_collider_with, enemy.get_force());
                 StartCoroutine(become_invincible());
-                AudioSource.PlayClipAtPoint (enemy_attack_sound_clip, Camera.main.transform.position);
+                AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
                 StartCoroutine(change_color());
             }
         }
@@ -81,7 +92,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         is_invincible = true;
         yield return new WaitForSeconds(0.8f);
-        is_invincible  = false;
+        is_invincible = false;
     }
 
     private void hit_stun(GameObject enemy, float hit_force)

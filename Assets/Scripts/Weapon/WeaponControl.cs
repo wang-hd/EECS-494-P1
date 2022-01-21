@@ -7,31 +7,25 @@ public class WeaponControl : MonoBehaviour
 {
     Weapon weapon_a;
     Weapon weapon_b;
-    public List<GameObject> weapons;
-    int secondary_index = 0;
+    Inventory inventory;
 
     public GameObject sword_prefab; //This prefab stores swords
 
+    void Start()
+    {
+        inventory = GetComponentInParent<Inventory>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown("space") && weapons.Count > 1)
-        {
-            if (secondary_index == weapons.Count)
-            {
-                secondary_index = 0;
-            }
-            else
-            {
-                secondary_index += 1;
-            }
-        }
+
     }
 
     public void createNewWeapon(string weapon_name, bool weapon_type){
         //INPUT: string - weapon name; bool - which weapon will be substitute
         //TODO: This function creates new weapon according to the input
         // Will not create a weapon if a weapon already exists, to prevent double attacking
-        if(weapon_type)
+        if (weapon_type)
         {
             weapon_a = Instantiate(sword_prefab, new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
         }
@@ -40,7 +34,7 @@ public class WeaponControl : MonoBehaviour
             switch(weapon_name)
             {
                 case "bow":
-                    weapon_b = Instantiate(weapons[secondary_index], new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
+                    weapon_b = Instantiate(inventory.get_secondary_weapon(), new Vector3(0, -12, 0), Quaternion.identity).GetComponent<Weapon>();
                     break;
             }
         }
@@ -53,8 +47,8 @@ public class WeaponControl : MonoBehaviour
 
     public string returnNameB(){
         //TODO: This function returns the name of weapon B
-        if(weapons[secondary_index] != null) {
-            return weapons[secondary_index].name;
+        if(inventory.get_secondary_weapon() != null) {
+            return inventory.get_secondary_weapon().name;
         }else{
             return "[WeaponControl.returnNameB] no weapon B";
         }
@@ -63,7 +57,7 @@ public class WeaponControl : MonoBehaviour
     public void attack(int direction, bool weapon_type,float horizontal, float vertical){
         //TODO: This function makes the character attack and if hull health, call shooting function
         // If weapon already exists, do not attack
-        if(weapon_type){
+        if(weapon_type) {
             if (weapon_a == null)
             {
                 createNewWeapon("sword", true);
@@ -72,9 +66,9 @@ public class WeaponControl : MonoBehaviour
         }else{
             if (weapon_b == null)
             {
-                createNewWeapon(weapons[secondary_index].name, false);
+                createNewWeapon(inventory.get_secondary_weapon().name, false);
                 Debug.Log(weapon_b);
-                weapon_b.attack(direction,horizontal,vertical);
+                weapon_b.attack(direction, horizontal, vertical);
             }
             else
             {

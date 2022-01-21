@@ -16,7 +16,8 @@ public class Collector : MonoBehaviour
     {
         inventory = GetComponent<Inventory>();
         player_health = GetComponent<HasHealth>();
-        if (inventory == null) {
+        if (inventory == null)
+        {
             Debug.LogWarning("WARNING: Gameobject with a collider has no inventory to store things in!");
         }
     }
@@ -54,6 +55,14 @@ public class Collector : MonoBehaviour
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint(keyCollectSound, Camera.main.transform.position);
+        }
+        else if (object_collide_with.tag == "bow")
+        {
+            // add bow
+        }
+        else if (object_collide_with.tag == "boomerang")
+        {
+            // add boomerang
         }
     }
 }

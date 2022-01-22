@@ -29,13 +29,10 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKeyDown("space") && weapons.Count > 1)
         {
+            secondary_index += 1;
             if (secondary_index == weapons.Count)
             {
                 secondary_index = 0;
-            }
-            else
-            {
-                secondary_index += 1;
             }
         }
     }

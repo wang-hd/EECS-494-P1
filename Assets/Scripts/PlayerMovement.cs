@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float Movement_speed = 4;
     public static bool player_control = true;
     Rigidbody rb;
-    WeaponControl weapon_control;
+    Inventory player_inventory;
+    PlayerAttack player_attack;
     HasHealth player_health;
     Animator animator;
     readonly int up = 0;
@@ -16,14 +17,13 @@ public class PlayerMovement : MonoBehaviour
     readonly int down = 2;
     readonly int left = 3;
     int direction;
-    bool attacking = false; // In the future, will be set by the weapon projectiles to true when spawned and false when destroyed, to prevent multiple projectiles from being active at once.
-    // This variable is distinct from the animator is_attack because that boolean only controls the animation, not player state. A player can still move around when a projectile is active, just not attack again.
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        weapon_control = GetComponentInChildren<WeaponControl>();
+        player_inventory = GetComponent<Inventory>();
+        player_attack = GetComponent<PlayerAttack>();
         player_health = GetComponent<HasHealth>();
         animator = GetComponent<Animator>();
         direction = up;
@@ -36,13 +36,22 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack")) // placeholder
             {
-                weapon_control.attack(direction, Input.GetKeyDown(KeyCode.X), transform.position.x, transform.position.y);
-                StartCoroutine(SetAttacking(2));
+                if (player_health.is_full_health())
+                {
+                    // Spawn full health sword projectile
+                    player_attack.attack(direction, "sword", transform.position.x, transform.position.y);
+                }
+                // Attack with melee sword always
+                StartCoroutine(SetAttacking(1));
             }
             else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
             {
-                weapon_control.attack(direction, Input.GetKeyDown(KeyCode.X), transform.position.x, transform.position.y);
-                // TODO - integrate with inventory to determine which secondary weapon Link is holding, and therefore what animation should play
+                if (player_inventory.get_secondary_weapon() != null)
+                {
+                    Debug.Log(player_inventory.get_secondary_weapon().name);
+                    player_attack.attack(direction, player_inventory.get_secondary_weapon().name, transform.position.x, transform.position.y);
+                    StartCoroutine(SetAttacking(2));
+                }
             }
             else
             {
@@ -75,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            direction = GetDirection(horizontal, vertical);
+            SetDirection(horizontal, vertical);
             animator.speed = 1.0f;
         }
     }
@@ -88,20 +97,24 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("is_attack", false);
     }
 
-    private int GetDirection(float horizontal, float vertical){
+    private void SetDirection(float horizontal, float vertical) {
         if (vertical > 0)
         {
-            return up;
+            direction = up;
         }
         else if (horizontal > 0)
         {
-            return right;
+            direction = right;
         }
         else if (vertical < 0)
         {
-            return down;
+            direction = down;
         }
-        return left;
+        else if (horizontal < 0)
+        {
+            direction = left;
+        }
+        // If the player is not moving, keep previous direction
     }
 
     public void SetPlayerControl(bool value)

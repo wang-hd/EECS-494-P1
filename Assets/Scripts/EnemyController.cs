@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    // TODO TODO: REFACTOR THIS
     private float attack = 1f;
     private float hit_force = 25f;
     public float speed = 2f;

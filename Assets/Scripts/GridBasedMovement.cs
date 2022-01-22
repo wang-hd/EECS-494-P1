@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GridBasedMovement : MonoBehaviour
 {
+    // TODO: REFACTOR TO WORK WITH ENEMIES AS WELL
+    
     // When collider with an object, the player will adjust to the nearest half-tile
     private void Update()
     {

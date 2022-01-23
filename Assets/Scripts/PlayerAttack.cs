@@ -55,7 +55,7 @@ public class PlayerAttack : MonoBehaviour
         return null;
     }
 
-    public void attack(int direction, string weapon_name, float horizontal, float vertical){
+    public void attack(int direction, string weapon_name, float horizontal, float vertical) {
         //TODO: This function makes the character attack and if hull health, call shooting function
         // If weapon already exists, do not attack
         GameObject weapon = createNewWeapon(weapon_name);

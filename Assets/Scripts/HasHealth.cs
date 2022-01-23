@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class HasHealth : MonoBehaviour
 {
-    public float max_health = 3.0f;
+    public float max_health = 6.0f;
     float curr_health;
 
     void Start()
     {
         curr_health = max_health;
     }
+
     public void add_health (float num_health)
     {
         curr_health += num_health;
@@ -19,6 +20,7 @@ public class HasHealth : MonoBehaviour
             curr_health = max_health;
         }
     }
+    
     public void lose_health (float num_health)
     {
         curr_health -= num_health;

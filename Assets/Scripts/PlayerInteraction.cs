@@ -8,7 +8,7 @@ public class PlayerInteraction : MonoBehaviour
     PlayerMovement player_control;
     HasHealth player_health;
     Animator animator;
-   Rigidbody player_rb;
+    Rigidbody player_rb;
     public AudioClip enemy_attack_sound_clip;
     public AudioClip game_over_sound_clip;
     AudioSource audioSource;
@@ -35,17 +35,6 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (game_over)
-        {
-            
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                player_control.SetPlayerControl(true);
-                is_invincible = false;
-            }
-        }
-
         is_invincible = Inventory.god_mode;
     }
 
@@ -60,25 +49,50 @@ public class PlayerInteraction : MonoBehaviour
                 player_health.lose_health(enemy.get_attack());
                 if (player_health.is_dead())
                 {
-                    game_over = true;
-                    is_invincible = true;
-                    PlayerMovement.player_control = false;
-
-                    audioSource.Stop();
-                    AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
-
-                    animator.SetFloat("horizontal_input", 0f);
-                    animator.SetFloat("vertical_input", 0f);
-                    animator.speed = 1f;
-                    animator.SetTrigger("die");
+                    StartCoroutine(resetGame());
                     return;
                 }
-                hit_stun(object_collider_with, enemy.get_force());
-                StartCoroutine(become_invincible());
-                AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
-                StartCoroutine(change_color());
+                StartCoroutine(getHit(object_collider_with));
             }
         }
+    }
+
+    IEnumerator resetGame()
+    {
+        player_control.SetPlayerControl(false);
+        player_rb.velocity = Vector3.zero;
+        audioSource.Stop();
+        AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
+
+        animator.SetFloat("horizontal_input", 0f);
+        animator.SetFloat("vertical_input", 0f);
+        animator.speed = 1f;
+        animator.SetTrigger("die");
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
+
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        player_control.SetPlayerControl(true);
+    }
+
+    IEnumerator getHit(GameObject enemy)
+    {
+        is_invincible = true;
+        PlayerMovement.player_control = false;
+
+        hit_stun(enemy, 10f);
+        AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
+        StartCoroutine(change_color());
+
+        yield return new WaitForSeconds(0.6f);
+
+        PlayerMovement.player_control = true;
+        is_invincible = false;
     }
     IEnumerator change_color()
     {
@@ -86,13 +100,6 @@ public class PlayerInteraction : MonoBehaviour
         player_sprite.color = new Color(1, 0, 0, 1);
         yield return new WaitForSeconds(0.1f);
         player_sprite.color = player_origin_color;
-    }
-
-    IEnumerator become_invincible()
-    {
-        is_invincible = true;
-        yield return new WaitForSeconds(0.8f);
-        is_invincible = false;
     }
 
     private void hit_stun(GameObject enemy, float hit_force)

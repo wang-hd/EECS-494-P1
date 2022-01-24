@@ -10,9 +10,9 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bow_prefab;
     public GameObject boomerang_prefab;
     public GameObject bomb_prefab;
-    public static bool sword_projectile = false; // Ensures only one sword at a time
-    public static bool bow_projectile = false; // Only one arrow at a time
-    public static bool boomerang_projectile = false; // Only one (player) boomerang at a time
+    public static int sword_projectiles = 0; // Ensures only one sword at a time
+    public static int bow_projectiles = 0; // Only one arrow at a time
+    public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
 
     void Start()
     {
@@ -23,23 +23,26 @@ public class PlayerAttack : MonoBehaviour
         //INPUT: string - weapon name; bool - which weapon will be substitute
         //TODO: This function creates new weapon according to the input
         // Will not create a weapon if a weapon already exists, to prevent double attacking
+        Vector3 player_pos = GameObject.Find("Player").transform.position;
         switch(weapon_name)
         {
             case "sword":
-                if (!sword_projectile)
+                if (sword_projectiles <= 1)
                 {
-                    return Instantiate(sword_prefab, transform.position, Quaternion.identity);
+                    Debug.Log("Initiating new sword projectile");
+                    return Instantiate(sword_prefab, player_pos, Quaternion.identity);
                 }
                 break;
             case "bow":
-                if (!bow_projectile && inventory != null && inventory.get_rupees() > 0)
+                if (bow_projectiles <= 1 && inventory != null && inventory.get_rupees() > 0)
                 {
                     inventory.add_rupees(-1);
+                    StartCoroutine(bowAnimation());
                     return Instantiate(bow_prefab, transform.position, Quaternion.identity);
                 }
                 break;
             case "boomerang":
-                if (!boomerang_projectile)
+                if (boomerang_projectiles <= 1)
                 {
                     return Instantiate(boomerang_prefab, transform.position, Quaternion.identity);
                 }
@@ -55,11 +58,17 @@ public class PlayerAttack : MonoBehaviour
         return null;
     }
 
-    public void attack(int direction, string weapon_name, float horizontal, float vertical) {
+    public void attack(int direction, string weapon_name) {
         //TODO: This function makes the character attack and if hull health, call shooting function
         // If weapon already exists, do not attack
         GameObject weapon = createNewWeapon(weapon_name);
         // Attack with the weapon, aka set projectile's desired position
         // weapon.attack(direction, horizontal, vertical);
+    }
+
+    IEnumerator bowAnimation()
+    {
+        // TODO: spawn a bow sprite on top of the player
+        yield return new WaitForSeconds(0.2f);
     }
 }

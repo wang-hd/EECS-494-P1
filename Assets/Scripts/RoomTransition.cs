@@ -6,6 +6,7 @@ public class RoomTransition : MonoBehaviour
 {
     Camera cam;
     GameObject player;
+    PlayerMovement player_control;
     readonly Vector3 cameraNorth = new Vector3(0, 11, 0);
     readonly Vector3 cameraEast = new Vector3(16, 0, 0);
     readonly Vector3 cameraSouth = new Vector3(0, -11, 0);
@@ -27,6 +28,7 @@ public class RoomTransition : MonoBehaviour
     {
         cam = Camera.main;
         player = GameObject.Find("Player");
+        player_control = player.GetComponent<PlayerMovement>();
         prevTransition = empty;
     }
 
@@ -34,7 +36,7 @@ public class RoomTransition : MonoBehaviour
     {
         if (other.CompareTag("player"))
         {
-            if (PlayerMovement.player_control)
+            if (player_control.enabled)
             {
                 Debug.Log("Do transition");
                 other.GetComponent<Rigidbody>().velocity = Vector3.zero;          
@@ -120,7 +122,7 @@ public class RoomTransition : MonoBehaviour
 
     IEnumerator PlayerRoomTransition(Vector3 direction)
     {
-        PlayerMovement.player_control = false;
+        player_control.enabled = false;
         player.GetComponent<BoxCollider>().enabled = false;
         Debug.Log("Moving player");
 
@@ -150,7 +152,7 @@ public class RoomTransition : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         player.GetComponent<BoxCollider>().enabled = true;
-        PlayerMovement.player_control = true;
+        player_control.enabled = true;
     }
 
     void setPrevTransition(string direction)

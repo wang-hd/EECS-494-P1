@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float Movement_speed = 4;
-    public static bool player_control = true;
+    public static int direction;
     Rigidbody rb;
     Inventory player_inventory;
     PlayerAttack player_attack;
@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     readonly int right = 1;
     readonly int down = 2;
     readonly int left = 3;
-    int direction;
 
     // Start is called before the first frame update
     void Start()
@@ -32,33 +31,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_control)
+        if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack")) // placeholder
         {
-            if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack")) // placeholder
+            if (player_health.is_full_health())
             {
-                if (player_health.is_full_health())
-                {
-                    // Spawn full health sword projectile
-                    player_attack.attack(direction, "sword", transform.position.x, transform.position.y);
-                }
-                // Attack with melee sword always
-                StartCoroutine(SetAttacking(1));
+                // Spawn full health sword projectile
+                player_attack.attack(direction, "sword");
             }
-            else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
+            // Attack with melee sword always
+            StartCoroutine(SetAttacking(1));
+        }
+        else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
+        {
+            if (player_inventory.get_secondary_weapon() != null)
             {
-                if (player_inventory.get_secondary_weapon() != null)
-                {
-                    Debug.Log(player_inventory.get_secondary_weapon().name);
-                    player_attack.attack(direction, player_inventory.get_secondary_weapon().name, transform.position.x, transform.position.y);
-                    StartCoroutine(SetAttacking(2));
-                }
+                Debug.Log(player_inventory.get_secondary_weapon().name);
+                player_attack.attack(direction, player_inventory.get_secondary_weapon().name);
+                StartCoroutine(SetAttacking(2));
             }
-            else
-            {
-                Vector2 current_input = GetMovementInput();
-                rb.velocity = current_input * Movement_speed;
-                SetAnimationAndDirection(current_input.x, current_input.y);
-            }
+        }
+        else
+        {
+            Vector2 current_input = GetMovementInput();
+            rb.velocity = current_input * Movement_speed;
+            SetAnimationAndDirection(current_input.x, current_input.y);
         }
     }
 
@@ -115,15 +111,5 @@ public class PlayerMovement : MonoBehaviour
             direction = left;
         }
         // If the player is not moving, keep previous direction
-    }
-
-    public void SetPlayerControl(bool value)
-    {
-        player_control = value;
-    }
-
-    public bool GetPlayerControl()
-    {
-        return player_control;
     }
 }

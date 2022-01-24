@@ -8,15 +8,17 @@ public class EnemyController : MonoBehaviour
     private float attack = 1f;
     private float hit_force = 25f;
     public float speed = 2f;
+    public AudioClip enemy_death_sound;
+    HasHealth health;
     Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
     Vector2 waypoint;
-    private HasHealth health;
-    public AudioClip enemy_death_sound;
+    Vector3 init_camera_pos;
 
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<HasHealth>();
+        init_camera_pos = Camera.main.transform.position;
         SetNewDestination();
     }
 
@@ -28,10 +30,15 @@ public class EnemyController : MonoBehaviour
             AudioSource.PlayClipAtPoint(enemy_death_sound, Camera.main.transform.position);
             Destroy(gameObject);
         }
-        transform.position = Vector2.MoveTowards(transform.position, waypoint, speed*Time.deltaTime);
-        if (Vector2.Distance(transform.position, waypoint) == 0)
+
+        if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
         {
-            SetNewDestination();
+            // movement is enabled
+            transform.position = Vector2.MoveTowards(transform.position, waypoint, speed*Time.deltaTime);
+            if (Vector2.Distance(transform.position, waypoint) == 0)
+            {
+                SetNewDestination();
+            }
         }
     }
     private void OnCollisionEnter(Collision other) {
@@ -74,7 +81,7 @@ public class EnemyController : MonoBehaviour
     //TODO: Thereofore, for normal swords, the hurt is 1, and for higher level weapon, the hurt could be 2.
     public void get_hurt(float n){
         if(health != null){
-            health.lose_health(1.5f*n);
+            health.lose_health(n);
             Debug.Log($"[EnemyController.Gethurt] Current Health is {health.get_health()}");
         }else{
             Debug.Log("[EnemyController.Gethurt] uhhhh, health couldn't be found....");

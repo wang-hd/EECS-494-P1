@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6721164107138238482}
   - component: {fileID: -4051637164999170125}
   - component: {fileID: 375080364148136767}
+  - component: {fileID: 1307151413288406125}
   m_Layer: 0
   m_Name: bow
   m_TagString: weapon
@@ -117,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896140d1aa644487bb0c526885d1c361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_animator: {fileID: 0}
 --- !u!65 &-4051637164999170125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,3 +147,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1307151413288406125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721164107138238486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d916b0e2a4769bf48ad309584ac6a5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

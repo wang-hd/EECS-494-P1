@@ -9,7 +9,6 @@ public class OpenWithKey : MonoBehaviour
     {
         if (other.CompareTag("player"))
         {
-            Debug.Log("Player hit locked door");
             Inventory playerInventory = other.GetComponent<Inventory>();
             if (playerInventory != null && playerInventory.get_keys() > 0) {
                 if (!Inventory.god_mode) playerInventory.add_keys(-1);

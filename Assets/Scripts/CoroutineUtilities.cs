@@ -25,4 +25,29 @@ public class CoroutineUtilities
 
         target.position = dest_pos;
     }
+
+    public static bool InCurrentRoom(Transform transform, Vector3 camera_pos)
+    {
+        if (transform.position.x > camera_pos.x + 6.5)
+        {
+            return false;
+        }
+        else if (transform.position.x < camera_pos.x - 6.5)
+        {
+            return false;
+        }
+        else if (transform.position.y > camera_pos.y + 2)
+        {
+            return false;
+        }
+        else if (transform.position.y < camera_pos.y - 6)
+        {
+            return false;
+        }
+        else if (Camera.main.transform.position != camera_pos)
+        {
+            return false;
+        }
+        return true;
+    }
 }

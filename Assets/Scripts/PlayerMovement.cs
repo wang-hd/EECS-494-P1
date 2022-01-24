@@ -36,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
             if (player_health.is_full_health())
             {
                 // Spawn full health sword projectile
-                player_attack.attack(direction, "sword");
+                player_attack.createNewWeapon("sword");
             }
             // Attack with melee sword always
+            player_attack.attack();
             StartCoroutine(SetAttacking(1));
         }
         else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             if (player_inventory.get_secondary_weapon() != null)
             {
                 Debug.Log(player_inventory.get_secondary_weapon().name);
-                player_attack.attack(direction, player_inventory.get_secondary_weapon().name);
+                player_attack.createNewWeapon(player_inventory.get_secondary_weapon().name);
                 StartCoroutine(SetAttacking(2));
             }
         }

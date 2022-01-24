@@ -7,6 +7,7 @@ public class RoomTransition : MonoBehaviour
     Camera cam;
     GameObject player;
     PlayerMovement player_control;
+    Animator player_anim;
     readonly Vector3 cameraNorth = new Vector3(0, 11, 0);
     readonly Vector3 cameraEast = new Vector3(16, 0, 0);
     readonly Vector3 cameraSouth = new Vector3(0, -11, 0);
@@ -29,6 +30,7 @@ public class RoomTransition : MonoBehaviour
         cam = Camera.main;
         player = GameObject.Find("Player");
         player_control = player.GetComponent<PlayerMovement>();
+        player_anim = player.GetComponent<Animator>();
         prevTransition = empty;
     }
 
@@ -149,7 +151,9 @@ public class RoomTransition : MonoBehaviour
         );
 
         // Wait for player to finish moving
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
+        player_anim.speed = 0.0f;
+        yield return new WaitForSeconds(0.3f);
 
         player.GetComponent<BoxCollider>().enabled = true;
         player_control.enabled = true;

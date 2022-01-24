@@ -41,7 +41,7 @@ public class PlayerInteraction : MonoBehaviour
         GameObject object_collider_with = other.gameObject;
         if (object_collider_with.CompareTag("enemy"))
         {
-            EnemyController enemy = object_collider_with.GetComponent<EnemyController>();
+            EnemyInteraction enemy = object_collider_with.GetComponent<EnemyInteraction>();
 
             if (!is_invincible)
             {
@@ -93,7 +93,7 @@ public class PlayerInteraction : MonoBehaviour
         player_control.enabled = true;
         is_invincible = false;
     }
-    
+
     IEnumerator change_color()
     {
         Color player_origin_color = player_sprite.color;

@@ -6,7 +6,8 @@ public class BladeController : MonoBehaviour
 {
     public int rayDirectionInt;
     public Vector3 destination;
-    float speed = 10f;
+    float attackSpeed = 10f;
+    float returnSpeed = 5f;
     Vector2 rayDirection;
     int layerMask = 1 << 6; // set the layer mask to detct only layer 6 (player)
     int motion = 0; // set the movement of blade
@@ -27,11 +28,11 @@ public class BladeController : MonoBehaviour
         
         if (motion == 1)
         {
-            Move(destination);
+            Move(destination, attackSpeed);
         }
         else if (motion == 3)
         {
-            Move(originalPosition);
+            Move(originalPosition, returnSpeed);
         }
         if (transform.position == destination)
         {
@@ -44,7 +45,7 @@ public class BladeController : MonoBehaviour
         }
     }
 
-    void Move(Vector3 target)
+    void Move(Vector3 target, float speed)
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }

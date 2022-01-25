@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     Animator animator;
     Rigidbody player_rb;
     AudioSource audioSource;
+    Collider collider;
     bool is_invincible = false;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class PlayerInteraction : MonoBehaviour
 
         animator = GetComponent<Animator>();
         audioSource = Camera.main.GetComponent<AudioSource>();
+        collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         GameObject object_collider_with = other.gameObject;
-        if (object_collider_with.CompareTag("enemy"))
+        if (object_collider_with.CompareTag("enemy") || object_collider_with.CompareTag("bladetrap"))
         {
             if (!is_invincible)
             {
@@ -78,6 +80,8 @@ public class PlayerInteraction : MonoBehaviour
     {
         is_invincible = true;
         player_control.enabled = false;
+        Physics.IgnoreLayerCollision(6, 7, true);
+        Physics.IgnoreLayerCollision(6, 8, true);
 
         player_hit.hit_stun(enemy);
         AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
@@ -86,5 +90,8 @@ public class PlayerInteraction : MonoBehaviour
 
         player_control.enabled = true;
         is_invincible = false;
+        Physics.IgnoreLayerCollision(6, 7, false);
+        Physics.IgnoreLayerCollision(6, 8, false);
+
     }
 }

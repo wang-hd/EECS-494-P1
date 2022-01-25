@@ -7,6 +7,8 @@ public class HitInteraction : MonoBehaviour
     public float hit_force = 5f;
     Rigidbody rb;
     SpriteRenderer sprite;
+    int direction = 0;
+    Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,21 @@ public class HitInteraction : MonoBehaviour
     }
 
     private Vector2 returnDirection( GameObject ObjectHit )
+    {
+        if (gameObject.CompareTag("player"))
+        {
+            direction = PlayerMovement.direction;
+        }
+        else if (gameObject.CompareTag("enemy"))
+        {
+            EnemyGridMovement enemyMovement = gameObject.GetComponent<EnemyGridMovement>();
+            direction = enemyMovement.curr_direction;
+        }
+        return directions[direction];
+    }
+
+    /*
+    private Vector2 returnDirection( GameObject ObjectHit )
     {    
         RaycastHit MyRayHit;
         Vector3 direction = ( transform.position - ObjectHit.transform.position ).normalized;
@@ -54,6 +71,7 @@ public class HitInteraction : MonoBehaviour
         }
         return Vector2.zero;
     }
+    */
 
     IEnumerator change_color(SpriteRenderer sprite)
     {

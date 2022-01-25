@@ -1301,3 +1301,4 @@ Received Import Request.
 Start importing Assets/Resources/Zelda/TLoZ_Trap_Sprite.png using Guid(be18c35488c29db429575ed2ee24c5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb9deb2732b03e7320d25bc51e80973') in 0.058368 seconds 
   Import took 0.061769 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

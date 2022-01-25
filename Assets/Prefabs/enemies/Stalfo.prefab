@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4503677153963554580}
   - component: {fileID: 4361292819118283418}
   - component: {fileID: 3910784169457554851}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Stalfo
   m_TagString: enemy
   m_Icon: {fileID: 0}

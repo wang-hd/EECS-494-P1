@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    Inventory inventory;
-
     public GameObject sword_prefab; //This prefab stores swords
     public GameObject bow_prefab;
     public GameObject boomerang_prefab;
@@ -13,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
     public static int sword_projectiles = 0; // Ensures only one sword at a time
     public static int bow_projectiles = 0; // Only one arrow at a time
     public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
+    Inventory inventory;
+    float melee_damage = 1f;
 
     void Start()
     {
@@ -84,7 +84,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (object_collided.GetComponent<HasHealth>() != null)
                 {
-                    object_collided.GetComponent<EnemyInteraction>().getHit(gameObject);
+                    object_collided.GetComponent<EnemyInteraction>().getHit(gameObject, melee_damage);
                 }
             }
         }

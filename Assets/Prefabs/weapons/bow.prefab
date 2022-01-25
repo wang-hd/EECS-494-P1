@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4051637164999170125}
   - component: {fileID: 375080364148136767}
   - component: {fileID: 1307151413288406125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bow
   m_TagString: weapon
   m_Icon: {fileID: 0}
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896140d1aa644487bb0c526885d1c361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!65 &-4051637164999170125
 BoxCollider:
   m_ObjectHideFlags: 0

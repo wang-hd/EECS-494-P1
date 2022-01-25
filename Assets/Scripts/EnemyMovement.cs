@@ -2,36 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public abstract class EnemyMovement : MonoBehaviour
 {
     // TODO TODO: REFACTOR THIS
     public float speed = 2f;
-    Vector3 init_camera_pos;
-    protected Vector2 waypoint;
+    public Vector2 waypoint;
+    public Vector3 init_camera_pos;
+    public LayerMask enemyLayer;
+    protected Rigidbody rb;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
+        rb = GetComponent<Rigidbody>();
         init_camera_pos = Camera.main.transform.position;
         SetNewDestination();
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
         {
             MoveTowardsDestination();
         }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
+
+    public virtual void OnDisable()
+    {
+        rb.velocity = Vector3.zero;
     }
 
     public virtual void MoveTowardsDestination()
     {
-        transform.position = Vector2.MoveTowards(transform.position, waypoint, speed*Time.deltaTime);
-        if (Vector2.Distance(transform.position, waypoint) == 0)
-        {
-            SetNewDestination();
-        }
+        // something
     }
 
     public virtual void SetNewDestination()

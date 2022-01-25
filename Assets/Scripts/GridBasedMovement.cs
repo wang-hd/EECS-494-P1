@@ -5,16 +5,20 @@ using UnityEngine;
 public class GridBasedMovement : MonoBehaviour
 {
     // TODO: REFACTOR TO WORK WITH ENEMIES AS WELL
-    
+    public static readonly int up = 0;
+    public static readonly int right = 1;
+    public static readonly int down = 2;
+    public static readonly int left = 3;
+
     // When collider with an object, the player will adjust to the nearest half-tile
-    private void Update()
+    public void AdjustPosition(int curr_direction)
     {
         // original position of player
         float horizontal_position = transform.position.x;
         float vertical_position = transform.position.y;
 
         // if collider with an object horizontally, adjust player to nearest vertical half-tile
-        if (Input.GetAxisRaw("Horizontal")!=0.0f)
+        if (curr_direction == left || curr_direction == right)
         {
             float deviation_with_tile = vertical_position % 1f;
             float new_vertical_position = vertical_position;
@@ -32,8 +36,8 @@ public class GridBasedMovement : MonoBehaviour
             }
             transform.position = new Vector2(horizontal_position, new_vertical_position);
         }
-
-        if (Input.GetAxisRaw("Vertical")!=0.0f)
+        
+        if (curr_direction == up || curr_direction == down)
         {
             float deviation_with_tile = horizontal_position % 1f;
             float new_horizontal_position = horizontal_position;

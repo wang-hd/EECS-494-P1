@@ -7,25 +7,23 @@ public class PlayerMovement : MonoBehaviour
 
     public float Movement_speed = 4;
     public static int direction;
+    GridBasedMovement grid;
     Rigidbody rb;
     Inventory player_inventory;
     PlayerAttack player_attack;
     HasHealth player_health;
     Animator animator;
-    readonly int up = 0;
-    readonly int right = 1;
-    readonly int down = 2;
-    readonly int left = 3;
 
     // Start is called before the first frame update
     void Start()
     {
+        grid = GetComponent<GridBasedMovement>();
         rb = GetComponent<Rigidbody>();
         player_inventory = GetComponent<Inventory>();
         player_attack = GetComponent<PlayerAttack>();
         player_health = GetComponent<HasHealth>();
         animator = GetComponent<Animator>();
-        direction = up;
+        direction = GridBasedMovement.up;
     }
 
     // Update is called once per frame
@@ -56,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
             Vector2 current_input = GetMovementInput();
             rb.velocity = current_input * Movement_speed;
             SetAnimationAndDirection(current_input.x, current_input.y);
+            grid.AdjustPosition(direction);
         }
     }
 
@@ -97,19 +96,19 @@ public class PlayerMovement : MonoBehaviour
     private void SetDirection(float horizontal, float vertical) {
         if (vertical > 0)
         {
-            direction = up;
+            direction = GridBasedMovement.up;
         }
         else if (horizontal > 0)
         {
-            direction = right;
+            direction = GridBasedMovement.right;
         }
         else if (vertical < 0)
         {
-            direction = down;
+            direction = GridBasedMovement.down;
         }
         else if (horizontal < 0)
         {
-            direction = left;
+            direction = GridBasedMovement.left;
         }
         // If the player is not moving, keep previous direction
     }

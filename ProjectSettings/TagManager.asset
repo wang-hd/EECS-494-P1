@@ -4,28 +4,29 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - weapon
+  - health
+  - enemy
+  - rupee
+  - key
+  - bomb
+  - weapon_b
   - player
   - SouthDoor
   - WestDoor
   - EastDoor
   - NorthDoor
-  - key
-  - health
-  - rupee
-  - enemy
-  - bomb
-  - weapon
-  - weapon_b
+  - bladetrap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - enemy
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - player
+  - enemy
+  - bladetrap
   - 
   - 
   - 

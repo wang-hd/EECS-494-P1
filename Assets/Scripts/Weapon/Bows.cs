@@ -5,46 +5,35 @@ using UnityEngine;
 //TODO: This is for the bow 
 public class Bows : Weapon
 {
-    public Animator player_animator;
-    Inventory inventory;
-    string name = "bow";
-    int number = 2;
+    int bow_projectiles = 0;
+    Vector3 init_camera_pos;
 
     void Start()
     {
-        inventory = GetComponentInParent<Inventory>();
-        player_animator = GameObject.Find("Player").GetComponent<Animator>();
+        PlayerAttack.bow_projectiles++;
+        bow_projectiles = PlayerAttack.bow_projectiles;
+        init_camera_pos = Camera.main.transform.position;
     }
 
-
-    // Attack and consume a rupee as ammo. Do not attack if no rupees.
-    public override void attack(int direction, float horizontal,float vertical){
-        if (inventory != null && inventory.get_rupees() > 0)
-        {
-            inventory.add_rupees(-1);
-            StartCoroutine(WaitAndPrint(0.2f));
-
-            player_animator.SetInteger("no_of_weapon", number);
-            player_animator.SetBool("is_attack", true);
-            base.swapIn(direction, horizontal, vertical);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+    void OnDestroy()
+    {
+        PlayerAttack.bow_projectiles--;
     }
 
-    public override IEnumerator WaitAndPrint(float waitTime){
-        yield return new WaitForSeconds(waitTime);
-        player_animator.SetBool("is_attack", false);
+    void Update()
+    {
+        if (!CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        {
+            transform.position = Vector3.zero;
+            if (bow_projectiles > 1)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-        if (other.CompareTag("enemy"))
-        {
-            Destroy(gameObject);
-        }
     }
 }

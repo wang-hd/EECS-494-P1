@@ -22,7 +22,7 @@ public class TextDisplayer : MonoBehaviour
     {
         if (gameObject.name == "HealthText")
         {
-            text_component.text = player_health.get_health().ToString();
+            text_component.text = "x " + player_health.get_health().ToString();
         }
         if (gameObject.name == "RupeeText")
         {

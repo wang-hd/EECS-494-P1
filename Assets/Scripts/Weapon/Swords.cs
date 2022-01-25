@@ -5,29 +5,31 @@ using UnityEngine;
 // TODO: This class is an inheritance of weapon class, which is for swords.
 public class Swords : Weapon
 {
-    public Animator player_animator;
-    public HasHealth player_health;
+    int sword_projectiles = 0;
+    Vector3 init_camera_pos;
 
-    string name = "sword";
-    int number = 1;
-
-    //TODO: if player has full health, then call the shooting function of weapon;
-    public override void attack(int direction, float horizontal,float vertical){
-        StartCoroutine(WaitAndPrint(0.2f));
-
-        player_animator.SetInteger("no_of_weapon", number);
-        player_animator.SetBool("is_attack", true);
-        
-        // player has full health, call the shooting function from the base
-        if (player_health.is_full_health())
-        {
-            base.swapIn(direction,horizontal,vertical);
-        }
+    void Start()
+    {
+        PlayerAttack.sword_projectiles++;
+        sword_projectiles = PlayerAttack.sword_projectiles;
+        init_camera_pos = Camera.main.transform.position;
     }
 
-    public override IEnumerator WaitAndPrint(float waitTime){
-        yield return new WaitForSeconds(waitTime);
-        player_animator.SetBool("is_attack", false);
+    void OnDestroy()
+    {
+        PlayerAttack.sword_projectiles--;
+    }
+
+    void Update()
+    {
+        if (!CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        {
+            transform.position = Vector3.zero;
+            if (sword_projectiles > 1)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public override void OnTriggerEnter(Collider other)

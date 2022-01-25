@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5047543252503864904}
   - component: {fileID: 2857111113571750054}
   - component: {fileID: 6134226902682934046}
-  - component: {fileID: 4503677153963554580}
   - component: {fileID: 4361292819118283418}
   - component: {fileID: 3910784169457554851}
+  - component: {fileID: -7407526059055450696}
   m_Layer: 7
   m_Name: Stalfo
   m_TagString: enemy
@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881114e5e72b0b543867d8aa33880929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit_force: 5
+  rb: {fileID: 5047543252503864904}
+  sprite: {fileID: 4872193946279347272}
   enemy_death_sound: {fileID: 8300000, guid: 41555a2bb885acc4182ef74636745de3, type: 3}
 --- !u!114 &6134226902682934046
 MonoBehaviour:
@@ -166,23 +169,10 @@ MonoBehaviour:
   speed: 1
   waypoint: {x: 0, y: 0}
   init_camera_pos: {x: 0, y: 0, z: 0}
-  enemyLayer:
+  enemyAndPlayerLayer:
     serializedVersion: 2
-    m_Bits: 200
-  curr_direction: 0
---- !u!114 &4503677153963554580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5017442264409282225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be4d08de6609c947b72b9e28629e21c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hit_force: 5
+    m_Bits: 448
+  direction: 0
 --- !u!114 &4361292819118283418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +198,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_health: 2
+--- !u!114 &-7407526059055450696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5017442264409282225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7f83260b7ab714487193449769f16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  threshold: 0

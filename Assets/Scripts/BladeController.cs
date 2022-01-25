@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BladeController : MonoBehaviour
+public class BladeController : EnemyMovement
 {
     public int rayDirectionInt;
     public Vector3 destination;
-    float attackSpeed = 10f;
-    float returnSpeed = 5f;
+    float attackSpeed = 8f;
+    float returnSpeed = 2f;
     Vector2 rayDirection;
     int layerMask = 1 << 6; // set the layer mask to detct only layer 6 (player)
     int motion = 0; // set the movement of blade
     Vector3 originalPosition;
     readonly Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
-    private void Start() {
+    public override void Start() {
         originalPosition = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         if (motion == 0)
         {

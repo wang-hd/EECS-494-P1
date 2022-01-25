@@ -5,21 +5,15 @@ using UnityEngine;
 public class HitInteraction : MonoBehaviour
 {
     public float hit_force = 5f;
-    Rigidbody rb;
-    SpriteRenderer sprite;
-    int direction = 0;
+    public Rigidbody rb;
+    public SpriteRenderer sprite;
+    public int last_hit = 0;
     Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
-    // Start is called before the first frame update
-    void Start()
+
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void hit_stun(GameObject enemy)
@@ -37,6 +31,7 @@ public class HitInteraction : MonoBehaviour
 
     private Vector2 returnDirection( GameObject ObjectHit )
     {
+        int direction = 0;
         if (gameObject.CompareTag("player"))
         {
             direction = PlayerMovement.direction;
@@ -44,8 +39,9 @@ public class HitInteraction : MonoBehaviour
         else if (gameObject.CompareTag("enemy"))
         {
             EnemyGridMovement enemyMovement = gameObject.GetComponent<EnemyGridMovement>();
-            direction = enemyMovement.curr_direction;
+            direction = enemyMovement.direction;
         }
+
         return directions[direction];
     }
 

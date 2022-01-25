@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyGridMovement : EnemyMovement
 {
-    public int curr_direction;
+    public int direction;
     GridBasedMovement grid;
     Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
@@ -17,17 +17,17 @@ public class EnemyGridMovement : EnemyMovement
     public override void Update()
     {
         base.Update();
-        grid.AdjustPosition(curr_direction);
+        grid.AdjustPosition(direction);
     }
 
     public override void MoveTowardsDestination()
     {
         // transform.position = Vector2.MoveTowards(transform.position, waypoint, speed*Time.deltaTime);
-        if ((curr_direction == GridBasedMovement.up || curr_direction == GridBasedMovement.down) && transform.position.x != waypoint.x)
+        if ((direction == GridBasedMovement.up || direction == GridBasedMovement.down) && transform.position.x != waypoint.x)
         {
             SetNewDestination();
         }
-        else if ((curr_direction == GridBasedMovement.right || curr_direction == GridBasedMovement.left) && transform.position.y != waypoint.y)
+        else if ((direction == GridBasedMovement.right || direction == GridBasedMovement.left) && transform.position.y != waypoint.y)
         {
             SetNewDestination();
         }
@@ -50,7 +50,7 @@ public class EnemyGridMovement : EnemyMovement
         RaycastHit hit;
         Ray detect = new Ray(transform.position, new_direction);
         int move_distance =  0;
-        if (Physics.Raycast(detect, out hit, 100f, ~enemyLayer))
+        if (Physics.Raycast(detect, out hit, 100f, ~enemyAndPlayerLayer))
         {
             move_distance = Random.Range(0, Mathf.FloorToInt(hit.distance));
             //Debug.Log("distance = " + move_distance);
@@ -61,22 +61,22 @@ public class EnemyGridMovement : EnemyMovement
         //Debug.Log(waypoint.ToString());
     }
 
-    private void SetCurrentDirection(Vector2 direction) {
-        if (direction == Vector2.up)
+    private void SetCurrentDirection(Vector2 new_direction) {
+        if (new_direction == Vector2.up)
         {
-            curr_direction = GridBasedMovement.up;
+            direction = GridBasedMovement.up;
         }
-        else if (direction == Vector2.right)
+        else if (new_direction == Vector2.right)
         {
-            curr_direction = GridBasedMovement.right;
+            direction = GridBasedMovement.right;
         }
-        else if (direction == Vector2.down)
+        else if (new_direction == Vector2.down)
         {
-            curr_direction = GridBasedMovement.down;
+            direction = GridBasedMovement.down;
         }
-        else if (direction == Vector2.left)
+        else if (new_direction == Vector2.left)
         {
-            curr_direction = GridBasedMovement.left;
+            direction = GridBasedMovement.left;
         }
     }
 }

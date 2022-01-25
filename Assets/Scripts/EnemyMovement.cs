@@ -8,13 +8,15 @@ public abstract class EnemyMovement : MonoBehaviour
     public float speed = 2f;
     public Vector2 waypoint;
     public Vector3 init_camera_pos;
-    public LayerMask enemyLayer;
+    public LayerMask enemyAndPlayerLayer;
     protected Rigidbody rb;
+    Animator animator;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         init_camera_pos = Camera.main.transform.position;
         SetNewDestination();
     }
@@ -24,11 +26,14 @@ public abstract class EnemyMovement : MonoBehaviour
     {
         if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
         {
+            Debug.Log(waypoint);
+            animator.speed = 1;
             MoveTowardsDestination();
         }
         else
         {
             rb.velocity = Vector3.zero;
+            animator.speed = 0;
         }
     }
 

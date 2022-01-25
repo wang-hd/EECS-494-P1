@@ -5,7 +5,7 @@ using UnityEngine;
 // TODO: This class represents all types of weapon
 public class Weapon : MonoBehaviour
 {
-    public float damage = 1f;
+    public int damage = 1;
     // TODO: destroy or give every object a certain hurt when it collide with the enemy
     public virtual void OnTriggerEnter(Collider other) {
         //if other's tag is enemy

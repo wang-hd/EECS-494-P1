@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public int damage = 1;
+    public int threshold = 5;
     EnemyMovement enemyMovement;
     // Start is called before the first frame update
     void Start()
@@ -22,13 +24,14 @@ public class EnemyAttack : MonoBehaviour
     {
         while (true)
         {
-            if (Random.Range(0, 99) < 5)
+            if (Random.Range(0, 100) < threshold)
             {
                 enemyMovement.enabled = false;
                 // do some attack e.g. throw a boomerang
                 yield return new WaitForSeconds(0.5f);
                 enemyMovement.enabled = true;
-            } 
+            }
+            yield return null;
         }  
     }
 }

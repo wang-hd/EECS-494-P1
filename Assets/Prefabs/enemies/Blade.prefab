@@ -116,8 +116,10 @@ MonoBehaviour:
   enemyAndPlayerLayer:
     serializedVersion: 2
     m_Bits: 0
-  rayDirectionInt: 1
-  destination: {x: 39.5, y: 4, z: 0}
+  rayDirectionInt1: 0
+  destination1: {x: 0, y: 0, z: 0}
+  rayDirectionInt2: 0
+  destination2: {x: 0, y: 0, z: 0}
 --- !u!114 &3719248160239905795
 MonoBehaviour:
   m_ObjectHideFlags: 0

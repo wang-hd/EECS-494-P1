@@ -24,9 +24,8 @@ public abstract class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        if (CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
-            Debug.Log(waypoint);
             animator.speed = 1;
             MoveTowardsDestination();
         }

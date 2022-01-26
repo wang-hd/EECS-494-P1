@@ -17,7 +17,7 @@ public class CollectableDespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
             if (despawnOnExit)
             {
@@ -28,12 +28,15 @@ public class CollectableDespawn : MonoBehaviour
 
     IEnumerator Lifespan()
     {
-        if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        while (true)
         {
-            yield return new WaitForSeconds(1);
-            lifetime -= 1;
+            if (CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
+            {
+                yield return new WaitForSeconds(1);
+                lifetime -= 1;
 
-            if (lifetime == 0) Destroy(gameObject);
+                if (lifetime == 0) Destroy(gameObject);
+            }
         }
     }
 }

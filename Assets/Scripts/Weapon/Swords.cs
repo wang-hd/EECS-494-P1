@@ -22,7 +22,7 @@ public class Swords : Weapon
 
     void Update()
     {
-        if (!CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
             transform.position = Vector3.zero;
             if (sword_projectiles > 1)

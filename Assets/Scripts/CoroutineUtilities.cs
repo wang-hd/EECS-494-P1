@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CoroutineUtilities
 {
+    public static float room_y_upper_bound = 1;
+    public static float room_y_lower_bound = -5;
+    public static float room_x_upper_bound = 5.75f;
+    public static float room_x_lower_bound = -5.75f;
     public static IEnumerator MoveObjectOverTime(Transform target, Vector3 initial_pos, Vector3 dest_pos, float duration_sec)
     {
         float initial_time = Time.time;
@@ -26,21 +30,21 @@ public class CoroutineUtilities
         target.position = dest_pos;
     }
 
-    public static bool InCurrentRoom(Transform transform, Vector3 camera_pos)
+    public static bool InCurrentRoom(Vector3 position, Vector3 camera_pos)
     {
-        if (transform.position.x > camera_pos.x + 6.5)
+        if (position.x > camera_pos.x + room_x_upper_bound)
         {
             return false;
         }
-        else if (transform.position.x < camera_pos.x - 6.5)
+        else if (position.x < camera_pos.x + room_x_lower_bound)
         {
             return false;
         }
-        else if (transform.position.y > camera_pos.y + 2)
+        else if (position.y > camera_pos.y + room_y_upper_bound)
         {
             return false;
         }
-        else if (transform.position.y < camera_pos.y - 6)
+        else if (position.y < camera_pos.y + room_y_lower_bound)
         {
             return false;
         }

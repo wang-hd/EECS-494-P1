@@ -7,21 +7,6 @@ public class Weapon : MonoBehaviour
 {
     public int damage = 1;
 
-    // TODO: When every weapons are created, it will move with players
-    // 1. it will get the player's direction and position by link the player to this
-    // 2. it will change its direction and position according to the player
-    // 3. direction should be sent to the animator
-    void Update(){
-
-    }
-
-    // TODO: This function is used when the player is going to attack
-    // 1. the weapon should be able to collide and it should be Visible
-    // 2. then the remaining function would be implemented by the subclass
-    public virtual void attack(){
-
-    }
-
     public virtual void setProjectile(){
 
     }

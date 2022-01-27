@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerAttack player_attack;
     HasHealth player_health;
     Animator animator;
-    GameObject sword;
+    GameObject created_weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -32,24 +32,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack")) // placeholder
         {
-            Debug.Log("Press X!");
-            if (player_health.is_full_health())
-            {
-                // Spawn full health sword projectile
-                player_attack.createNewWeapon("sword",true);
-            }
-            // Attack with melee sword always
-            sword = player_attack.createNewWeapon("sword",false);
-            Debug.Log("Sword in hand has been created!");
-            StartCoroutine(SetAttacking(1));
+            Attack("sword");
         }
         else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
         {
             if (player_inventory.get_secondary_weapon() != null)
             {
                 Debug.Log(player_inventory.get_secondary_weapon().name);
-                player_attack.createNewWeapon(player_inventory.get_secondary_weapon().name,false);
-                StartCoroutine(SetAttacking(2));
+                Attack(player_inventory.get_secondary_weapon().name);
             }
         }
         else
@@ -70,6 +60,33 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return new Vector2(horizontal_input, vertical_input);
+    }
+
+    void Attack(string weapon_name)
+    {
+        Debug.Log("attack has entered!");
+        switch(weapon_name)
+        {
+            case "sword":
+              if (player_health.is_full_health())
+                {
+                    // Spawn full health sword projectile
+                    player_attack.createNewWeapon("sword",true);
+                }
+                // Attack with melee sword always
+                created_weapon = player_attack.createNewWeapon("sword",false);
+                Debug.Log("Sword in hand has been created!");
+                StartCoroutine(SetAttacking(1));
+                break;
+            case "boomerang":
+                Debug.Log("some weapon will be added!");
+                player_attack.createNewWeapon(weapon_name,false);
+                StartCoroutine(SetAttacking(2));
+                Debug.Log("some weapon has been added!");
+                break;
+
+        }
+
     }
 
     void SetAnimationAndDirection(float horizontal, float vertical)
@@ -93,8 +110,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("is_attack", false);
-        Destroy(sword);
-        Debug.Log("Sword in hand has been destroyed");
+        if(created_weapon!=null)
+        {
+            Destroy(created_weapon);
+        }
     }
 
     private void SetDirection(float horizontal, float vertical) {

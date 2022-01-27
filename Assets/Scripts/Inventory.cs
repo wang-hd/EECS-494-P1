@@ -15,10 +15,10 @@ public class Inventory : MonoBehaviour
     public GameObject bomb_prefab;
 
     public static bool god_mode = false;
-    
+
     void Start()
     {
-        weapons.Add(bomb_prefab);
+        weapons.Add(boomerang_prefab);
     }
 
     void Update() {
@@ -72,6 +72,8 @@ public class Inventory : MonoBehaviour
 
     public GameObject get_secondary_weapon()
     {
+        Debug.Log(weapons[secondary_index].name);
+        Debug.Log(weapons.Count);
         if (weapons.Count == 0) return null;
         return weapons[secondary_index];
     }

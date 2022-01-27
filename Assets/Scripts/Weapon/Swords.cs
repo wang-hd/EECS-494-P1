@@ -27,7 +27,6 @@ public class Swords : Weapon
         {
           direction = PlayerMovement.direction;
           GetComponent<Animator>().SetInteger("direction", direction);
-          GetComponent<Animator>().SetBool("is_attack", true);
         }
     }
 

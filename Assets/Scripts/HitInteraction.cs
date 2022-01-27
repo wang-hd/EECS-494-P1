@@ -7,7 +7,7 @@ public class HitInteraction : MonoBehaviour
     public float hit_force = 5f;
     public Rigidbody rb;
     public SpriteRenderer sprite;
-    public int last_hit = 0;
+    public float last_hit = 0;
     Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
     public virtual void Start()

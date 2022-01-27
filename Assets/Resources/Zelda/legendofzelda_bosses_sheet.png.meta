@@ -1,0 +1,1608 @@
+fileFormatVersion: 2
+guid: e9be75f9b202abf4986fef050ae23c66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1989299930668201901
+    second: legendofzelda_bosses_sheet_0
+  - first:
+      213: 8182951485039469305
+    second: legendofzelda_bosses_sheet_1
+  - first:
+      213: -2074501784636037956
+    second: legendofzelda_bosses_sheet_2
+  - first:
+      213: -1669250580148070665
+    second: legendofzelda_bosses_sheet_3
+  - first:
+      213: 5982398679223688104
+    second: legendofzelda_bosses_sheet_4
+  - first:
+      213: 4387870741220648107
+    second: legendofzelda_bosses_sheet_5
+  - first:
+      213: 4927549360358219892
+    second: legendofzelda_bosses_sheet_6
+  - first:
+      213: 956074009516167475
+    second: legendofzelda_bosses_sheet_7
+  - first:
+      213: -7183205399249953005
+    second: legendofzelda_bosses_sheet_8
+  - first:
+      213: 6263334203217824180
+    second: legendofzelda_bosses_sheet_9
+  - first:
+      213: -469066545438762390
+    second: legendofzelda_bosses_sheet_10
+  - first:
+      213: -4017299351579360290
+    second: legendofzelda_bosses_sheet_11
+  - first:
+      213: -565643000855010319
+    second: legendofzelda_bosses_sheet_12
+  - first:
+      213: -6977913335028255177
+    second: legendofzelda_bosses_sheet_13
+  - first:
+      213: 3268335387357636828
+    second: legendofzelda_bosses_sheet_14
+  - first:
+      213: 4984667435263797517
+    second: legendofzelda_bosses_sheet_15
+  - first:
+      213: 2773802477385432596
+    second: legendofzelda_bosses_sheet_16
+  - first:
+      213: -940661556434556408
+    second: legendofzelda_bosses_sheet_17
+  - first:
+      213: -2717556254928192372
+    second: legendofzelda_bosses_sheet_18
+  - first:
+      213: -8262455058779659266
+    second: legendofzelda_bosses_sheet_19
+  - first:
+      213: -73334271294853185
+    second: legendofzelda_bosses_sheet_20
+  - first:
+      213: -1119770891656486497
+    second: legendofzelda_bosses_sheet_21
+  - first:
+      213: -553730969017907445
+    second: legendofzelda_bosses_sheet_22
+  - first:
+      213: -2582074123944131827
+    second: legendofzelda_bosses_sheet_23
+  - first:
+      213: 6724555853221422973
+    second: legendofzelda_bosses_sheet_24
+  - first:
+      213: -5232906579051648431
+    second: legendofzelda_bosses_sheet_25
+  - first:
+      213: 4659644336629319531
+    second: legendofzelda_bosses_sheet_26
+  - first:
+      213: 3209980005837534250
+    second: legendofzelda_bosses_sheet_27
+  - first:
+      213: 2169137671951569829
+    second: legendofzelda_bosses_sheet_28
+  - first:
+      213: -3037354114971256856
+    second: legendofzelda_bosses_sheet_29
+  - first:
+      213: 416666577643323554
+    second: legendofzelda_bosses_sheet_30
+  - first:
+      213: 3163038228708185651
+    second: legendofzelda_bosses_sheet_31
+  - first:
+      213: 3513779739173371798
+    second: legendofzelda_bosses_sheet_32
+  - first:
+      213: -1809365110668564897
+    second: legendofzelda_bosses_sheet_33
+  - first:
+      213: -5909283033853094067
+    second: legendofzelda_bosses_sheet_34
+  - first:
+      213: 2894341002061778822
+    second: legendofzelda_bosses_sheet_35
+  - first:
+      213: 5075784341011149642
+    second: legendofzelda_bosses_sheet_36
+  - first:
+      213: 2684902313764485504
+    second: legendofzelda_bosses_sheet_37
+  - first:
+      213: 1851628044841389155
+    second: legendofzelda_bosses_sheet_38
+  - first:
+      213: 1013628802623086588
+    second: legendofzelda_bosses_sheet_39
+  - first:
+      213: 4303842814292057325
+    second: legendofzelda_bosses_sheet_40
+  - first:
+      213: -1592377573648760275
+    second: legendofzelda_bosses_sheet_41
+  - first:
+      213: -635564262140320820
+    second: legendofzelda_bosses_sheet_42
+  - first:
+      213: 6650420910312879254
+    second: legendofzelda_bosses_sheet_43
+  - first:
+      213: -3742540176825681217
+    second: legendofzelda_bosses_sheet_44
+  - first:
+      213: 192823826496799371
+    second: legendofzelda_bosses_sheet_45
+  - first:
+      213: -5285599148597037942
+    second: legendofzelda_bosses_sheet_46
+  - first:
+      213: -5551668177612773279
+    second: legendofzelda_bosses_sheet_47
+  - first:
+      213: -2507657210644466785
+    second: legendofzelda_bosses_sheet_48
+  - first:
+      213: -8625372491844253468
+    second: legendofzelda_bosses_sheet_49
+  - first:
+      213: -523498047397715824
+    second: legendofzelda_bosses_sheet_50
+  - first:
+      213: -1067930379532924187
+    second: legendofzelda_bosses_sheet_51
+  - first:
+      213: -1759360439204241487
+    second: legendofzelda_bosses_sheet_52
+  - first:
+      213: 6698976748622062067
+    second: legendofzelda_bosses_sheet_53
+  - first:
+      213: 3145654482314406172
+    second: legendofzelda_bosses_sheet_54
+  - first:
+      213: -4167340692521821934
+    second: legendofzelda_bosses_sheet_55
+  - first:
+      213: -7755098370841095906
+    second: legendofzelda_bosses_sheet_56
+  - first:
+      213: -6861743367295222271
+    second: legendofzelda_bosses_sheet_57
+  - first:
+      213: 970357594037868942
+    second: legendofzelda_bosses_sheet_58
+  - first:
+      213: -8873412544318218873
+    second: legendofzelda_bosses_sheet_59
+  - first:
+      213: -5466653682372970826
+    second: legendofzelda_bosses_sheet_60
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 311
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35800d8b0469464e0800000000000000
+      internalID: -1989299930668201901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 311
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f26800450faf8170800000000000000
+      internalID: 8182951485039469305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 311
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4ead83e93e533e0800000000000000
+      internalID: -2074501784636037956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 311
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6d8210171a5d8e0800000000000000
+      internalID: -1669250580148070665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8abd4e317efb50350800000000000000
+      internalID: 5982398679223688104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 319
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba469c2f039d4ec30800000000000000
+      internalID: 4387870741220648107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 311
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470ea55390c226440800000000000000
+      internalID: 4927549360358219892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 311
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331d1340f38a44d00800000000000000
+      internalID: 956074009516167475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 264
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fd9056fb0205c90800000000000000
+      internalID: -7183205399249953005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 265
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b94a54f545dbe650800000000000000
+      internalID: 6263334203217824180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 264
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a5a1f467a8d79f0800000000000000
+      internalID: -469066545438762390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 291
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed384b8368faf38c0800000000000000
+      internalID: -4017299351579360290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 263
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3e95800be6628f0800000000000000
+      internalID: -565643000855010319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 263
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736fd28dac8792f90800000000000000
+      internalID: -6977913335028255177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 236
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd86a4ae7b57b5d20800000000000000
+      internalID: 3268335387357636828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 237
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d092b5a5f981d2540800000000000000
+      internalID: 4984667435263797517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 236
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e38ad28a68e7620800000000000000
+      internalID: 2773802477385432596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 237
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a2ada5c4912f2f0800000000000000
+      internalID: -940661556434556408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 236
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c3ddffbfc494ad0800000000000000
+      internalID: -2717556254928192372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 236
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef32fc086ecd55d80800000000000000
+      internalID: -8262455058779659266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 236
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfab996ed67bfef0800000000000000
+      internalID: -73334271294853185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 236
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f912efc8e46c570f0800000000000000
+      internalID: -1119770891656486497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 206
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b070e821e90c058f0800000000000000
+      internalID: -553730969017907445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 206
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d030592c341aa2cd0800000000000000
+      internalID: -2582074123944131827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 206
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7769879beb625d50800000000000000
+      internalID: 6724555853221422973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 206
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a62d4013bf067b0800000000000000
+      internalID: -5232906579051648431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 206
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67837816d16aa040800000000000000
+      internalID: 4659644336629319531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 206
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a247d00eec32c8c20800000000000000
+      internalID: 3209980005837534250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 206
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3579558335a1e10800000000000000
+      internalID: 2169137671951569829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 206
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e73118668629d5d0800000000000000
+      internalID: -3037354114971256856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a045367b0c48c500800000000000000
+      internalID: 416666577643323554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 176
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336d121b28e55eb20800000000000000
+      internalID: 3163038228708185651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fb4645e0473c030800000000000000
+      internalID: 3513779739173371798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 176
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f566d9da408d3e6e0800000000000000
+      internalID: -1809365110668564897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 176
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4791f1b3620efda0800000000000000
+      internalID: -5909283033853094067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 176
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f8db67ec3ca2820800000000000000
+      internalID: 2894341002061778822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43b57a27fec07640800000000000000
+      internalID: 5075784341011149642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 176
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0897e8cdd60b24520800000000000000
+      internalID: 2684902313764485504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 146
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c0cec75ed42b910800000000000000
+      internalID: 1851628044841389155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 146
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff147a8602211e00800000000000000
+      internalID: 1013628802623086588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 146
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decdef2ac325abb30800000000000000
+      internalID: 4303842814292057325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 146
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d220e56980db6e9e0800000000000000
+      internalID: -1592377573648760275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc36133cba50e27f0800000000000000
+      internalID: -635564262140320820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694770e159a0b4c50800000000000000
+      internalID: 6650420910312879254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 91
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba7daab983df0cc0800000000000000
+      internalID: -3742540176825681217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 92
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82c292af3c0da200800000000000000
+      internalID: 192823826496799371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 91
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8434c22497c5a6b0800000000000000
+      internalID: -5285599148597037942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 39
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168ec8ad43384f2b0800000000000000
+      internalID: -5551668177612773279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 39
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93f6159d03033dd0800000000000000
+      internalID: -2507657210644466785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 38
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e88238fa658c4880800000000000000
+      internalID: -8625372491844253468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 39
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090af3cac492cb8f0800000000000000
+      internalID: -523498047397715824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea871b5af2fd21f0800000000000000
+      internalID: -1067930379532924187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf1b55800f7597e0800000000000000
+      internalID: -1759360439204241487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f128343cdb87fc50800000000000000
+      internalID: 6698976748622062067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c192774d51c97ab20800000000000000
+      internalID: 3145654482314406172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219d43c38b1aa26c0800000000000000
+      internalID: -4167340692521821934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e115ec7be1b506490800000000000000
+      internalID: -7755098370841095906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10eb97433c036c0a0800000000000000
+      internalID: -6861743367295222271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 12
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89dab13717677d00800000000000000
+      internalID: 970357594037868942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dda66ed4e4bd480800000000000000
+      internalID: -8873412544318218873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendofzelda_bosses_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6f310807b8224b0800000000000000
+      internalID: -5466653682372970826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

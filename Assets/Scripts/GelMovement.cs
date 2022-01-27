@@ -7,7 +7,7 @@ public class GelMovement : EnemyGridMovement
     public override void MoveTowardsDestination()
     {
         Vector3 waypoint_pos = new Vector3(waypoint.x, waypoint.y, 0);
-        transform.Translate(GetDirection(base.direction) * Time.deltaTime);
+        transform.Translate(GetDirection(base.direction) * Time.deltaTime * speed);
         if (Vector3.Distance(transform.position, waypoint_pos) <= 0.05)
         {
             transform.position = waypoint_pos;

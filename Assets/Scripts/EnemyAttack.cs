@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public int damage = 1;
-    public int threshold = 1; // if we don't need an explicit attack animation, set to 0
+    public int threshold = 1; // if we don't have an explicit attack, set to 0
     EnemyMovement enemyMovement;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,14 @@ public class EnemyAttack : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("player"))
+        {
+            other.gameObject.GetComponent<PlayerInteraction>().getHit(gameObject);
+        }
+    }
+
+    void OnCollisionEnter(Collision other) {
+        GameObject object_collider_with = other.gameObject;
+        if (object_collider_with.CompareTag("player"))
         {
             other.gameObject.GetComponent<PlayerInteraction>().getHit(gameObject);
         }

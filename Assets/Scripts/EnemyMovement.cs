@@ -10,13 +10,11 @@ public abstract class EnemyMovement : MonoBehaviour
     public Vector3 init_camera_pos;
     public LayerMask enemyAndPlayerLayer;
     protected Rigidbody rb;
-    Animator animator;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
         init_camera_pos = Camera.main.transform.position;
         SetNewDestination();
     }
@@ -24,19 +22,7 @@ public abstract class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if (CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
-        {
-            animator.speed = 1;
-            MoveTowardsDestination();
-        }
-        else
-        {
-            if (rb != null)
-            {
-                rb.velocity = Vector3.zero;
-            }
-            animator.speed = 0;
-        }
+        MoveTowardsDestination();
     }
 
     public virtual void OnDisable()
@@ -49,7 +35,8 @@ public abstract class EnemyMovement : MonoBehaviour
 
     public virtual void MoveTowardsDestination()
     {
-        // something
+        Vector2 current_pos = new Vector2(transform.position.x, transform.position.y);
+        rb.velocity = (waypoint - current_pos).normalized * speed;
     }
 
     public virtual void SetNewDestination()

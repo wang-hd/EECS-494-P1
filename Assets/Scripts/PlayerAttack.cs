@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
     {
         inventory = GetComponent<Inventory>();
         playerMovement = GetComponent<PlayerMovement>();
+
     }
 
     public GameObject createNewWeapon(string weapon_name, bool is_full_health){
@@ -30,11 +31,32 @@ public class PlayerAttack : MonoBehaviour
         switch(weapon_name)
         {
             case "sword":
-                if (sword_projectiles <= 1)
+                if (is_full_health&&sword_projectiles <= 1)
                 {
                     result = Instantiate(sword_prefab, player_pos, Quaternion.identity);
                     result.GetComponent<Swords>().setProjectile();
                     return result;
+                }else if(!is_full_health)
+                {
+                    Debug.Log("Bugan to make sword!");
+                    switch(PlayerMovement.direction)
+                    {
+                        case 0:
+                            player_pos=player_pos+Vector3.up*0.5f;
+                            break;
+                        case 1:
+                            player_pos=player_pos+Vector3.right*0.5f;
+                            break;
+                        case 2:
+                            player_pos=player_pos+Vector3.down*0.5f;
+                            break;
+                        case 3:
+                            player_pos=player_pos+Vector3.left*0.5f;
+                            break;
+                        default:
+                            break;
+                    }
+                    return Instantiate(sword_prefab, player_pos, Quaternion.identity);
                 }
                 break;
             case "bow":
@@ -60,41 +82,6 @@ public class PlayerAttack : MonoBehaviour
                 break;
         }
         return null;
-    }
-
-    public void attack() {
-        //TODO: This function performs a melee attack in the current direction the player is facing
-        Vector3 attack_dir = Vector3.zero;
-        switch (PlayerMovement.direction)
-        {
-            case 0:
-                attack_dir = Vector3.up;
-                break;
-            case 1:
-                attack_dir = Vector3.right;
-                break;
-            case 2:
-                attack_dir = Vector3.down;
-                break;
-            case 3:
-                attack_dir = Vector3.left;
-                break;
-        }
-
-        // TODO: This part could change by only the weapon touches,
-        // TODO: In this part, create a new weapon and use the projectile function of that.
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 1f);
-        foreach (RaycastHit hit in hits)
-        {
-            GameObject object_collided = hit.collider.gameObject;
-            if (object_collided.CompareTag("enemy"))
-            {
-                if (object_collided.GetComponent<HasHealth>() != null)
-                {
-                    object_collided.GetComponent<EnemyInteraction>().getHit(gameObject, melee_damage);
-                }
-            }
-        }
     }
 
     IEnumerator bowAnimation()

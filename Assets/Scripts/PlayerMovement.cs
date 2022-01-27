@@ -39,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
                 player_attack.createNewWeapon("sword",true);
             }
             // Attack with melee sword always
-            player_attack.attack();
+            sword = player_attack.createNewWeapon("sword",false);
+            Debug.Log("Sword in hand has been created!");
             StartCoroutine(SetAttacking(1));
         }
         else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack")) // placeholder
@@ -89,11 +90,11 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
-      //TODO: This part could be deleted
-        animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.2f);
         animator.SetBool("is_attack", false);
+        Destroy(sword);
+        Debug.Log("Sword in hand has been destroyed");
     }
 
     private void SetDirection(float horizontal, float vertical) {

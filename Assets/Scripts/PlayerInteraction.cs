@@ -11,7 +11,7 @@ public class PlayerInteraction : HitInteraction
     HasHealth health;
     Animator animator;
     AudioSource audioSource;
-    bool is_invincible = false;
+    static bool is_invincible = false;
 
     // Start is called before the first frame update
     public override void Start()
@@ -31,7 +31,7 @@ public class PlayerInteraction : HitInteraction
 
     private void OnCollisionEnter(Collision other) {
         GameObject object_collider_with = other.gameObject;
-        if (object_collider_with.CompareTag("enemy"))
+        if (object_collider_with.CompareTag("enemy") || object_collider_with.CompareTag("bladetrap") || object_collider_with.CompareTag("wallmaster"))
         {
             getHit(object_collider_with);
         }
@@ -87,5 +87,10 @@ public class PlayerInteraction : HitInteraction
 
         player_control.enabled = true;
         Physics.IgnoreLayerCollision(6, 7, false);
+    }
+
+    public static void setPlayerInvincible(bool value)
+    {
+        is_invincible = value;
     }
 }

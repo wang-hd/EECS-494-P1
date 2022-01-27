@@ -26,7 +26,6 @@ public abstract class EnemyMovement : MonoBehaviour
     {
         if (CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
         {
-            Debug.Log(waypoint);
             animator.speed = 1;
             MoveTowardsDestination();
         }

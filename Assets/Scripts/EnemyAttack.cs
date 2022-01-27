@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
     {
         while (true)
         {
-            if (Random.Range(0, 100) < threshold)
+            if (!gameObject.CompareTag("wallmaster") && Random.Range(0, 100) < threshold)
             {
                 enemyMovement.enabled = false;
                 // do some attack e.g. throw a boomerang

@@ -19,17 +19,20 @@ public class PlayerAttack : MonoBehaviour
         inventory = GetComponent<Inventory>();
     }
 
-    public GameObject createNewWeapon(string weapon_name){
+    public GameObject createNewWeapon(string weapon_name, bool is_full_health){
         //INPUT: string - weapon name; bool - which weapon will be substitute
         //TODO: This function creates new weapon according to the input
         // Will not create a weapon if a weapon already exists, to prevent double attacking
         Vector3 player_pos = GameObject.Find("Player").transform.position;
+        GameObject result;
         switch(weapon_name)
         {
             case "sword":
                 if (sword_projectiles <= 1)
                 {
-                    return Instantiate(sword_prefab, player_pos, Quaternion.identity);
+                    result = Instantiate(sword_prefab, player_pos, Quaternion.identity);
+                    result.GetComponent<Swords>().setProjectile();
+                    return result;
                 }
                 break;
             case "bow":
@@ -76,6 +79,8 @@ public class PlayerAttack : MonoBehaviour
                 break;
         }
 
+        // TODO: This part could change by only the weapon touches,
+        // TODO: In this part, create a new weapon and use the projectile function of that.
         RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 1f);
         foreach (RaycastHit hit in hits)
         {

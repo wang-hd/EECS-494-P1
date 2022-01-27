@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerAttack player_attack;
     HasHealth player_health;
     Animator animator;
+    GameObject sword;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         player_health = GetComponent<HasHealth>();
         animator = GetComponent<Animator>();
         direction = GridBasedMovement.up;
+
     }
 
     // Update is called once per frame
@@ -31,10 +33,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack")) // placeholder
         {
+            Debug.Log("Press X!");
             if (player_health.is_full_health())
             {
                 // Spawn full health sword projectile
-                player_attack.createNewWeapon("sword");
+                player_attack.createNewWeapon("sword",true);
             }
             // Attack with melee sword always
             player_attack.attack();
@@ -45,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             if (player_inventory.get_secondary_weapon() != null)
             {
                 Debug.Log(player_inventory.get_secondary_weapon().name);
-                player_attack.createNewWeapon(player_inventory.get_secondary_weapon().name);
+                player_attack.createNewWeapon(player_inventory.get_secondary_weapon().name,false);
                 StartCoroutine(SetAttacking(2));
             }
         }
@@ -58,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    Vector2 GetMovementInput() 
+    Vector2 GetMovementInput()
     {
         float horizontal_input = Input.GetAxisRaw("Horizontal");
         float vertical_input = Input.GetAxisRaw("Vertical");
@@ -87,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
+      //TODO: This part could be deleted
         animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.2f);

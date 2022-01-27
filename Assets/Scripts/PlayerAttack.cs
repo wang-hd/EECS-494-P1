@@ -62,7 +62,6 @@ public class PlayerAttack : MonoBehaviour
                 if (bow_projectiles <= 1 && inventory != null && inventory.get_rupees() > 0)
                 {
                     inventory.add_rupees(-1);
-                    StartCoroutine(bowAnimation());
                     return Instantiate(bow_prefab, transform.position, Quaternion.identity);
                 }
                 break;
@@ -81,11 +80,5 @@ public class PlayerAttack : MonoBehaviour
                 break;
         }
         return null;
-    }
-
-    IEnumerator bowAnimation()
-    {
-        // TODO: spawn a bow sprite on top of the player
-        yield return new WaitForSeconds(0.2f);
     }
 }

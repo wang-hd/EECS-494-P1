@@ -12,7 +12,7 @@ public class Collector : MonoBehaviour
     Inventory inventory;
     HasHealth player_health;
 
-    void Start() 
+    void Start()
     {
         inventory = GetComponent<Inventory>();
         player_health = GetComponent<HasHealth>();
@@ -22,10 +22,10 @@ public class Collector : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider coll) 
+    void OnTriggerEnter(Collider coll)
     {
         GameObject object_collide_with = coll.gameObject;
-        
+
         if (object_collide_with.tag == "rupee")
         {
             if (inventory != null)
@@ -41,7 +41,7 @@ public class Collector : MonoBehaviour
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);
         }
-        else if (object_collide_with.tag == "bomb")
+        else if (object_collide_with.tag == "bomb"&&object_collide_with.GetComponent<Bombs>().collectable)
         {
             if (inventory != null)
                 inventory.add_bombs(4);

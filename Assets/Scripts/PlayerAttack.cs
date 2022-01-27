@@ -75,6 +75,7 @@ public class PlayerAttack : MonoBehaviour
                 if (inventory != null && inventory.get_bombs() > 0)
                 {
                     inventory.add_bombs(-1);
+                    Debug.Log("[Bomb] createNewWeapon ready to create a new bomb!");
                     return Instantiate(bomb_prefab, transform.position, Quaternion.identity);
                 }
                 break;

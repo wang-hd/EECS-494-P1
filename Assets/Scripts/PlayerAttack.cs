@@ -38,7 +38,6 @@ public class PlayerAttack : MonoBehaviour
                     return result;
                 }else if(!is_full_health)
                 {
-                    Debug.Log("Bugan to make sword!");
                     switch(PlayerMovement.direction)
                     {
                         case 0:

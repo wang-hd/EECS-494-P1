@@ -1,0 +1,4896 @@
+fileFormatVersion: 2
+guid: 045c96890c4674f8cac15256dbc4c46f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8373548513587304804
+    second: EECS494-p1_0
+  - first:
+      213: -2587762682383613679
+    second: EECS494-p1_1
+  - first:
+      213: 3144058156702228543
+    second: EECS494-p1_2
+  - first:
+      213: 8739389410363497076
+    second: EECS494-p1_3
+  - first:
+      213: 1245572097869175173
+    second: EECS494-p1_4
+  - first:
+      213: -6812461790886608202
+    second: EECS494-p1_5
+  - first:
+      213: -2424912037192920694
+    second: EECS494-p1_6
+  - first:
+      213: -652543619477160176
+    second: EECS494-p1_7
+  - first:
+      213: -8294744907469810690
+    second: EECS494-p1_8
+  - first:
+      213: 1942973217762763560
+    second: EECS494-p1_9
+  - first:
+      213: -5177552661885540053
+    second: EECS494-p1_10
+  - first:
+      213: 2822303429188943141
+    second: EECS494-p1_11
+  - first:
+      213: -2111728240046931824
+    second: EECS494-p1_12
+  - first:
+      213: -4625530192595852927
+    second: EECS494-p1_13
+  - first:
+      213: -7223672974347046097
+    second: EECS494-p1_14
+  - first:
+      213: 8055421126805266153
+    second: EECS494-p1_15
+  - first:
+      213: -5784731519300679922
+    second: EECS494-p1_16
+  - first:
+      213: 7623920571092241117
+    second: EECS494-p1_17
+  - first:
+      213: -4330109574326355960
+    second: EECS494-p1_18
+  - first:
+      213: 8130902243991714360
+    second: EECS494-p1_19
+  - first:
+      213: 8726684049982096990
+    second: EECS494-p1_20
+  - first:
+      213: 5822813598830602312
+    second: EECS494-p1_21
+  - first:
+      213: -5427101118035511498
+    second: EECS494-p1_22
+  - first:
+      213: 3351418946971913543
+    second: EECS494-p1_23
+  - first:
+      213: -2396939737606237083
+    second: EECS494-p1_24
+  - first:
+      213: 5803379082465423098
+    second: EECS494-p1_25
+  - first:
+      213: 3314001264931971880
+    second: EECS494-p1_26
+  - first:
+      213: 4744692906310079920
+    second: EECS494-p1_27
+  - first:
+      213: -8846250304740779903
+    second: EECS494-p1_28
+  - first:
+      213: -8739818107392636599
+    second: EECS494-p1_29
+  - first:
+      213: 7343692621482572844
+    second: EECS494-p1_30
+  - first:
+      213: -2739085936482322578
+    second: EECS494-p1_31
+  - first:
+      213: 5888541764321874916
+    second: EECS494-p1_32
+  - first:
+      213: 6550959749275361215
+    second: EECS494-p1_33
+  - first:
+      213: -1290396329987514501
+    second: EECS494-p1_34
+  - first:
+      213: -2561138933690263352
+    second: EECS494-p1_35
+  - first:
+      213: 2385152661008431311
+    second: EECS494-p1_36
+  - first:
+      213: -2093178709782756326
+    second: EECS494-p1_37
+  - first:
+      213: -818063060908961417
+    second: EECS494-p1_38
+  - first:
+      213: 2823409676049828509
+    second: EECS494-p1_39
+  - first:
+      213: -9193448895729771161
+    second: EECS494-p1_40
+  - first:
+      213: -2304567840135259380
+    second: EECS494-p1_41
+  - first:
+      213: 3314823931396000763
+    second: EECS494-p1_42
+  - first:
+      213: 4036406785511333076
+    second: EECS494-p1_43
+  - first:
+      213: 2681713704492846615
+    second: EECS494-p1_44
+  - first:
+      213: 1253829713956666541
+    second: EECS494-p1_45
+  - first:
+      213: -7345561950137093024
+    second: EECS494-p1_46
+  - first:
+      213: -2359806050418750295
+    second: EECS494-p1_47
+  - first:
+      213: 3505520183036871641
+    second: EECS494-p1_48
+  - first:
+      213: -8734577372969453431
+    second: EECS494-p1_49
+  - first:
+      213: 3733729036437200342
+    second: EECS494-p1_50
+  - first:
+      213: -6394572045346567476
+    second: EECS494-p1_51
+  - first:
+      213: 8747948504860141724
+    second: EECS494-p1_52
+  - first:
+      213: -4043202613538051572
+    second: EECS494-p1_53
+  - first:
+      213: -5539781493241462775
+    second: EECS494-p1_54
+  - first:
+      213: 7615461066297455427
+    second: EECS494-p1_55
+  - first:
+      213: 7890340946388545045
+    second: EECS494-p1_56
+  - first:
+      213: -9075588091573632061
+    second: EECS494-p1_57
+  - first:
+      213: -6922721331551624233
+    second: EECS494-p1_58
+  - first:
+      213: -4599863257188162336
+    second: EECS494-p1_59
+  - first:
+      213: 1956810731197650551
+    second: EECS494-p1_60
+  - first:
+      213: -2092881356530422071
+    second: EECS494-p1_61
+  - first:
+      213: -5939242887753672156
+    second: EECS494-p1_62
+  - first:
+      213: 1044235928670415603
+    second: EECS494-p1_63
+  - first:
+      213: -7494999288712734851
+    second: EECS494-p1_64
+  - first:
+      213: 6295697230114619117
+    second: EECS494-p1_65
+  - first:
+      213: -1631241799296207318
+    second: EECS494-p1_66
+  - first:
+      213: -482216800024364273
+    second: EECS494-p1_67
+  - first:
+      213: -4386881894612807741
+    second: EECS494-p1_68
+  - first:
+      213: 950623221667153403
+    second: EECS494-p1_69
+  - first:
+      213: 1604075396447233433
+    second: EECS494-p1_70
+  - first:
+      213: 4956583143247865131
+    second: EECS494-p1_71
+  - first:
+      213: 8779654073492105298
+    second: EECS494-p1_72
+  - first:
+      213: 4089621353263473877
+    second: EECS494-p1_73
+  - first:
+      213: -8653853616753570369
+    second: EECS494-p1_74
+  - first:
+      213: 4378783679952212548
+    second: EECS494-p1_75
+  - first:
+      213: -2716276775150747011
+    second: EECS494-p1_76
+  - first:
+      213: 4900122690480862940
+    second: EECS494-p1_77
+  - first:
+      213: 5351370464928306995
+    second: EECS494-p1_78
+  - first:
+      213: -819937668268983307
+    second: EECS494-p1_79
+  - first:
+      213: 7993337534955809009
+    second: EECS494-p1_80
+  - first:
+      213: -476714145008690782
+    second: EECS494-p1_81
+  - first:
+      213: 254282842657424527
+    second: EECS494-p1_82
+  - first:
+      213: -7674935360223336797
+    second: EECS494-p1_83
+  - first:
+      213: -4161226222120667499
+    second: EECS494-p1_84
+  - first:
+      213: -4331880442977154461
+    second: EECS494-p1_85
+  - first:
+      213: 4487086791220666314
+    second: EECS494-p1_86
+  - first:
+      213: 4940184610565008784
+    second: EECS494-p1_87
+  - first:
+      213: 2976152125936631798
+    second: EECS494-p1_88
+  - first:
+      213: -4101063154477812015
+    second: EECS494-p1_89
+  - first:
+      213: -7374621148658739988
+    second: EECS494-p1_90
+  - first:
+      213: 5537327477442890082
+    second: EECS494-p1_91
+  - first:
+      213: 9078553094798830190
+    second: EECS494-p1_92
+  - first:
+      213: 9008048450146194039
+    second: EECS494-p1_93
+  - first:
+      213: 5255035117057076897
+    second: EECS494-p1_94
+  - first:
+      213: -4712961859496772971
+    second: EECS494-p1_95
+  - first:
+      213: 646690122877430024
+    second: EECS494-p1_96
+  - first:
+      213: -2987339199435055194
+    second: EECS494-p1_97
+  - first:
+      213: -672647555724308880
+    second: EECS494-p1_98
+  - first:
+      213: 6379067155609388310
+    second: EECS494-p1_99
+  - first:
+      213: -4063832927108731527
+    second: EECS494-p1_100
+  - first:
+      213: 1648097147947023068
+    second: EECS494-p1_101
+  - first:
+      213: 7803820267063702304
+    second: EECS494-p1_102
+  - first:
+      213: -2410766098670095839
+    second: EECS494-p1_103
+  - first:
+      213: 6330240341333766110
+    second: EECS494-p1_104
+  - first:
+      213: -8587097023190157161
+    second: EECS494-p1_105
+  - first:
+      213: -1747216904836886701
+    second: EECS494-p1_106
+  - first:
+      213: -5369345581268353960
+    second: EECS494-p1_107
+  - first:
+      213: -882281189129200150
+    second: EECS494-p1_108
+  - first:
+      213: -4149295996671219054
+    second: EECS494-p1_109
+  - first:
+      213: -3843341944919256810
+    second: EECS494-p1_110
+  - first:
+      213: -3973678188976081460
+    second: EECS494-p1_111
+  - first:
+      213: -6138092731456658400
+    second: EECS494-p1_112
+  - first:
+      213: 7115713377179992267
+    second: EECS494-p1_113
+  - first:
+      213: -2728926628946417512
+    second: EECS494-p1_114
+  - first:
+      213: 4906716278170970581
+    second: EECS494-p1_115
+  - first:
+      213: -5874075738549632703
+    second: EECS494-p1_116
+  - first:
+      213: 5205408826874021562
+    second: EECS494-p1_117
+  - first:
+      213: -95734098615973635
+    second: EECS494-p1_118
+  - first:
+      213: -7874815630201931237
+    second: EECS494-p1_119
+  - first:
+      213: -2739751228649032718
+    second: EECS494-p1_120
+  - first:
+      213: -5222993609289786352
+    second: EECS494-p1_121
+  - first:
+      213: 7130212414434572301
+    second: EECS494-p1_122
+  - first:
+      213: -788874746265770719
+    second: EECS494-p1_123
+  - first:
+      213: 3435463455622420352
+    second: EECS494-p1_124
+  - first:
+      213: 6368786310256460795
+    second: EECS494-p1_125
+  - first:
+      213: 5470390867750860700
+    second: EECS494-p1_126
+  - first:
+      213: -28623350396820224
+    second: EECS494-p1_127
+  - first:
+      213: -6328304356926351605
+    second: EECS494-p1_128
+  - first:
+      213: 2023053064586749236
+    second: EECS494-p1_129
+  - first:
+      213: -4077117939595949551
+    second: EECS494-p1_130
+  - first:
+      213: 6404474615716598219
+    second: EECS494-p1_131
+  - first:
+      213: 5500727009870293481
+    second: EECS494-p1_132
+  - first:
+      213: 1232047737585372518
+    second: EECS494-p1_133
+  - first:
+      213: -61878441888101455
+    second: EECS494-p1_134
+  - first:
+      213: -5360647260414317632
+    second: EECS494-p1_135
+  - first:
+      213: -6772687509705494706
+    second: EECS494-p1_136
+  - first:
+      213: 4971535808109907629
+    second: EECS494-p1_137
+  - first:
+      213: 2689597008711907074
+    second: EECS494-p1_138
+  - first:
+      213: -8056466300580165337
+    second: EECS494-p1_139
+  - first:
+      213: 6185590218745295421
+    second: EECS494-p1_140
+  - first:
+      213: 1834297199376963973
+    second: EECS494-p1_141
+  - first:
+      213: 7174783948754630648
+    second: EECS494-p1_142
+  - first:
+      213: -2702717148359826552
+    second: EECS494-p1_143
+  - first:
+      213: -1634779120544821099
+    second: EECS494-p1_144
+  - first:
+      213: -355713241271956861
+    second: EECS494-p1_145
+  - first:
+      213: -4584064487542993944
+    second: EECS494-p1_146
+  - first:
+      213: -2904700064727000360
+    second: EECS494-p1_147
+  - first:
+      213: -362237442445574006
+    second: EECS494-p1_148
+  - first:
+      213: 3433338266952049012
+    second: EECS494-p1_149
+  - first:
+      213: -43476611972830451
+    second: EECS494-p1_150
+  - first:
+      213: 7920921795684392989
+    second: EECS494-p1_151
+  - first:
+      213: -3938095935922727548
+    second: EECS494-p1_152
+  - first:
+      213: -8178740333973308181
+    second: EECS494-p1_153
+  - first:
+      213: -7423260532563509689
+    second: EECS494-p1_154
+  - first:
+      213: 7219443823112328249
+    second: EECS494-p1_155
+  - first:
+      213: 8487404083726743412
+    second: EECS494-p1_156
+  - first:
+      213: -7287730342654309205
+    second: EECS494-p1_157
+  - first:
+      213: -5962417749974911314
+    second: EECS494-p1_158
+  - first:
+      213: -1600251062236320835
+    second: EECS494-p1_159
+  - first:
+      213: -5746418319041911083
+    second: EECS494-p1_160
+  - first:
+      213: -4495612082191970424
+    second: EECS494-p1_161
+  - first:
+      213: -3931479208055569516
+    second: EECS494-p1_162
+  - first:
+      213: -1290371439209951116
+    second: EECS494-p1_163
+  - first:
+      213: 7154556183132325866
+    second: EECS494-p1_164
+  - first:
+      213: -642646766717956188
+    second: EECS494-p1_165
+  - first:
+      213: -7039348537754325833
+    second: EECS494-p1_166
+  - first:
+      213: 6457581702744433815
+    second: EECS494-p1_167
+  - first:
+      213: -5903709703732557621
+    second: EECS494-p1_168
+  - first:
+      213: 8191108705475261931
+    second: EECS494-p1_169
+  - first:
+      213: -4293634509432700217
+    second: EECS494-p1_170
+  - first:
+      213: 513432216631932372
+    second: EECS494-p1_171
+  - first:
+      213: -7767327718537137421
+    second: EECS494-p1_172
+  - first:
+      213: 7157165322842961785
+    second: EECS494-p1_173
+  - first:
+      213: -4738445499098951584
+    second: EECS494-p1_174
+  - first:
+      213: 4131170610977607246
+    second: EECS494-p1_175
+  - first:
+      213: 2076964226368488519
+    second: EECS494-p1_176
+  - first:
+      213: -5686982926961025550
+    second: EECS494-p1_177
+  - first:
+      213: 5403721743391126881
+    second: EECS494-p1_178
+  - first:
+      213: 7193648481228333610
+    second: EECS494-p1_179
+  - first:
+      213: 5594540837850683090
+    second: EECS494-p1_180
+  - first:
+      213: -1848347093129914193
+    second: EECS494-p1_181
+  - first:
+      213: -5685811321371174464
+    second: EECS494-p1_182
+  - first:
+      213: 5826293296425733159
+    second: EECS494-p1_183
+  - first:
+      213: -3253553319449525447
+    second: EECS494-p1_184
+  - first:
+      213: 2531461582111098948
+    second: EECS494-p1_185
+  - first:
+      213: 8866294096961142643
+    second: EECS494-p1_186
+  - first:
+      213: 6759052621371101717
+    second: EECS494-p1_187
+  - first:
+      213: 457427956430426726
+    second: EECS494-p1_188
+  - first:
+      213: 5982407995427182491
+    second: EECS494-p1_189
+  - first:
+      213: 7654669230174232429
+    second: EECS494-p1_190
+  - first:
+      213: 5123925468934856929
+    second: EECS494-p1_191
+  - first:
+      213: 4362543875116115099
+    second: EECS494-p1_192
+  - first:
+      213: -2639218354929402019
+    second: EECS494-p1_193
+  - first:
+      213: -6968181451529606715
+    second: EECS494-p1_194
+  - first:
+      213: -7139051076567190547
+    second: EECS494-p1_195
+  - first:
+      213: 4609298318192613644
+    second: EECS494-p1_196
+  - first:
+      213: 3575964024919769237
+    second: EECS494-p1_197
+  - first:
+      213: -4428774157009224729
+    second: EECS494-p1_198
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EECS494-p1_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 974
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4691fd51202d43470800000000000000
+      internalID: 8373548513587304804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 974
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11143890d8b661cd0800000000000000
+      internalID: -2587762682383613679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 974
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30e76f4c30f1ab20800000000000000
+      internalID: 3144058156702228543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 974
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ad68e8d5c884970800000000000000
+      internalID: 8739389410363497076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 974
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58951a34939294110800000000000000
+      internalID: 1245572097869175173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_5
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 974
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2484c58164571a0800000000000000
+      internalID: -6812461790886608202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_6
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 974
+        width: 138
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a811c83995bf85ed0800000000000000
+      internalID: -2424912037192920694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_7
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 974
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fbd901903b1f6f0800000000000000
+      internalID: -652543619477160176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_8
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 974
+        width: 169
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef318cf347523ec80800000000000000
+      internalID: -8294744907469810690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_9
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 974
+        width: 86
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823e8d4e8d3d6fa10800000000000000
+      internalID: 1942973217762763560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_10
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 974
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b292f6e2943a528b0800000000000000
+      internalID: -5177552661885540053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_11
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 974
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d7c210406da2720800000000000000
+      internalID: 2822303429188943141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_12
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 974
+        width: 137
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09087d5aa52a1b2e0800000000000000
+      internalID: -2111728240046931824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 907
+        width: 176
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181ea740cc0decfb0800000000000000
+      internalID: -4625530192595852927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_14
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 907
+        width: 147
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f237476d3bb50cb90800000000000000
+      internalID: -7223672974347046097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_15
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 908
+        width: 73
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee976bd5da9acf60800000000000000
+      internalID: 8055421126805266153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_16
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 907
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07c31ff45188bfa0800000000000000
+      internalID: -5784731519300679922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 907
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda0fbbbd5b9dc960800000000000000
+      internalID: 7623920571092241117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_18
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 907
+        width: 147
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80872c7b84c58e3c0800000000000000
+      internalID: -4330109574326355960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_19
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 904
+        width: 130
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a7d84f284c6d070800000000000000
+      internalID: 8130902243991714360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_20
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 907
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56004258e86b1970800000000000000
+      internalID: 8726684049982096990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_21
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 908
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848ac971e1acec050800000000000000
+      internalID: 5822813598830602312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_22
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 907
+        width: 147
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6373e5389401fa4b0800000000000000
+      internalID: -5427101118035511498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_23
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 904
+        width: 130
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d46c396c1a28e20800000000000000
+      internalID: 3351418946971913543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_24
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 907
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56456f7120c5cbed0800000000000000
+      internalID: -2396939737606237083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_25
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 908
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afea843278eb98050800000000000000
+      internalID: 5803379082465423098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_26
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 907
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82327759792bdfd20800000000000000
+      internalID: 3314001264931971880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_27
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 907
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b59de05f0988d140800000000000000
+      internalID: 4744692906310079920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 834
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1881cbf973ecb3580800000000000000
+      internalID: -8846250304740779903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_29
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 791
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949c553acbde5b680800000000000000
+      internalID: -8739818107392636599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 807
+        width: 67
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c302bd7890ae560800000000000000
+      internalID: 7343692621482572844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_31
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 822
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67f3b26adfccf9d0800000000000000
+      internalID: -2739085936482322578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_32
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 834
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3157b298d48b150800000000000000
+      internalID: 5888541764321874916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_33
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 791
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf9079fe2fa9ea50800000000000000
+      internalID: 6550959749275361215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 807
+        width: 67
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f50abef57971ee0800000000000000
+      internalID: -1290396329987514501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_35
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 822
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c818f495b1057cd0800000000000000
+      internalID: -2561138933690263352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_36
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 834
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc83c7645b3c91120800000000000000
+      internalID: 2385152661008431311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_37
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 791
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a140df7bd0983f2e0800000000000000
+      internalID: -2093178709782756326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_38
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 807
+        width: 67
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77117aafaf7a5a4f0800000000000000
+      internalID: -818063060908961417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_39
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 822
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ac95c2424ce2720800000000000000
+      internalID: 2823409676049828509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_40
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 834
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dd15530fe4a6080800000000000000
+      internalID: -9193448895729771161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_41
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 791
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bd2ff62c78400e0800000000000000
+      internalID: -2304567840135259380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_42
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 806
+        width: 68
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb82db8dce900e20800000000000000
+      internalID: 3314823931396000763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_43
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 822
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc116be592340830800000000000000
+      internalID: 4036406785511333076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 717
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ec799e76c573520800000000000000
+      internalID: 2681713704492846615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_45
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 714
+        width: 114
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac77355b7f766110800000000000000
+      internalID: 1253829713956666541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_46
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 714
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064f37623525f0a90800000000000000
+      internalID: -7345561950137093024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_47
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 714
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac09f166e8404fd0800000000000000
+      internalID: -2359806050418750295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_48
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 717
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d300ee880c16a030800000000000000
+      internalID: 3505520183036871641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_49
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 714
+        width: 113
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988bdf4382c88c680800000000000000
+      internalID: -8734577372969453431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_50
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 714
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd9668c6ced0d330800000000000000
+      internalID: 3733729036437200342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_51
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 714
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca897aca9ae147a0800000000000000
+      internalID: -6394572045346567476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_52
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 717
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98299901d4f66970800000000000000
+      internalID: 8747948504860141724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_53
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 714
+        width: 113
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a222115a8a3e7c0800000000000000
+      internalID: -4043202613538051572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_54
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 714
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9004f0a351ebe13b0800000000000000
+      internalID: -5539781493241462775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_55
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 714
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3433a79cd7d8fa960800000000000000
+      internalID: 7615461066297455427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_56
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 717
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e6532394f108d60800000000000000
+      internalID: 7890340946388545045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_57
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 714
+        width: 114
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c30df917b80d0280800000000000000
+      internalID: -9075588091573632061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_58
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 714
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3a8d980ad8def90800000000000000
+      internalID: -6922721331551624233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_59
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 714
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4adeb1db00a20c0800000000000000
+      internalID: -4599863257188162336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_60
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 592
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77655bd0efcf72b10800000000000000
+      internalID: 1956810731197650551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_61
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 592
+        width: 69
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce67faae7794f2e0800000000000000
+      internalID: -2092881356530422071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_62
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 592
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a5da0af02939da0800000000000000
+      internalID: -5939242887753672156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_63
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 592
+        width: 66
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faa9166b0fdd7e00800000000000000
+      internalID: 1044235928670415603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_64
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 592
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77d87c6bd96cf790800000000000000
+      internalID: -7494999288712734851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_65
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 592
+        width: 68
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee7466564fce5750800000000000000
+      internalID: 6295697230114619117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_66
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 592
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a263e2ae93aac59e0800000000000000
+      internalID: -1631241799296207318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_67
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 592
+        width: 66
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b72d11062de49f0800000000000000
+      internalID: -482216800024364273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_68
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 592
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfc208d82aae13c0800000000000000
+      internalID: -4386881894612807741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_69
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 592
+        width: 68
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf545b298ca413d00800000000000000
+      internalID: 950623221667153403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_70
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 592
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9956e260312d24610800000000000000
+      internalID: 1604075396447233433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_71
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 592
+        width: 66
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b256af09b1259c440800000000000000
+      internalID: 4956583143247865131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_72
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 592
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258ee4dfcd897d970800000000000000
+      internalID: 8779654073492105298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_73
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 592
+        width: 68
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d42f1bf3f041c830800000000000000
+      internalID: 4089621353263473877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_74
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 592
+        width: 65
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd8c235cf557e780800000000000000
+      internalID: -8653853616753570369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_75
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 592
+        width: 66
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44254df9e8094cc30800000000000000
+      internalID: 4378783679952212548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_76
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 491
+        width: 67
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d720f791aa8dd4ad0800000000000000
+      internalID: -2716276775150747011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_77
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 507
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd671f100abb00440800000000000000
+      internalID: 4900122690480862940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_78
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 515
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3379197c513e34a40800000000000000
+      internalID: 5351370464928306995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_79
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 515
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb7dd0f80ffe94f0800000000000000
+      internalID: -819937668268983307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_80
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 491
+        width: 68
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f866d4332a0eee60800000000000000
+      internalID: 7993337534955809009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_81
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 507
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a95a57c20f5269f0800000000000000
+      internalID: -476714145008690782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_82
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 515
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84821de5e4678300800000000000000
+      internalID: 254282842657424527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_83
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 515
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6adc314f62d7590800000000000000
+      internalID: -7674935360223336797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_84
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 491
+        width: 67
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596f4705cca5046c0800000000000000
+      internalID: -4161226222120667499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_85
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 507
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a82ea30b112e3c0800000000000000
+      internalID: -4331880442977154461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_86
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 515
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf1e0bb9a5554e30800000000000000
+      internalID: 4487086791220666314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_87
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 515
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d2495aabf0f8440800000000000000
+      internalID: 4940184610565008784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_88
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 491
+        width: 67
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fff9f7179a6d4920800000000000000
+      internalID: 2976152125936631798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_89
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 506
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d638e31ac81617c0800000000000000
+      internalID: -4101063154477812015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_90
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 515
+        width: 98
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4dc11432518a990800000000000000
+      internalID: -7374621148658739988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_91
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 515
+        width: 81
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2694ef1b00a88dc40800000000000000
+      internalID: 5537327477442890082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_92
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 418
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ae10280ff7dfd70800000000000000
+      internalID: 9078553094798830190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_93
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 418
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772d876b654030d70800000000000000
+      internalID: 9008048450146194039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_94
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 418
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aee36ab892ade840800000000000000
+      internalID: 5255035117057076897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 417
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59afabcb822389eb0800000000000000
+      internalID: -4712961859496772971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_96
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 418
+        width: 105
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809ecdd8d3189f800800000000000000
+      internalID: 646690122877430024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_97
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 417
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd21263d6da86d0800000000000000
+      internalID: -2987339199435055194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_98
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 418
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e8406ac964aa6f0800000000000000
+      internalID: -672647555724308880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_99
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 418
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6158570c7cff68850800000000000000
+      internalID: 6379067155609388310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_100
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 418
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97de521eb7d5a97c0800000000000000
+      internalID: -4063832927108731527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_101
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 418
+        width: 105
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda77b2cf973fd610800000000000000
+      internalID: 1648097147947023068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_102
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 417
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023735dbf2dbc4c60800000000000000
+      internalID: 7803820267063702304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_103
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 418
+        width: 69
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122f63c810d3b8ed0800000000000000
+      internalID: -2410766098670095839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_104
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 417
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfeb082d0889d750800000000000000
+      internalID: 6330240341333766110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_105
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 418
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798bfe8f0c084d880800000000000000
+      internalID: -8587097023190157161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_106
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 417
+        width: 139
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fc3a17b73a0c7e0800000000000000
+      internalID: -1747216904836886701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_107
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 417
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cbf2054a04c75b0800000000000000
+      internalID: -5369345581268353960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_108
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 418
+        width: 66
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedd1f9dee181c3f0800000000000000
+      internalID: -882281189129200150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_109
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 417
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a2672664dba66c0800000000000000
+      internalID: -4149295996671219054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_110
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 417
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6119abe2dd4b9aac0800000000000000
+      internalID: -3843341944919256810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_111
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 370
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5fc569db8aad8c0800000000000000
+      internalID: -3973678188976081460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_112
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 370
+        width: 113
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0246e178e2d11daa0800000000000000
+      internalID: -6138092731456658400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_113
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 370
+        width: 93
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc00f4aad9710c260800000000000000
+      internalID: 7115713377179992267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_114
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 366
+        width: 114
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8986b8f70b7e02ad0800000000000000
+      internalID: -2728926628946417512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_115
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 371
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9e1064578281440800000000000000
+      internalID: 4906716278170970581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_116
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 370
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141420cec371b7ea0800000000000000
+      internalID: -5874075738549632703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_117
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 370
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab64284afb35d3840800000000000000
+      internalID: 5205408826874021562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_118
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 370
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df84a133852ebaef0800000000000000
+      internalID: -95734098615973635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_119
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 296
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1abe1a28e807b290800000000000000
+      internalID: -7874815630201931237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_120
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 297
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f33f6bf5c27af9d0800000000000000
+      internalID: -2739751228649032718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_121
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 296
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c95262cf23487b0800000000000000
+      internalID: -5222993609289786352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_122
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 297
+        width: 68
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08f377d96a93f260800000000000000
+      internalID: 7130212414434572301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_123
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 297
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1256d80199a5d05f0800000000000000
+      internalID: -788874746265770719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_124
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 297
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087d53f9fc73daf20800000000000000
+      internalID: 3435463455622420352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_125
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 297
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf30539e769726850800000000000000
+      internalID: 6368786310256460795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_126
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 297
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97b4d6c28bbaeb40800000000000000
+      internalID: 5470390867750860700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_127
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 297
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005e057e63f4a9ff0800000000000000
+      internalID: -28623350396820224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_128
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 297
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0719d657b85d28a0800000000000000
+      internalID: -6328304356926351605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_129
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 297
+        width: 73
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435657c2b04531c10800000000000000
+      internalID: 2023053064586749236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_130
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 300
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ac20fd5da2b67c0800000000000000
+      internalID: -4077117939595949551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_131
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 355
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc15bca0bb341e850800000000000000
+      internalID: 6404474615716598219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_132
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 296
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e927b54212865c40800000000000000
+      internalID: 5500727009870293481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_133
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 296
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d8911c3ec191110800000000000000
+      internalID: 1232047737585372518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_134
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 296
+        width: 208
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb410c82e9242ff0800000000000000
+      internalID: -61878441888101455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_135
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 296
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb65d4f7b72b95b0800000000000000
+      internalID: -5360647260414317632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_136
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 296
+        width: 36
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f6749d7949202a0800000000000000
+      internalID: -6772687509705494706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_137
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 344
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae86862a717ef440800000000000000
+      internalID: 4971535808109907629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_138
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 347
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207f935ba3e535520800000000000000
+      internalID: 2689597008711907074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_139
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 347
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7298309a59ea13090800000000000000
+      internalID: -8056466300580165337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_140
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 344
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32b1720881a7d550800000000000000
+      internalID: 6185590218745295421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_141
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 332
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5899b55959bb47910800000000000000
+      internalID: 1834297199376963973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_142
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 339
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7b1bddcf3f19360800000000000000
+      internalID: 7174783948754630648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_143
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 332
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883e7abb2150e7ad0800000000000000
+      internalID: -2702717148359826552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_144
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 328
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59053b12d091059e0800000000000000
+      internalID: -1634779120544821099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_145
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 328
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a051411b0401bf0800000000000000
+      internalID: -355713241271956861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_146
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 328
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb4480d2a12260c0800000000000000
+      internalID: -4584064487542993944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_147
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 328
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da94ee4eae60b7d0800000000000000
+      internalID: -2904700064727000360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_148
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 324
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a808fae17f219faf0800000000000000
+      internalID: -362237442445574006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_149
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 317
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471ae6396faa5af20800000000000000
+      internalID: 3433338266952049012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_150
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 320
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b6253704a856ff0800000000000000
+      internalID: -43476611972830451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_151
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 320
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10ea650864cced60800000000000000
+      internalID: 7920921795684392989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_152
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 320
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4859ae77c921959c0800000000000000
+      internalID: -3938095935922727548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_153
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 317
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec7c53cff64f7e80800000000000000
+      internalID: -8178740333973308181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_154
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 308
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74eff5130e74bf890800000000000000
+      internalID: -7423260532563509689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_155
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 312
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9349f7828ed903460800000000000000
+      internalID: 7219443823112328249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_156
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 308
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4777bb3cb0159c570800000000000000
+      internalID: 8487404083726743412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_157
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 296
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac014b8dd7ccda90800000000000000
+      internalID: -7287730342654309205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_158
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 305
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6f24a85ac314da0800000000000000
+      internalID: -5962417749974911314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_159
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 305
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb66fb2324cac9e0800000000000000
+      internalID: -1600251062236320835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_160
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 249
+        width: 88
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6a5b21cfe9040b0800000000000000
+      internalID: -5746418319041911083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_161
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 249
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f4ef841a06c91c0800000000000000
+      internalID: -4495612082191970424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_162
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 249
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493830a7d749079c0800000000000000
+      internalID: -3931479208055569516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_163
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 249
+        width: 97
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470d491430ea71ee0800000000000000
+      internalID: -1290371439209951116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_164
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 249
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae74d2d21f61a4360800000000000000
+      internalID: 7154556183132325866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_165
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 249
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af09b9ab2cd417f0800000000000000
+      internalID: -642646766717956188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_166
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 249
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcecfc0dc53f4e90800000000000000
+      internalID: -7039348537754325833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_167
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 249
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794e42c4850fd9950800000000000000
+      internalID: 6457581702744433815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_168
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 246
+        width: 102
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc88efbbd4fc11ea0800000000000000
+      internalID: -5903709703732557621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_169
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 211
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5767228f9aca170800000000000000
+      internalID: 8191108705475261931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_170
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 113
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2c7ed8922f964c0800000000000000
+      internalID: -4293634509432700217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_171
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 113
+        width: 68
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5769871e3102700800000000000000
+      internalID: 513432216631932372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_172
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 47
+        width: 67
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f27c82d798e43490800000000000000
+      internalID: -7767327718537137421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_173
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 78
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9777ccad0fb535360800000000000000
+      internalID: 7157165322842961785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_174
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 78
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06098a68ce8ad3eb0800000000000000
+      internalID: -4738445499098951584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_175
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 144
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e8ad568cdd45930800000000000000
+      internalID: 4131170610977607246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_176
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 144
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74443eba5fbd2dc10800000000000000
+      internalID: 2076964226368488519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_177
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 78
+        width: 68
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdd6caa827c311b0800000000000000
+      internalID: -5686982926961025550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_178
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 145
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165f1e3ab40edfa40800000000000000
+      internalID: 5403721743391126881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_179
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 47
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22a4aa1e29f4d360800000000000000
+      internalID: 7193648481228333610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_180
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 129
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d69189304dc3ad40800000000000000
+      internalID: 5594540837850683090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_181
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 98
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa89d5c9c1a5956e0800000000000000
+      internalID: -1848347093129914193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_182
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 79
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9d6c95ab0f711b0800000000000000
+      internalID: -5685811321371174464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_183
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 12
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c02b252e62bd050800000000000000
+      internalID: 5826293296425733159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_184
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 79
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9330b687e7e09d2d0800000000000000
+      internalID: -3253553319449525447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_185
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 12
+        width: 67
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448c74c85ee812320800000000000000
+      internalID: 2531461582111098948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_186
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 12
+        width: 139
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ff28b61876b0b70800000000000000
+      internalID: 8866294096961142643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_187
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 98
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5125ff25c8afccd50800000000000000
+      internalID: 6759052621371101717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_188
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 98
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6625e558d4c195600800000000000000
+      internalID: 457427956430426726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_189
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 84
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97d4ec2068c50350800000000000000
+      internalID: 5982407995427182491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_190
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 98
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fd5a1db19da3a60800000000000000
+      internalID: 7654669230174232429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_191
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 98
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e06077f017db1740800000000000000
+      internalID: 5123925468934856929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_192
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 12
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b942a596a8eda8c30800000000000000
+      internalID: 4362543875116115099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_193
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 12
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ffdbda3ec9f5bd0800000000000000
+      internalID: -2639218354929402019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_194
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 12
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9ac1b83eb0c4f90800000000000000
+      internalID: -6968181451529606715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_195
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 12
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3b7d3cedefcec90800000000000000
+      internalID: -7139051076567190547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_196
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 294
+        width: 69
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c091da7366487ff30800000000000000
+      internalID: 4609298318192613644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_197
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 294
+        width: 72
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5904bea955060a130800000000000000
+      internalID: 3575964024919769237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EECS494-p1_198
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 294
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebf80d6e55d982c0800000000000000
+      internalID: -4428774157009224729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

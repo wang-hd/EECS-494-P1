@@ -64,7 +64,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack(string weapon_name)
     {
-        Debug.Log("attack has entered!");
         switch(weapon_name)
         {
             case "sword":
@@ -75,8 +74,15 @@ public class PlayerMovement : MonoBehaviour
                 }
                 // Attack with melee sword always
                 created_weapon = player_attack.createNewWeapon("sword",false);
-                Debug.Log("Sword in hand has been created!");
                 StartCoroutine(SetAttacking(2));
+                break;
+            case "bomb":
+                created_weapon = player_attack.createNewWeapon("bomb",false);
+                if(created_weapon!=null)
+                {
+                  Debug.Log("[Bomb] Attack is ready to attack!");
+                  created_weapon.GetComponent<Bombs>().Attack();
+                }
                 break;
             default:
                 player_attack.createNewWeapon(weapon_name,false);

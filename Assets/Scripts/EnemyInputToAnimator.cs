@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyInputToAnimator : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     EnemyGridMovement grid_movement;
     EnemyFlyingMovement fly_movement;
+    HasHealth health;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         grid_movement = GetComponent<EnemyGridMovement>();
         fly_movement = GetComponent<EnemyFlyingMovement>();
+        health = GetComponent<HasHealth>();
     }
 
     // Update is called once per frame
@@ -26,12 +28,17 @@ public class EnemyInputToAnimator : MonoBehaviour
         {
             if (!fly_movement.moving)
             {
-                animator.speed = 0f;
+                animator.SetFloat("animator_speed", 0f);
             }
             else
             {
-                animator.speed = fly_movement.speed / 3;
+                animator.SetFloat("animator_speed", 1f);
             }
+        }
+
+        if (health.is_dead())
+        {
+            animator.SetTrigger("dead"); // TODO: add enemy death animation
         }
     }
 }

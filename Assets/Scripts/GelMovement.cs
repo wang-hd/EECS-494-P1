@@ -8,7 +8,7 @@ public class GelMovement : EnemyGridMovement
     {
         Vector3 waypoint_pos = new Vector3(waypoint.x, waypoint.y, 0);
         transform.Translate(GetDirection(base.direction) * Time.deltaTime);
-        if (Vector3.Distance(transform.position, waypoint_pos) <= 0.01)
+        if (Vector3.Distance(transform.position, waypoint_pos) <= 0.05)
         {
             transform.position = waypoint_pos;
             StartCoroutine(PauseThenNewDestination(Random.Range(0.1f, 0.7f)));

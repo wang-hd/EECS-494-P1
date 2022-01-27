@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnOnRoomClear : MonoBehaviour
 {
     public AudioClip keySpawnSound;
-    private bool enemiesDefeated;
+    private bool enemiesDefeated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +26,20 @@ public class SpawnOnRoomClear : MonoBehaviour
         while (true)
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+            List<GameObject> enemiesInCurrentRoom = new List<GameObject>();
+            foreach (GameObject enemy in enemies)
+            {
+                if (CoroutineUtilities.InCurrentRoom(enemy.transform.position, Camera.main.transform.position))
+                {
+                    enemiesInCurrentRoom.Add(enemy);
+                }
+            }
 
-            if (enemies.Length <= 0) break;
+            if (enemiesInCurrentRoom.Count <= 0) 
+            {
+                enemiesDefeated = true;
+                break;
+            }
 
             yield return null;
         }

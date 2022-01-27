@@ -217,4 +217,4 @@ MonoBehaviour:
   rb: {fileID: 0}
   sprite: {fileID: 0}
   last_hit: 0
-  enemy_death_sound: {fileID: 0}
+  enemy_death_sound: {fileID: 8300000, guid: 41555a2bb885acc4182ef74636745de3, type: 3}

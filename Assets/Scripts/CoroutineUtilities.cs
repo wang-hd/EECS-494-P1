@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CoroutineUtilities
 {
-    public static float room_y_upper_bound = 1;
-    public static float room_y_lower_bound = -5;
+    public static float room_y_upper_bound = 1.25f;
+    public static float room_y_lower_bound = -5.25f;
     public static float room_x_upper_bound = 5.75f;
     public static float room_x_lower_bound = -5.75f;
     public static IEnumerator MoveObjectOverTime(Transform target, Vector3 initial_pos, Vector3 dest_pos, float duration_sec)

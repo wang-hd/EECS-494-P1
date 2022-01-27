@@ -18,9 +18,9 @@ GameObject:
   - component: {fileID: 4647723024561624009}
   - component: {fileID: 4647723024561624012}
   - component: {fileID: 4647723024561624013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Keese
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebf16fbd08a0cf4cbe0a578e40d6b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &4647723024561624013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,4 +213,4 @@ MonoBehaviour:
   rb: {fileID: 0}
   sprite: {fileID: 0}
   last_hit: 0
-  enemy_death_sound: {fileID: 0}
+  enemy_death_sound: {fileID: 8300000, guid: 41555a2bb885acc4182ef74636745de3, type: 3}

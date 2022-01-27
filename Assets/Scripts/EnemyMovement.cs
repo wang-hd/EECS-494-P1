@@ -31,14 +31,20 @@ public abstract class EnemyMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            if (rb != null)
+            {
+                rb.velocity = Vector3.zero;
+            }
             animator.speed = 0;
         }
     }
 
     public virtual void OnDisable()
     {
-        rb.velocity = Vector3.zero;
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     public virtual void MoveTowardsDestination()

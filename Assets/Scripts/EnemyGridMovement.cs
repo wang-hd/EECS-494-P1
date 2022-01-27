@@ -35,7 +35,7 @@ public class EnemyGridMovement : EnemyMovement
         {
             Vector2 current_pos = new Vector2(transform.position.x, transform.position.y);
             base.rb.velocity = (waypoint - current_pos).normalized * speed;
-            if (Vector2.Distance(transform.position, waypoint) <= 0.01)
+            if (Vector2.Distance(transform.position, waypoint) <= 0.05)
             {
                 transform.position = waypoint;
                 SetNewDestination();

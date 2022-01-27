@@ -18,14 +18,27 @@ public class EnemyAttack : MonoBehaviour
     {
         if (Random.Range(0, 1000) < threshold && enemyMovement.enabled)
         {
-            StartCoroutine(attack());
+            attack();
         }
     }
 
-    IEnumerator attack()
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("player"))
+        {
+            other.gameObject.GetComponent<PlayerInteraction>().getHit(gameObject);
+        }
+    }
+
+    void attack()
+    {
+        StartCoroutine(DoAttack());
+    }
+
+    public virtual IEnumerator DoAttack()
     {
         enemyMovement.enabled = false;
-        // do some attack e.g. throw a boomerang
+        // do some attack e.g. throw a boomerang or some fireballs
         // placeholder: stop for one second
         yield return new WaitForSeconds(1f);
         enemyMovement.enabled = true;

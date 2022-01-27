@@ -76,15 +76,12 @@ public class PlayerMovement : MonoBehaviour
                 // Attack with melee sword always
                 created_weapon = player_attack.createNewWeapon("sword",false);
                 Debug.Log("Sword in hand has been created!");
-                StartCoroutine(SetAttacking(1));
+                StartCoroutine(SetAttacking(2));
                 break;
-            case "boomerang":
-                Debug.Log("some weapon will be added!");
+            default:
                 player_attack.createNewWeapon(weapon_name,false);
                 StartCoroutine(SetAttacking(2));
-                Debug.Log("some weapon has been added!");
                 break;
-
         }
 
     }

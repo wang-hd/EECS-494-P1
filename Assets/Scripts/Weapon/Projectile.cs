@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour
     {
         direction = PlayerMovement.direction;
         GetComponent<Animator>().SetInteger("direction", direction);
-        GetComponent<Animator>().SetBool("is_attack", true);
     }
 
     // Update is called once per frame

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7645351589526475454}
   - component: {fileID: 7645351589526475449}
   - component: {fileID: -904058040259139871}
-  - component: {fileID: 7645351589526475448}
   - component: {fileID: 3933002012944377861}
+  - component: {fileID: 6609160811747018728}
   m_Layer: 7
   m_Name: Wallmaster
   m_TagString: wallmaster
@@ -118,24 +118,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7645351589526475448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7645351589526475453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46391c8b6c99ca4189b5c3c563e6a6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  waypoint: {x: 0, y: 0}
-  init_camera_pos: {x: 0, y: 0, z: 0}
-  enemyAndPlayerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &3933002012944377861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +132,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   threshold: 5
+--- !u!114 &6609160811747018728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645351589526475453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f5928eba625fe44bd0675bd9cd8622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  waypoint: {x: 0, y: 0}
+  init_camera_pos: {x: 0, y: 0, z: 0}
+  enemyAndPlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0

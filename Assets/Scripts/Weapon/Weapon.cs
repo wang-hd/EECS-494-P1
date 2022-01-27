@@ -5,7 +5,7 @@ using UnityEngine;
 // TODO: This class is used by all types of weapon, but will be inherited by its subclass
 public class Weapon : MonoBehaviour
 {
-    public float damage = 1f;
+    public int damage = 1;
 
     // TODO: When every weapons are created, it will move with players
     // 1. it will get the player's direction and position by link the player to this
@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
     }
 
     public virtual void setProjectile(){
-      
+
     }
     // TODO: destroy or give every object a certain hurt when it collide with the enemy
     public virtual void OnTriggerEnter(Collider other) {

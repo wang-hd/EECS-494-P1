@@ -18,6 +18,11 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         // Move
+        Move();
+    }
+
+    void Move()
+    {
         switch(direction) {
             case 0:
                 transform.Translate(0, 0.1f, 0);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Unity Editor version:    2020.3.25f1 (9b9180224418)
 Branch:                  2020.3/staging
 Build type:              Release
@@ -828,3 +829,271 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+=======
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16253 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity/Unity Projects/P1-Zelda
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56656
+Successfully changed project path to: D:/Unity/Unity Projects/P1-Zelda
+D:/Unity/Unity Projects/P1-Zelda
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 39.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path D:/Unity/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Unity Projects/P1-Zelda/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.5749
+Initialize mono
+Mono path[0] = 'D:/Unity/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: D:/Unity/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001295 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 41.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.509 seconds
+Domain Reload Profiling:
+	ReloadAssembly (509ms)
+		BeginReloadAssembly (54ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (390ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (133ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (152ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (71ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002938 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 39.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Domain Reload Profiling:
+	ReloadAssembly (932ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (753ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (287ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (39ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (165ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2228 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.6 MB.
+System memory in use after: 96.7 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2661.
+Total: 3.093500 ms (FindLiveObjects: 0.233200 ms CreateObjectMapping: 0.096300 ms MarkObjects: 2.696900 ms  DeleteObjects: 0.065200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Resources/Zelda/link_sprites.png
+  artifactKey: Guid(45afd34443b96473598b76e2b1778b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/link_sprites.png using Guid(45afd34443b96473598b76e2b1778b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03e680eb41bdfa671a0618415d74f772') in 0.493100 seconds 
+  Import took 0.496857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Resources/Zelda/NES - The Legend of Zelda - Dungeon Enemies.png
+  artifactKey: Guid(21d77cd4f3c966c49b440f2e5db4ef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/NES - The Legend of Zelda - Dungeon Enemies.png using Guid(21d77cd4f3c966c49b440f2e5db4ef43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123c83db4a3094284389212bb47da126') in 0.013238 seconds 
+  Import took 0.016310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/_GeneratedAssets/TileSpriteSheet.png
+  artifactKey: Guid(bb34205738cfd394d884a96afc540d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GeneratedAssets/TileSpriteSheet.png using Guid(bb34205738cfd394d884a96afc540d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '229da9b996e0eeae6e0daa9165c65a48') in 0.271333 seconds 
+  Import took 0.274692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Resources/Zelda/Stalfos-LoZ-Sprite.png
+  artifactKey: Guid(5a4bc52fca75c7d46aded93c9f6d6b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/Stalfos-LoZ-Sprite.png using Guid(5a4bc52fca75c7d46aded93c9f6d6b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a93086911524fa1002aa40bad060539f') in 0.009024 seconds 
+  Import took 0.012129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Resources/Zelda/rupee.png
+  artifactKey: Guid(4eeaa22b341e743a496237bf30190f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/rupee.png using Guid(4eeaa22b341e743a496237bf30190f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5eeafed91232b875e24e4cc167b25b5') in 0.011380 seconds 
+  Import took 0.014730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.819672 seconds.
+  path: Assets/Resources/Zelda/black_pixel.png
+  artifactKey: Guid(318458ef93c624cf3bbe42d3c5532123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/black_pixel.png using Guid(318458ef93c624cf3bbe42d3c5532123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b4627f8ead89de9e03848d8cb64422') in 0.017111 seconds 
+  Import took 0.020760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Resources/Zelda/inventory.jpg
+  artifactKey: Guid(835f78b53cfc84b4fa48829a924daa1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/inventory.jpg using Guid(835f78b53cfc84b4fa48829a924daa1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c30a2d037205d7e744e7370f04727795') in 0.023159 seconds 
+  Import took 0.026241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Resources/Zelda/enemies.png
+  artifactKey: Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/enemies.png using Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd3cfb25a41307f091be63a2afa6862d') in 0.035935 seconds 
+  Import took 0.039057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Resources/Zelda/inventory.png
+  artifactKey: Guid(caae2700b98091d4689fe94c03ed61ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/inventory.png using Guid(caae2700b98091d4689fe94c03ed61ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cef278891c49a3a0b1938521caec9a') in 0.023511 seconds 
+  Import took 0.026541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.313798 seconds.
+  path: Assets/Prefabs/enemies/Blade.prefab
+  artifactKey: Guid(7169bcb46eb02fd4ba64c0b4a6f75012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/enemies/Blade.prefab using Guid(7169bcb46eb02fd4ba64c0b4a6f75012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5245d3a9caac02769910a0ef9456f21') in 0.032580 seconds 
+  Import took 0.036290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Prefabs/enemies/Stalfo.prefab
+  artifactKey: Guid(c50aacd08ea5bae4e881ddd998208307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/enemies/Stalfo.prefab using Guid(c50aacd08ea5bae4e881ddd998208307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9f159db531089f424a345b7352bc078') in 0.030194 seconds 
+  Import took 0.033285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.399449 seconds.
+  path: Assets/Resources/Zelda
+  artifactKey: Guid(399073fc7e20160409d8ec33a1858c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda using Guid(399073fc7e20160409d8ec33a1858c9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4597a68bd595d1568da7784ea9fbedc5') in 0.001433 seconds 
+  Import took 0.004661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072331 seconds.
+  path: Assets/Resources/Zelda/TLoZ_Trap_Sprite.png
+  artifactKey: Guid(be18c35488c29db429575ed2ee24c5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/TLoZ_Trap_Sprite.png using Guid(be18c35488c29db429575ed2ee24c5eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47d67b7965a5f0ff2c4928d92ccf45e2') in 0.016665 seconds 
+  Import took 0.020035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Resources/Zelda/ZeldaMap.png
+  artifactKey: Guid(c5d1391cc1271456e8069128e1b0f7b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/ZeldaMap.png using Guid(c5d1391cc1271456e8069128e1b0f7b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '831d259f98a472a0c6846562a23f8569') in 0.041589 seconds 
+  Import took 0.044733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.480016 seconds.
+  path: Assets/Resources/Zelda/enemies.png
+  artifactKey: Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/enemies.png using Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32cf6c88722bb3f2065fd25af091a23') in 0.007417 seconds 
+  Import took 0.011015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.582592 seconds.
+  path: Assets/Resources/Zelda/enemies.png
+  artifactKey: Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Zelda/enemies.png using Guid(4e4bb4631a50e7a4ea8549367d26a59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97782cc33ee05f3330892712e00d5717') in 0.412475 seconds 
+  Import took 0.416903 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+>>>>>>> e8e1c670b3f89c478d363f52d51438a756306db3

@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class BladeController : MonoBehaviour
 {
-    public int rayDirectionInt;
-    public Vector3 destination;
-    float attackSpeed = 10f;
-    float returnSpeed = 5f;
-    Vector2 rayDirection;
+    public int rayDirectionInt1;
+    public Vector3 destination1;
+    public int rayDirectionInt2;
+    public Vector3 destination2;
+    Vector3 destination;
+    float attackSpeed = 8f;
+    float returnSpeed = 2f;
+    Vector2 rayDirection1;
+    Vector2 rayDirection2;
     int layerMask = 1 << 6; // set the layer mask to detct only layer 6 (player)
     int motion = 0; // set the movement of blade
     Vector3 originalPosition;
     readonly Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
-    private void Start() {
+    void Start() {
         originalPosition = transform.position;
     }
 
@@ -58,13 +62,25 @@ public class BladeController : MonoBehaviour
 
     void Detect()
     {
-        rayDirection = directions[rayDirectionInt];
-        RaycastHit hit;
-        Ray ray = new Ray (transform.position, rayDirection);
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        rayDirection1 = directions[rayDirectionInt1];
+        rayDirection2 = directions[rayDirectionInt2];
+        RaycastHit hit1;
+        RaycastHit hit2;
+        Ray ray1 = new Ray (transform.position, rayDirection1);
+        Ray ray2 = new Ray (transform.position, rayDirection2);
+        if (Physics.Raycast(ray1, out hit1, Mathf.Infinity, layerMask))
         {
-            if (hit.collider.gameObject.CompareTag("player"))
+            if (hit1.collider.gameObject.CompareTag("player"))
             {
+                destination = destination1;
+                motion = 1;
+            }
+        }
+        else if (Physics.Raycast(ray2, out hit2, Mathf.Infinity, layerMask))
+        {
+            if (hit2.collider.gameObject.CompareTag("player"))
+            {
+                destination = destination2;
                 motion = 1;
             }
         }

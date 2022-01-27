@@ -36,7 +36,7 @@ public class Collector : MonoBehaviour
         }
         else if (object_collide_with.tag == "health")
         {
-            player_health.add_health(1.0f);
+            player_health.add_health(1);
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);

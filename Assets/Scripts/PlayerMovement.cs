@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public float Movement_speed = 4;
     public static int direction;
     GridBasedMovement grid;

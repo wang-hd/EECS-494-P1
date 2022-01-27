@@ -2,52 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyInteraction : MonoBehaviour
+public class EnemyInteraction : HitInteraction
 {
     public AudioClip enemy_death_sound;
-    HasHealth enemy_health;
-    EnemyMovement enemy_movement;
-    HitInteraction enemy_interaction;
-    bool is_invincible = false;
+    HasHealth health;
+    EnemyMovement movement;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        enemy_health = GetComponent<HasHealth>();
-        enemy_movement = GetComponent<EnemyMovement>();
-        enemy_interaction = GetComponent<HitInteraction>();
+        base.Start();
+        health = GetComponent<HasHealth>();
+        movement = GetComponent<EnemyMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void getHit(GameObject player, int damage)
     {
-        
-    }
-
-    public void getHit(GameObject player, float damage)
-    {
-        if (!is_invincible)
+        if (health != null && Time.frameCount > last_hit + 30)
         {
-            enemy_health.lose_health(damage);
-            if (enemy_health.is_dead())
+            last_hit = Time.frameCount;
+            health.lose_health(damage);
+            if (health.is_dead())
             {
-                AudioSource.PlayClipAtPoint(enemy_death_sound, Camera.main.transform.position);
-                Destroy(gameObject);
+                StartCoroutine(EnemyDeath());
                 return;
             }
             StartCoroutine(HitInteraction(player));
         }
     }
 
+    IEnumerator EnemyDeath()
+    {
+        AudioSource.PlayClipAtPoint(enemy_death_sound, Camera.main.transform.position);
+        Destroy(gameObject);
+        yield return null;
+    }
+
     IEnumerator HitInteraction(GameObject player)
     {
-        enemy_movement.enabled = false;
-        is_invincible = true;
+        movement.enabled = false;
 
-        enemy_interaction.hit_stun(player);
+        base.hit_stun(player);
         yield return new WaitForSeconds(0.5f);
 
-        is_invincible = false;
-        enemy_movement.enabled = true;
+        movement.enabled = true;
     }
 }

@@ -12,11 +12,13 @@ public class PlayerAttack : MonoBehaviour
     public static int bow_projectiles = 0; // Only one arrow at a time
     public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
     Inventory inventory;
-    float melee_damage = 1f;
+    PlayerMovement playerMovement;
+    int melee_damage = 1;
 
     void Start()
     {
         inventory = GetComponent<Inventory>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     public GameObject createNewWeapon(string weapon_name, bool is_full_health){

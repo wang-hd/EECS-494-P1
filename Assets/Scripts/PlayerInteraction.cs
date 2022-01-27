@@ -3,31 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : HitInteraction
 {
     public AudioClip enemy_attack_sound_clip;
     public AudioClip game_over_sound_clip;
     PlayerMovement player_control;
-    HasHealth player_health;
-    HitInteraction player_hit;
+    HasHealth health;
     Animator animator;
-    Rigidbody player_rb;
     AudioSource audioSource;
-    Collider collider;
     bool is_invincible = false;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
+        base.Start();
         player_control = GetComponent<PlayerMovement>();
-        player_health = GetComponent<HasHealth>();
-        player_hit = GetComponent<HitInteraction>();
-
-        player_rb = GetComponent<Rigidbody>();
-
+        health = GetComponent<HasHealth>();
         animator = GetComponent<Animator>();
         audioSource = Camera.main.GetComponent<AudioSource>();
-        collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -38,25 +31,31 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         GameObject object_collider_with = other.gameObject;
-        if (object_collider_with.CompareTag("enemy") || object_collider_with.CompareTag("bladetrap"))
+        if (object_collider_with.CompareTag("enemy"))
         {
-            if (!is_invincible)
+            getHit(object_collider_with);
+        }
+    }
+
+    void getHit(GameObject enemy)
+    {
+        if (!is_invincible && enemy.GetComponent<EnemyAttack>() != null && Time.frameCount > last_hit + 30)
+        {
+            last_hit = Time.frameCount;
+            health.lose_health(enemy.GetComponent<EnemyAttack>().damage);
+            if (health.is_dead())
             {
-                player_health.lose_health(1f);
-                if (player_health.is_dead())
-                {
-                    StartCoroutine(resetGame());
-                    return;
-                }
-                StartCoroutine(HitInteraction(object_collider_with));
+                StartCoroutine(resetGame());
+                return;
             }
+            StartCoroutine(HitInteraction(enemy));
         }
     }
 
     IEnumerator resetGame()
     {
         player_control.enabled = false;
-        player_rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
         audioSource.Stop();
         AudioSource.PlayClipAtPoint(game_over_sound_clip, Camera.main.transform.position);
 
@@ -78,20 +77,15 @@ public class PlayerInteraction : MonoBehaviour
 
     IEnumerator HitInteraction(GameObject enemy)
     {
-        is_invincible = true;
         player_control.enabled = false;
         Physics.IgnoreLayerCollision(6, 7, true);
-        Physics.IgnoreLayerCollision(6, 8, true);
 
-        player_hit.hit_stun(enemy);
+        base.hit_stun(enemy);
         AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
 
         yield return new WaitForSeconds(0.5f);
 
         player_control.enabled = true;
-        is_invincible = false;
         Physics.IgnoreLayerCollision(6, 7, false);
-        Physics.IgnoreLayerCollision(6, 8, false);
-
     }
 }

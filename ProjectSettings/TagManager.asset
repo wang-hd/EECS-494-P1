@@ -5,18 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - weapon
-  - health
-  - enemy
-  - rupee
-  - key
-  - bomb
   - weapon_b
+  - enemy
   - player
+  - bomb
   - SouthDoor
   - WestDoor
   - EastDoor
   - NorthDoor
   - bladetrap
+  - health
+  - rupee
+  - key
   layers:
   - Default
   - TransparentFX
@@ -27,14 +27,9 @@ TagManager:
   - player
   - enemy
   - collectable
-<<<<<<< HEAD
-  - boomerang
-  - 
-=======
   - doorwall
   - boss
->>>>>>> gene
-  - 
+  - weapon
   - 
   - 
   - 

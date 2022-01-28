@@ -31,6 +31,11 @@ public class EnemyInteraction : HitInteraction
         }
     }
 
+    public void stun()
+    {
+        if (movement != null) StartCoroutine(StunInteraction());
+    }
+
     IEnumerator EnemyDeath()
     {
         AudioSource.PlayClipAtPoint(enemy_death_sound, Camera.main.transform.position);
@@ -45,6 +50,13 @@ public class EnemyInteraction : HitInteraction
         base.hit_stun(player);
         yield return new WaitForSeconds(0.5f);
 
+        movement.enabled = true;
+    }
+
+    IEnumerator StunInteraction()
+    {
+        movement.enabled = false;
+        yield return new WaitForSeconds(3f);
         movement.enabled = true;
     }
 }

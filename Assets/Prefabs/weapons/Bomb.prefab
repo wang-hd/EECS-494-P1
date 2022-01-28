@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4119582975267114830}
   - component: {fileID: 354484831048886937}
   - component: {fileID: -1782541219135814366}
-  - component: {fileID: 5612822808325392027}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: bomb
-  m_TagString: bomb
+  m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,21 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e159818c5cc740ecb1fc6221c3ffb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 4
   attacking_distance: 3
   cloud_prefab: {fileID: 5461491165401897015, guid: f76b9d5bdb80c48bfa173d489297f51e, type: 3}
-  collectable: 1
---- !u!114 &5612822808325392027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450757685257597980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5afb4149084bff41980ea015cef4289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifetime: 10
-  despawnOnExit: 0

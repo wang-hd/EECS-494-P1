@@ -41,7 +41,7 @@ public class Collector : MonoBehaviour
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);
         }
-        else if (object_collide_with.tag == "bomb"&&object_collide_with.GetComponent<Bombs>().collectable)
+        else if (object_collide_with.tag == "bomb")
         {
             if (inventory != null)
                 inventory.add_bombs(4);

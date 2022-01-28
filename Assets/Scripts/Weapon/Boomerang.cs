@@ -5,7 +5,8 @@ using UnityEngine;
 public class Boomerang : Weapon
 {
     // Start is called before the first frame update
-    bool is_fly_out=true;
+    public float speed = 8f;
+    bool is_fly_out = true;
     int direction;
     Vector3 init_camera_pos;
     Rigidbody rb;
@@ -35,21 +36,21 @@ public class Boomerang : Weapon
         {
             switch(direction) {
                 case 0:
-                    rb.velocity = new Vector3(0,3f,0);
+                    rb.velocity = new Vector3(0,speed,0);
                     break;
                 case 1:
-                    rb.velocity = new Vector3(3f,0,0);
+                    rb.velocity = new Vector3(speed,0,0);
                     break;
                 case 2:
-                    rb.velocity = new Vector3(0,-3f,0);
+                    rb.velocity = new Vector3(0,-speed,0);
                     break;
                 case 3:
-                    rb.velocity = new Vector3(-3f,0,0);
+                    rb.velocity = new Vector3(-speed,0,0);
                     break;
             }
         }else
         {
-            rb.velocity = (GameObject.Find("Player").transform.position-transform.position).normalized*3f;
+            rb.velocity = (GameObject.Find("Player").transform.position-transform.position).normalized*speed;
         }
     }
     public override void OnTriggerEnter(Collider other)
@@ -57,7 +58,17 @@ public class Boomerang : Weapon
         //if other's tag is enemy
         if (other.CompareTag("enemy"))
         {
-            other.gameObject.GetComponent<EnemyInteraction>().getHit(GameObject.Find("Player"), damage);
+            HasHealth enemyHealth = other.gameObject.GetComponent<HasHealth>();
+            if (enemyHealth != null && enemyHealth.max_health == 1)
+            {
+                enemyHealth.lose_health(1);
+            }
+            else
+            {
+                EnemyInteraction enemyInteraction = other.gameObject.GetComponent<EnemyInteraction>();
+                if (enemyInteraction != null) enemyInteraction.stun();
+            }
+
             if(is_fly_out)
             {
               is_fly_out=false;

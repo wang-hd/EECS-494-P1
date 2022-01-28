@@ -6,15 +6,12 @@ public class Bombs : Weapon
 {
     public float attacking_distance = 0.003f;
     public GameObject cloud_prefab;
-    public bool collectable = true;
     GameObject[] enemies;
 
     public void Attack()
     {
-        collectable = false;
         Debug.Log("[Bomb] Attack is ready to boom!");
         StartCoroutine(Boom());
-        return;
     }
 
     IEnumerator Boom()
@@ -36,7 +33,8 @@ public class Bombs : Weapon
         {
             if(Vector3.Distance(enemy.transform.position,transform.position)<attacking_distance)
             {
-                Destroy(enemy);
+                EnemyInteraction enemyInteraction = enemy.GetComponent<EnemyInteraction>();
+                if (enemyInteraction != null) enemyInteraction.getHit(GameObject.Find("Player"), damage);
             }
         }
         Destroy(gameObject);

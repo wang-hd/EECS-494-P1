@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3206801760485995853}
   - component: {fileID: 5906616805401143421}
   - component: {fileID: 2005574423940191254}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: sword
   m_TagString: weapon
   m_Icon: {fileID: 0}
@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d916b0e2a4769bf48ad309584ac6a5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0

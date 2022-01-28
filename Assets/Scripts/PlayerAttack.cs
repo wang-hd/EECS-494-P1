@@ -14,6 +14,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayer;
     Inventory inventory;
     PlayerMovement playerMovement;
+    int melee_damage = 1;
 
     void Start()
     {
@@ -32,12 +33,7 @@ public class PlayerAttack : MonoBehaviour
         switch(weapon_name)
         {
             case "sword":
-                if (is_full_health&&sword_projectiles <= 1)
-                {
-                    result = Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
-                    result.GetComponent<Swords>().setProjectile();
-                    return result;
-                }else if(!is_full_health)
+                if (sword_projectiles <= 1)
                 {
                     return Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
                 }
@@ -67,24 +63,24 @@ public class PlayerAttack : MonoBehaviour
         return null;
     }
 
-    // public void attack() {
-    //     //TODO: This function performs a melee attack in the current direction the player is facing
-    //     Vector3 attack_dir = GetDirection(PlayerMovement.direction);
+    public void attack() {
+        //TODO: This function performs a melee attack in the current direction the player is facing
+        Vector3 attack_dir = GetDirection(PlayerMovement.direction);
 
-    //     RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 0.5f, enemyLayer);
-    //     foreach (RaycastHit hit in hits)
-    //     {
-    //         GameObject object_collided = hit.collider.gameObject;
-    //         if (object_collided.CompareTag("enemy"))
-    //         {
-    //             Debug.Log("hit an enemy with melee");
-    //             if (object_collided.GetComponent<HasHealth>() != null)
-    //             {
-    //                 object_collided.GetComponent<EnemyInteraction>().getHit(gameObject, melee_damage);
-    //             }
-    //         }
-    //     }
-    // }
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 0.5f, enemyLayer);
+        foreach (RaycastHit hit in hits)
+        {
+            GameObject object_collided = hit.collider.gameObject;
+            if (object_collided.CompareTag("enemy"))
+            {
+                Debug.Log("hit an enemy with melee");
+                if (object_collided.GetComponent<HasHealth>() != null)
+                {
+                    object_collided.GetComponent<EnemyInteraction>().getHit(gameObject, melee_damage);
+                }
+            }
+        }
+    }
 
     IEnumerator bowAnimation()
     {

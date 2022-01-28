@@ -74,14 +74,14 @@ public class PlayerMovement : MonoBehaviour
                     player_attack.createNewWeapon("sword",true);
                 }
                 // Attack with melee sword always
+                player_attack.attack();
                 created_weapon = player_attack.createNewWeapon("sword",false);
-                StartCoroutine(SetAttacking(2));
+                StartCoroutine(SetAttacking(1));
                 break;
             case "bomb":
                 created_weapon = player_attack.createNewWeapon("bomb",false);
                 if(created_weapon!=null)
                 {
-                  Debug.Log("[Bomb] Attack is ready to attack!");
                   created_weapon.GetComponent<Bombs>().Attack();
                 }
                 break;
@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
+        animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.25f);
         animator.SetBool("is_attack", false);

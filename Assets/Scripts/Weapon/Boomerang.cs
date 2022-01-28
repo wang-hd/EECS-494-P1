@@ -6,16 +6,21 @@ public class Boomerang : Weapon
 {
     // Start is called before the first frame update
     public float speed = 8f;
+    public float max_distance = 5f;
+
     bool is_fly_out = true;
     int direction;
     Vector3 init_camera_pos;
     Rigidbody rb;
+    GameObject player;
 
     void Start()
     {
         direction = PlayerMovement.direction;
         init_camera_pos = Camera.main.transform.position;
         rb = GetComponent<Rigidbody>();
+        player = GameObject.Find("Player");
+
         boomerang_move();
     }
 
@@ -27,6 +32,9 @@ public class Boomerang : Weapon
         if (is_fly_out&&!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
             is_fly_out=false;
+        }else if(is_fly_out&&Vector3.Distance(player.transform.position, transform.position)>max_distance)
+        {
+            is_fly_out = false;
         }
     }
 
@@ -50,7 +58,7 @@ public class Boomerang : Weapon
             }
         }else
         {
-            rb.velocity = (GameObject.Find("Player").transform.position-transform.position).normalized*speed;
+            rb.velocity = (player.transform.position-transform.position).normalized*speed;
         }
     }
     public override void OnTriggerEnter(Collider other)

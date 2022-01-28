@@ -15,10 +15,10 @@ public class Inventory : MonoBehaviour
     public GameObject bomb_prefab;
 
     public static bool god_mode = false;
-    
+
     void Start()
     {
-        weapons.Add(bomb_prefab);
+        weapons.Add(boomerang_prefab);
     }
 
     void Update() {

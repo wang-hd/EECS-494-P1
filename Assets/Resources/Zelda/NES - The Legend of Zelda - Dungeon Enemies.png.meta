@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -6140082021176908095
     second: NES - The Legend of Zelda - Dungeon Enemies_0
+  - first:
+      213: 5624816802889452426
+    second: NES - The Legend of Zelda - Dungeon Enemies_1
+  - first:
+      213: -258166553553586310
+    second: NES - The Legend of Zelda - Dungeon Enemies_2
+  - first:
+      213: -1896785440114134109
+    second: NES - The Legend of Zelda - Dungeon Enemies_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +120,28 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 153
-        width: 16
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 15, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6ecfbeeeb0acaa0800000000000000
+      internalID: -6140082021176908095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - The Legend of Zelda - Dungeon Enemies_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 201
+        width: 7
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -120,8 +150,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c6ecfbeeeb0acaa0800000000000000
-      internalID: -6140082021176908095
+      spriteID: a8bcfd6a41d5f0e40800000000000000
+      internalID: 5624816802889452426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - The Legend of Zelda - Dungeon Enemies_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 202
+        width: 8
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4999962, y: 0.5254702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a773d8a23eeca6cf0800000000000000
+      internalID: -258166553553586310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NES - The Legend of Zelda - Dungeon Enemies_3
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 201
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a33dda11b34da5e0800000000000000
+      internalID: -1896785440114134109
       vertices: []
       indices: 
       edges: []

@@ -6,18 +6,37 @@ using UnityEngine;
 public class Swords : Weapon
 {
     int sword_projectiles = 0;
+    bool is_projectile=false;
     Vector3 init_camera_pos;
+    int direction = 0;
+
+    void Awake()
+    {
+        // This command will be called for many times when it is in the Start()
+        GetComponent<Projectile>().enabled = false;
+    }
 
     void Start()
     {
-        PlayerAttack.sword_projectiles++;
-        sword_projectiles = PlayerAttack.sword_projectiles;
-        init_camera_pos = Camera.main.transform.position;
+        if(is_projectile)
+        {
+            PlayerAttack.sword_projectiles++;
+            sword_projectiles = PlayerAttack.sword_projectiles;
+            init_camera_pos = Camera.main.transform.position;
+        }else
+        {
+          direction = PlayerMovement.direction;
+          GetComponent<Animator>().SetInteger("direction", direction);
+        }
     }
 
     void OnDestroy()
     {
-        PlayerAttack.sword_projectiles--;
+        if(is_projectile)
+        {
+            PlayerAttack.sword_projectiles--;
+        }
+
     }
 
     void Update()
@@ -32,10 +51,19 @@ public class Swords : Weapon
         }
     }
 
+    /// <summary>
+    /// This function is used when the swords are needed to become a projectile
+    /// </summary>
+    public override void setProjectile()
+    {
+      is_projectile = true;
+      GetComponent<Projectile>().enabled = true;
+    }
+
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-        if (other.CompareTag("enemy"))
+        if (is_projectile&&other.CompareTag("enemy"))
         {
             Destroy(gameObject);
         }

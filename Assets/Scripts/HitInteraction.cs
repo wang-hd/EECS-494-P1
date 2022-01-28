@@ -39,7 +39,25 @@ public class HitInteraction : MonoBehaviour
         else if (gameObject.CompareTag("enemy"))
         {
             EnemyGridMovement enemyMovement = gameObject.GetComponent<EnemyGridMovement>();
-            direction = enemyMovement.direction;
+            //direction = enemyMovement.direction;
+             
+            RaycastHit MyRayHit;
+            Vector3 MyDirection = ( transform.position - ObjectHit.transform.position ).normalized;
+            Ray MyRay = new Ray( ObjectHit.transform.position, MyDirection );
+            
+            if ( Physics.Raycast( MyRay, out MyRayHit ) ){
+                    
+                if ( MyRayHit.collider != null ){
+                    
+                    Vector3 MyNormal = MyRayHit.normal;
+                    MyNormal = MyRayHit.transform.TransformDirection( MyNormal );
+                    
+                    if( MyNormal == MyRayHit.transform.up ){ direction = 0; }
+                    if( MyNormal == -MyRayHit.transform.up ){ direction = 2; }
+                    if( MyNormal == MyRayHit.transform.right ){ direction = 1; }
+                    if( MyNormal == -MyRayHit.transform.right ){ direction = 3; }
+                }    
+            }
         }
 
         return directions[direction];

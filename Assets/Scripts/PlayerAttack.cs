@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     {
         inventory = GetComponent<Inventory>();
         playerMovement = GetComponent<PlayerMovement>();
+
     }
 
     public GameObject createNewWeapon(string weapon_name, bool is_full_health){
@@ -33,7 +34,12 @@ public class PlayerAttack : MonoBehaviour
         switch(weapon_name)
         {
             case "sword":
-                if (sword_projectiles <= 1)
+                if (is_full_health&&sword_projectiles <= 1)
+                {
+                    result = Instantiate(sword_prefab, player_pos, Quaternion.identity);
+                    result.GetComponent<Swords>().setProjectile();
+                    return result;
+                }else if(!is_full_health)
                 {
                     return Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
                 }

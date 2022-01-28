@@ -10,7 +10,6 @@ public class Weapon : MonoBehaviour
     public virtual void setProjectile(){
 
     }
-
     // TODO: destroy or give every object a certain hurt when it collide with the enemy
     public virtual void OnTriggerEnter(Collider other) {
         //if other's tag is enemy

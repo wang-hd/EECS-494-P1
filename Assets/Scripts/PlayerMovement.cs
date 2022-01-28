@@ -111,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
-        animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.25f);
         animator.SetBool("is_attack", false);

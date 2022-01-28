@@ -3,20 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - weapon
-  - weapon_b
-  - enemy
-  - player
-  - bomb
-  - SouthDoor
-  - WestDoor
-  - EastDoor
-  - NorthDoor
-  - bladetrap
-  - health
-  - rupee
-  - key
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -24,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - player
-  - enemy
-  - collectable
-  - doorwall
-  - boss
-  - weapon
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

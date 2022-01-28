@@ -71,22 +71,22 @@ public class PlayerMovement : MonoBehaviour
               if (player_health.is_full_health())
                 {
                     // Spawn full health sword projectile
-                    player_attack.createNewWeapon("sword",true);
+                    player_attack.createNewWeapon("sword");
                 }
                 // Attack with melee sword always
                 player_attack.attack();
-                created_weapon = player_attack.createNewWeapon("sword",false);
+                created_weapon = player_attack.createNewWeapon("sword");
                 StartCoroutine(SetAttacking(1));
                 break;
             case "bomb":
-                created_weapon = player_attack.createNewWeapon("bomb",false);
+                created_weapon = player_attack.createNewWeapon("bomb");
                 if(created_weapon!=null)
                 {
                   created_weapon.GetComponent<Bombs>().Attack();
                 }
                 break;
             default:
-                player_attack.createNewWeapon(weapon_name,false);
+                player_attack.createNewWeapon(weapon_name);
                 StartCoroutine(SetAttacking(2));
                 break;
         }
@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
+        animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.25f);
         animator.SetBool("is_attack", false);

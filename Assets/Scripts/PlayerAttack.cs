@@ -20,10 +20,9 @@ public class PlayerAttack : MonoBehaviour
     {
         inventory = GetComponent<Inventory>();
         playerMovement = GetComponent<PlayerMovement>();
-
     }
 
-    public GameObject createNewWeapon(string weapon_name, bool is_full_health){
+    public GameObject createNewWeapon(string weapon_name){
         //INPUT: string - weapon name; bool - which weapon will be substitute
         //TODO: This function creates new weapon according to the input
         // Will not create a weapon if a weapon already exists, to prevent double attacking
@@ -34,12 +33,7 @@ public class PlayerAttack : MonoBehaviour
         switch(weapon_name)
         {
             case "sword":
-                if (is_full_health&&sword_projectiles <= 1)
-                {
-                    result = Instantiate(sword_prefab, player_pos, Quaternion.identity);
-                    result.GetComponent<Swords>().setProjectile();
-                    return result;
-                }else if(!is_full_health)
+                if (sword_projectiles <= 1)
                 {
                     return Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
                 }

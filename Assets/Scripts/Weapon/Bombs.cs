@@ -10,7 +10,6 @@ public class Bombs : Weapon
 
     public void Attack()
     {
-        Debug.Log("[Bomb] Attack is ready to boom!");
         StartCoroutine(Boom());
     }
 
@@ -21,8 +20,6 @@ public class Bombs : Weapon
         yield return new WaitForSeconds(0.5f);
         //begin to attack and damage enemies
         enemies = GameObject.FindGameObjectsWithTag("enemy");
-        Debug.Log("[Bomb] enemy has been found, we are going to destroy the enemy!");
-        Debug.Log("[Bomb] we are going to make clouds");
         cloud_position = new Vector3[]{new Vector3(0,0,0), new Vector3(0.6f,0,0), new Vector3(-0.6f,0,0), new Vector3(0.3f,0.5f,0), new Vector3(0.3f,-0.5f,0), new Vector3(-0.3f,0.5f,0), new Vector3(-0.3f,-0.5f,0)};
         for(int i=0;i<7;i++)
         {

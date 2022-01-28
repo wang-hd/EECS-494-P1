@@ -27,8 +27,13 @@ TagManager:
   - player
   - enemy
   - collectable
+<<<<<<< HEAD
   - boomerang
   - 
+=======
+  - doorwall
+  - boss
+>>>>>>> gene
   - 
   - 
   - 

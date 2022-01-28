@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyGridMovement : EnemyMovement
 {
     public int direction;
+    public Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
     GridBasedMovement grid;
-    Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
     public override void Start()
     {
@@ -35,11 +35,10 @@ public class EnemyGridMovement : EnemyMovement
         {
             Vector2 current_pos = new Vector2(transform.position.x, transform.position.y);
             base.rb.velocity = (waypoint - current_pos).normalized * speed;
-            if (Vector2.Distance(transform.position, waypoint) <= 0.01)
+            if (Vector2.Distance(transform.position, waypoint) <= 0.05)
             {
-                Debug.Log("reached destination!");
+                transform.position = waypoint;
                 SetNewDestination();
-                Debug.Log("new waypoint: " + waypoint);
             }
         }
     }
@@ -48,20 +47,22 @@ public class EnemyGridMovement : EnemyMovement
     {
         Vector2 new_direction = directions[Random.Range(0, 4)];
         RaycastHit hit;
-        Ray detect = new Ray(transform.position, new_direction);
         int move_distance =  0;
-        if (Physics.Raycast(detect, out hit, 100f, ~enemyAndPlayerLayer))
+        do
         {
-            move_distance = Random.Range(0, Mathf.FloorToInt(hit.distance));
-            //Debug.Log("distance = " + move_distance);
-        }
+            new_direction = directions[Random.Range(0, 4)];
+            Ray detect = new Ray(transform.position, new_direction);
+            if (Physics.Raycast(detect, out hit, 100f, ~enemyAndPlayerLayer))
+            {
+                move_distance = Random.Range(1, Mathf.FloorToInt(hit.distance));
+            }
+        } while (hit.distance < 1);
         
         waypoint = new Vector2(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y)) + new_direction * move_distance;
         SetCurrentDirection(new_direction);
-        //Debug.Log(waypoint.ToString());
     }
 
-    private void SetCurrentDirection(Vector2 new_direction) {
+    public void SetCurrentDirection(Vector2 new_direction) {
         if (new_direction == Vector2.up)
         {
             direction = GridBasedMovement.up;

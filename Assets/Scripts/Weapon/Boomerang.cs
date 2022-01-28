@@ -23,7 +23,7 @@ public class Boomerang : Weapon
     {
         transform.Rotate(0,0,10);
         boomerang_move();
-        if (is_fly_out&&!CoroutineUtilities.InCurrentRoom(transform, init_camera_pos))
+        if (is_fly_out&&!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
             is_fly_out=false;
         }

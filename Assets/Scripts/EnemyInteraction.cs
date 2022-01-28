@@ -18,9 +18,9 @@ public class EnemyInteraction : HitInteraction
 
     public void getHit(GameObject player, int damage)
     {
-        if (health != null && Time.frameCount > last_hit + 30)
+        if (health != null && Time.time > last_hit + 0.5f)
         {
-            last_hit = Time.frameCount;
+            last_hit = Time.time;
             health.lose_health(damage);
             if (health.is_dead())
             {

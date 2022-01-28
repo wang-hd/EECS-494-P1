@@ -29,19 +29,11 @@ public class PlayerInteraction : HitInteraction
         is_invincible = Inventory.god_mode;
     }
 
-    private void OnCollisionEnter(Collision other) {
-        GameObject object_collider_with = other.gameObject;
-        if (object_collider_with.CompareTag("enemy"))
-        {
-            getHit(object_collider_with);
-        }
-    }
-
-    void getHit(GameObject enemy)
+    public void getHit(GameObject enemy)
     {
-        if (!is_invincible && enemy.GetComponent<EnemyAttack>() != null && Time.frameCount > last_hit + 30)
+        if (!is_invincible && enemy.GetComponent<EnemyAttack>() != null && Time.time > last_hit + 0.5f)
         {
-            last_hit = Time.frameCount;
+            last_hit = Time.time;
             health.lose_health(enemy.GetComponent<EnemyAttack>().damage);
             if (health.is_dead())
             {

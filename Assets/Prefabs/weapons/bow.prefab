@@ -15,13 +15,8 @@ GameObject:
   - component: {fileID: -4051637164999170125}
   - component: {fileID: 375080364148136767}
   - component: {fileID: 1307151413288406125}
-<<<<<<< HEAD:Assets/Prefabs/weapons/arrow.prefab
-  m_Layer: 11
-  m_Name: arrow
-=======
   m_Layer: 8
   m_Name: bow
->>>>>>> 154f2adebc0489d19acd76382f291cf5271c014b:Assets/Prefabs/weapons/bow.prefab
   m_TagString: weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896140d1aa644487bb0c526885d1c361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
 --- !u!65 &-4051637164999170125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,4 +160,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d916b0e2a4769bf48ad309584ac6a5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0

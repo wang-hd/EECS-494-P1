@@ -13,11 +13,7 @@ GameObject:
   - component: {fileID: 8381652231621106141}
   - component: {fileID: -3541812004160990370}
   - component: {fileID: 2609937649072880959}
-<<<<<<< HEAD
-  m_Layer: 11
-=======
   m_Layer: 9
->>>>>>> 154f2adebc0489d19acd76382f291cf5271c014b
   m_Name: boomerang
   m_TagString: weapon
   m_Icon: {fileID: 0}
@@ -33,11 +29,7 @@ Transform:
   m_GameObject: {fileID: 8381652231621106208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37, y: 6, z: 0}
-<<<<<<< HEAD
-  m_LocalScale: {x: 5, y: 5, z: 5}
-=======
   m_LocalScale: {x: 10, y: 10, z: 10}
->>>>>>> 154f2adebc0489d19acd76382f291cf5271c014b
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,10 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-<<<<<<< HEAD
-  speed: 8
-=======
->>>>>>> 154f2adebc0489d19acd76382f291cf5271c014b
 --- !u!54 &-3541812004160990370
 Rigidbody:
   m_ObjectHideFlags: 0

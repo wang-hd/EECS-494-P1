@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class GoriyaAttack : EnemyAttack
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool returned = false;
+    public GameObject boomerang_prefab;
+    public override IEnumerator DoAttack()
     {
-        
-    }
+        enemyMovement.enabled = false;
 
-    // Update is called once per frame
-    void Update()
-    {
+        GameObject boomerang = Instantiate(boomerang_prefab, transform.position, Quaternion.identity);
+        boomerang.GetComponent<GoriyaBoomerang>().SetParentGoriya(gameObject);
         
+        while (!returned)
+        {
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        enemyMovement.enabled = true;
+        returned = false;
     }
 }

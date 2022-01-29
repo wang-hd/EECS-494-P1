@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     public int damage = 1;
     public int threshold = 1; // if we don't have an explicit attack, set to 0
-    EnemyMovement enemyMovement;
+    protected EnemyMovement enemyMovement;
     // Start is called before the first frame update
     void Start()
     {

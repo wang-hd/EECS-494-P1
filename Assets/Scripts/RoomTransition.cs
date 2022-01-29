@@ -1,33 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomTransition : MonoBehaviour
 {
     Camera cam;
     GameObject player;
+    Image filter;
     PlayerMovement player_control;
     Animator player_anim;
     readonly Vector3 cameraNorth = new Vector3(0, 11, 0);
     readonly Vector3 cameraEast = new Vector3(16, 0, 0);
     readonly Vector3 cameraSouth = new Vector3(0, -11, 0);
     readonly Vector3 cameraWest = new Vector3(-16, 0, 0);
+    readonly Vector3 cameraDown = new Vector3(2,0,12);
+    readonly Vector3 cameraUp = new Vector3(-2,0,-12);
 
     readonly Vector3 playerNorth = new Vector3(0, 1.5f, 0);
     readonly Vector3 playerEast = new Vector3(1.5f, 0, 0);
     readonly Vector3 playerSouth = new Vector3(0, -1.5f, 0);
     readonly Vector3 playerWest = new Vector3(-1.5f, 0, 0);
+    readonly Vector3 playerDown = new Vector3(21, 65, 12);
+    readonly Vector3 playerUp = new Vector3(21,60,0);
+
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
         player = GameObject.Find("Player");
+        filter = GameObject.Find("BlackFilter").GetComponent<Image>();
+
         if (player != null)
         {
             player_control = player.GetComponent<PlayerMovement>();
             player_anim = player.GetComponent<Animator>();
         }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,7 +47,7 @@ public class RoomTransition : MonoBehaviour
             if (player_control.enabled)
             {
                 Debug.Log("Do transition");
-                other.GetComponent<Rigidbody>().velocity = Vector3.zero;          
+                other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
                 if (this.CompareTag("NorthDoor"))
                 {
@@ -58,7 +68,14 @@ public class RoomTransition : MonoBehaviour
                 {
                     StartCoroutine(PlayerRoomTransition(playerWest));
                     StartCoroutine(CameraRoomTransition(cameraWest));
-                }                
+                }
+                else if (this.CompareTag("UpDoor"))
+                {
+                    StartCoroutine(CameraTurnBlack());
+                    StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, player.transform.position, playerUp, 0.4f));
+                    StartCoroutine(CameraRoomTransition(cameraUp));
+                    cam.orthographicSize=7.5f;
+                }
             }
             else
             {
@@ -117,5 +134,12 @@ public class RoomTransition : MonoBehaviour
 
         player.GetComponent<BoxCollider>().enabled = true;
         player_control.enabled = true;
+    }
+
+    IEnumerator CameraTurnBlack()
+    {
+        filter.color=new Color(0,0,0,255);
+        yield return new WaitForSeconds(1f);
+        filter.color=new Color(0,0,0,0);
     }
 }

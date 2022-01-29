@@ -34,9 +34,9 @@ public class GridBasedMovement : MonoBehaviour
             {
                 new_vertical_position = vertical_position - deviation_with_tile + 1f * vertical_position / Mathf.Abs(vertical_position);
             }
-            transform.position = new Vector2(horizontal_position, new_vertical_position);
+            transform.position = new Vector3(horizontal_position, new_vertical_position, transform.position.z);
         }
-        
+
         if (curr_direction == up || curr_direction == down)
         {
             float deviation_with_tile = horizontal_position % 1f;
@@ -53,7 +53,7 @@ public class GridBasedMovement : MonoBehaviour
             {
                 new_horizontal_position = horizontal_position - deviation_with_tile + 1f * horizontal_position / Mathf.Abs(horizontal_position);
             }
-            transform.position = new Vector2(new_horizontal_position, vertical_position);
+            transform.position = new Vector3(new_horizontal_position, vertical_position, transform.position.z);
         }
     }
 }

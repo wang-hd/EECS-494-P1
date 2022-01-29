@@ -11,23 +11,26 @@ public class FireballMovement : EnemyMovement
     {
         base.Start();
         fireballs++;
-        fireball_num = fireballs;
     }
 
     // Update is called once per frame
     public override void Update()
     {
         base.Update();
-        if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos) && fireball_num > 1)
+        if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos) && fireballs >= 0)
         {
-            fireballs--;
             Destroy(gameObject);
         }
     }
 
-    public void SetDestination(Vector3 player_pos, int offset)
+    void OnDestroy()
     {
-        waypoint = new Vector2(init_camera_pos.x + CoroutineUtilities.room_x_lower_bound, player_pos.y + offset * 2.1f);
+        fireballs--;
+    }
+
+    public void SetDestination(Vector3 camera_pos, Vector3 player_pos, int offset)
+    {
+        waypoint = new Vector2(camera_pos.x + CoroutineUtilities.room_x_lower_bound, player_pos.y + offset * 2.1f);
         if (offset != 0) speed += 0.05f;
     }
 

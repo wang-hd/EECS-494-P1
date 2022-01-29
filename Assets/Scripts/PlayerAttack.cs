@@ -27,19 +27,18 @@ public class PlayerAttack : MonoBehaviour
         //TODO: This function creates new weapon according to the input
         // Will not create a weapon if a weapon already exists, to prevent double attacking
         Vector3 player_pos = GameObject.Find("Player").transform.position;
-        GameObject result;
         Vector3 player_dir = GetDirection(PlayerMovement.direction);
         Vector3 weapon_pos = player_pos + player_dir * 0.5f;
         switch(weapon_name)
         {
             case "sword":
-                if (sword_projectiles <= 1)
+                if (sword_projectiles <= 0)
                 {
                     return Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;
             case "arrow":
-                if (bow_projectiles <= 1 && inventory != null && inventory.get_rupees() > 0)
+                if (bow_projectiles <= 0 && inventory != null && inventory.get_rupees() > 0)
                 {
                     inventory.add_rupees(-1);
                     StartCoroutine(bowAnimation());
@@ -47,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
                 }
                 break;
             case "boomerang":
-                if (boomerang_projectiles <= 1)
+                if (boomerang_projectiles <= 0)
                 {
                     return Instantiate(boomerang_prefab, weapon_pos, Quaternion.identity);
                 }

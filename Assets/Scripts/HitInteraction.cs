@@ -18,7 +18,7 @@ public class HitInteraction : MonoBehaviour
 
     public void hit_stun(GameObject enemy)
     {
-        if (rb != null)
+        if (rb != null && hit_force > 0)
         {
             rb.AddForce(Vector3.Normalize(returnDirection(enemy)) * (-hit_force), ForceMode.Impulse);
             // Debug.Log("add force" + Vector3.Normalize(returnDirection(enemy)).ToString());

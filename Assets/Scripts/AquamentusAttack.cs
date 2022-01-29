@@ -29,7 +29,7 @@ public class AquamentusAttack : MonoBehaviour
             for (int i = -1; i < 2; i++)
             {
                 GameObject fireball = Instantiate(fireball_prefab, transform.position + Vector3.up * (0.5f + i * 0.25f), Quaternion.identity);
-                fireball.GetComponent<FireballMovement>().SetDestination(GameObject.Find("Player").transform.position, i);
+                fireball.GetComponent<FireballMovement>().SetDestination(Camera.main.transform.position, GameObject.Find("Player").transform.position, i);
             }
             yield return new WaitForSeconds(interval);
         }

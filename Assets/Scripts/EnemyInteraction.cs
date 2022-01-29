@@ -5,8 +5,11 @@ using UnityEngine;
 public class EnemyInteraction : HitInteraction
 {
     public AudioClip enemy_death_sound;
+    public bool ignore_hit = false;
     HasHealth health;
     EnemyMovement movement;
+    public float stun_duration = 0f;
+    float max_duration = 3f;
 
     // Start is called before the first frame update
     public override void Start()
@@ -14,6 +17,7 @@ public class EnemyInteraction : HitInteraction
         base.Start();
         health = GetComponent<HasHealth>();
         movement = GetComponent<EnemyMovement>();
+        StartCoroutine(StunInteraction());
     }
 
     public void getHit(GameObject player, int damage)
@@ -31,9 +35,13 @@ public class EnemyInteraction : HitInteraction
         }
     }
 
-    public void stun()
+    public void stun(float time)
     {
-        if (movement != null) StartCoroutine(StunInteraction());
+        if (movement != null)
+        {
+            stun_duration += time;
+            if (stun_duration > max_duration) stun_duration = max_duration;
+        }
     }
 
     IEnumerator EnemyDeath()
@@ -45,18 +53,27 @@ public class EnemyInteraction : HitInteraction
 
     IEnumerator HitInteraction(GameObject player)
     {
-        movement.enabled = false;
+        if (!ignore_hit) movement.enabled = false;
 
         base.hit_stun(player);
         yield return new WaitForSeconds(0.5f);
 
-        movement.enabled = true;
+        if (!ignore_hit) movement.enabled = true;
+        if (!ignore_hit) movement.SetNewDestination();
     }
 
     IEnumerator StunInteraction()
     {
-        movement.enabled = false;
-        yield return new WaitForSeconds(3f);
-        movement.enabled = true;
+        while (true)
+        {
+            while (stun_duration > 0)
+            {
+                movement.enabled = false;
+                yield return new WaitForSeconds(1f);
+                stun_duration--;
+                movement.enabled = true;
+            }
+            yield return null;
+        }
     }
 }

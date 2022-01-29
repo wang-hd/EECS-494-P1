@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class AquamentusMovement : EnemyMovement
 {
-    public AudioClip aquamentus_sound;
-    float sound_interval = 10.6f;
+    AudioSource audioSource;
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        StartCoroutine(MakeSound(sound_interval));
+        
     }
 
     // Update is called once per frame
@@ -38,14 +37,5 @@ public class AquamentusMovement : EnemyMovement
             horizontal_offset = Random.Range(-5, 5);
         } while ((transform.position.x + horizontal_offset > init_camera_pos.x + 5f) || (transform.position.x + horizontal_offset < init_camera_pos.x + 1.5f));
         waypoint = new Vector2(transform.position.x + horizontal_offset, transform.position.y);
-    }
-
-    IEnumerator MakeSound(float interval)
-    {
-        while (true)
-        {
-            AudioSource.PlayClipAtPoint(aquamentus_sound, Camera.main.transform.position);
-            yield return new WaitForSeconds(interval);
-        }
     }
 }

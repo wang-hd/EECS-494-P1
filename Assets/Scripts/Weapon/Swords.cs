@@ -5,13 +5,11 @@ using UnityEngine;
 // TODO: This class is an inheritance of weapon class, which is for swords.
 public class Swords : Weapon
 {
-    int sword_projectiles = 0;
     Vector3 init_camera_pos;
 
     void Start()
     {
         PlayerAttack.sword_projectiles++;
-        sword_projectiles = PlayerAttack.sword_projectiles;
         init_camera_pos = Camera.main.transform.position;
     }
 
@@ -24,11 +22,7 @@ public class Swords : Weapon
     {
         if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
-            transform.position = Vector3.zero;
-            if (sword_projectiles > 1)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 

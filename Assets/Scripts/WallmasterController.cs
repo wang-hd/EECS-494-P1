@@ -59,11 +59,15 @@ public class WallmasterController : EnemyMovement
             else if (motion == 3)
             {
                 motion = 0;
-                //transform.position = originalPosition;
-                //targetPosition = originalPosition;
-                grabPlayer = false;
-                PlayerInteraction.setPlayerInvincible(false);
-                Destroy(gameObject);
+                if (grabPlayer)
+                {
+                    grabPlayer = false;
+                    PlayerInteraction.setPlayerInvincible(false);
+                    Camera.main.transform.position = GameController.init_camera_pos;
+                    player.transform.position = new Vector3 (39.5f, 2f, 0);
+                    Destroy(gameObject);
+                }
+                
             }
         }
     }

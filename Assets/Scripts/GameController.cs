@@ -10,15 +10,23 @@ public class GameController : MonoBehaviour
     public Camera cam;
     public GameObject keese;
     public GameObject stalfo;
+    public GameObject stalfo_with_key;
     public GameObject gel;
     public GameObject goriya;
     public GameObject Aquamentus;
+    public GameObject key;
+    List<GameObject> enemy_1_0 = new List<GameObject>();
+    List<GameObject> enemy_2_2 = new List<GameObject>();
+    List<GameObject> enemy_2_4 = new List<GameObject>();
+    List<GameObject> enemy_2_5 = new List<GameObject>();
+    List<bool> key_is_taken;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
     // Start is called before the first frame update
     void Start()
     {
         init_camera_pos = cam.transform.position;
+        key_is_taken = new List<bool>() {false, false, false, false};
     }
 
     // Update is called once per frame
@@ -50,9 +58,15 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(keese, new Vector3 (19, 6, 0), Quaternion.identity);
-                Instantiate(keese, new Vector3 (23, 4, 0), Quaternion.identity);
-                Instantiate(keese, new Vector3 (25, 5, 0), Quaternion.identity);
+                
+                enemy_1_0.Add( Instantiate(keese, new Vector3 (19, 6, 0), Quaternion.identity));
+                enemy_1_0.Add( Instantiate(keese, new Vector3 (23, 4, 0), Quaternion.identity));
+                enemy_1_0.Add( Instantiate(keese, new Vector3 (25, 5, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_1_0) && !key_is_taken[0])
+            {
+                Instantiate(key, new Vector3 (24, 5, 0), Quaternion.identity);
+                key_is_taken[0] = true;
             }
         }
         else if (currentRoom == new Vector2 (3, 0))
@@ -64,7 +78,7 @@ public class GameController : MonoBehaviour
                 Instantiate(stalfo, new Vector3 (52, 3, 0), Quaternion.identity);
                 Instantiate(stalfo, new Vector3 (57, 5, 0), Quaternion.identity);
                 Instantiate(stalfo, new Vector3 (60, 6, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (61, 2, 0), Quaternion.identity);
+                Instantiate(stalfo_with_key, new Vector3 (61, 2, 0), Quaternion.identity);
             }
         }
         else if (currentRoom == new Vector2 (2, 1))
@@ -95,11 +109,16 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(stalfo, new Vector3 (37, 30, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (42, 30, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (44, 30, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (45, 28, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (43, 25, 0), Quaternion.identity);
+                enemy_2_2.Add( Instantiate(stalfo, new Vector3 (37, 30, 0), Quaternion.identity));
+                enemy_2_2.Add( Instantiate(stalfo, new Vector3 (42, 30, 0), Quaternion.identity));
+                enemy_2_2.Add( Instantiate(stalfo, new Vector3 (44, 30, 0), Quaternion.identity));
+                enemy_2_2.Add( Instantiate(stalfo, new Vector3 (45, 28, 0), Quaternion.identity));
+                enemy_2_2.Add( Instantiate(stalfo, new Vector3 (43, 25, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_2_2) && !key_is_taken[1])
+            {
+                Instantiate(key, new Vector3 (40, 27, 0), Quaternion.identity);
+                key_is_taken[1] = true;
             }
         }
         else if (currentRoom == new Vector2 (3, 2))
@@ -154,9 +173,14 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(stalfo, new Vector3 (35, 49, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (41, 51, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (44, 51, 0), Quaternion.identity);
+                enemy_2_4.Add( Instantiate(stalfo, new Vector3 (35, 49, 0), Quaternion.identity));
+                enemy_2_4.Add( Instantiate(stalfo, new Vector3 (41, 51, 0), Quaternion.identity));
+                enemy_2_4.Add( Instantiate(stalfo, new Vector3 (44, 51, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_2_4) && !key_is_taken[2])
+            {
+                Instantiate(key, new Vector3 (39, 49, 0), Quaternion.identity);
+                key_is_taken[2] = true;
             }
         }
         else if (currentRoom == new Vector2 (2, 5))
@@ -164,9 +188,14 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(goriya, new Vector3 (38, 63, 0), Quaternion.identity);
-                Instantiate(goriya, new Vector3 (41, 63, 0), Quaternion.identity);
-                Instantiate(goriya, new Vector3 (41, 61, 0), Quaternion.identity);
+                enemy_2_5.Add( Instantiate(goriya, new Vector3 (38, 63, 0), Quaternion.identity));
+                enemy_2_5.Add( Instantiate(goriya, new Vector3 (41, 63, 0), Quaternion.identity));
+                enemy_2_5.Add( Instantiate(goriya, new Vector3 (41, 61, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_2_5) && !key_is_taken[3])
+            {
+                Instantiate(key, new Vector3 (39, 61, 0), Quaternion.identity);
+                key_is_taken[3] = true;
             }
         }
         else if (currentRoom == new Vector2 (4, 4))
@@ -177,5 +206,14 @@ public class GameController : MonoBehaviour
                 Instantiate(Aquamentus, new Vector3 (75, 49, 0), Quaternion.identity);
             }
         }
+    }
+
+    bool isEmptyList(List<GameObject> list)
+    {
+        foreach (GameObject enemy in list)
+        {
+            if (enemy != null) return false;
+        }
+        return true;
     }
 }

@@ -44,6 +44,9 @@ public class BowRoomBlock : MovableBlock
         {
             is_key_down = true;
             startKeyDownTime = Time.time;
+        }else
+        {
+            is_key_down = false;
         }
         if(is_collision&&is_key_down&&Time.time>startKeyDownTime+holdTime&&Time.time>startCollisionTime+holdTime&&could_move)
         {

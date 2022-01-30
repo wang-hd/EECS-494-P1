@@ -8,13 +8,13 @@ public class TunnelRoom : RoomTransition
 
     Image filter;
 
-    readonly Vector3 cameraDown = new Vector3(2,0,12);
-    readonly Vector3 cameraUp = new Vector3(-2,0,-12);
+    readonly Vector3 cameraDown = new Vector3(0,-1,17.5f);
+    readonly Vector3 cameraUp = new Vector3(0,1,-17.5f);
 
-    readonly Vector3 playerDown = new Vector3(21, 65, 12);
+    readonly Vector3 playerDown = new Vector3(18, 64, 12);
     readonly Vector3 playerUp = new Vector3(21,60,0);
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         if(GameObject.Find("BlackFilter")!=null)
@@ -27,7 +27,7 @@ public class TunnelRoom : RoomTransition
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("player"))
         {
@@ -61,7 +61,7 @@ public class TunnelRoom : RoomTransition
     IEnumerator CameraTurnBlack()
     {
         filter.color=new Color(0,0,0,255);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         filter.color=new Color(0,0,0,0);
     }
 }

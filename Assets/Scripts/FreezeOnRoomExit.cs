@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FreezeOnRoomExit : MonoBehaviour
 {
-    public Vector3 init_camera_pos;
+    //public Vector3 init_camera_pos;
     EnemyMovement enemyMovement;
     SpriteRenderer sprite;
     // Start is called before the first frame update
@@ -12,13 +12,13 @@ public class FreezeOnRoomExit : MonoBehaviour
     {
         enemyMovement = GetComponent<EnemyMovement>();
         sprite = GetComponent<SpriteRenderer>();
-        init_camera_pos = Camera.main.transform.position;
+        //init_camera_pos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
+        if (CoroutineUtilities.InCurrentRoom(transform.position, GameController.init_camera_pos))
         {
             if (!sprite.enabled)
             {

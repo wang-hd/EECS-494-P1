@@ -32,7 +32,15 @@ public class CoroutineUtilities
 
     public static bool InCurrentRoom(Vector3 position, Vector3 camera_pos)
     {
-        if (position.x > camera_pos.x + room_x_upper_bound)
+        if(position.z < camera_pos.z)
+        {
+            return false;
+        }
+        else if(position.z > camera_pos.z+12)
+        {
+            return false;
+        }
+        else if (position.x > camera_pos.x + room_x_upper_bound)
         {
             return false;
         }

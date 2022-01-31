@@ -9,7 +9,7 @@ public class OldManBlock : MovableBlock
     protected override void Start()
     {
         base.Start();
-        base.MoveBlock(0, transform);
+        //base.MoveBlock(0, transform);
       }
       // Update is called once per frame
     protected override void Update()

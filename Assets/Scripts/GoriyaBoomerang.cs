@@ -28,23 +28,25 @@ public class GoriyaBoomerang : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        transform.Rotate(0,0,10);
-        boomerang_move();
-        if (is_fly_out)
-        {
-            if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos) || Vector3.Distance(init_position, transform.position) > max_distance)
-            {
-                is_fly_out = false;
-            }
-        }
         else
         {
-            if (Vector3.Distance(transform.position, goriya.transform.position) <= 0.05)
+            transform.Rotate(0,0,10);
+            boomerang_move();
+            if (is_fly_out)
             {
-                goriya.GetComponent<GoriyaAttack>().returned = true;
-                Destroy(gameObject);
-            } 
+                if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos) || Vector3.Distance(init_position, transform.position) > max_distance)
+                {
+                    is_fly_out = false;
+                }
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, goriya.transform.position) <= 0.05)
+                {
+                    goriya.GetComponent<GoriyaAttack>().returned = true;
+                    Destroy(gameObject);
+                } 
+            }
         }
     }
 

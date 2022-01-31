@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 // Attack with melee sword always
                 player_attack.attack();
-                created_weapon = player_attack.createNewWeapon("sword");
+                // created_weapon = player_attack.createNewWeapon("sword");
                 StartCoroutine(SetAttacking(1));
                 break;
             case "Bomb":

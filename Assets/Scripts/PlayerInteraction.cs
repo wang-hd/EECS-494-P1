@@ -59,7 +59,8 @@ public class PlayerInteraction : HitInteraction
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         foreach (GameObject enemy in enemies)
         {
-            Destroy(enemy);
+            enemy.GetComponent<SpriteRenderer>().enabled = false;
+            enemy.GetComponent<BoxCollider>().enabled = false;
         }
 
         yield return new WaitForSeconds(3.0f);

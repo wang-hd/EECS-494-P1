@@ -260,6 +260,17 @@ public class GameController : MonoBehaviour
                 Instantiate(keese, new Vector3(17, 59, 12), Quaternion.identity);
             }
         }
+        else if (cam.transform.position == bowRoom)
+        {
+            if (!bowRoomVisited)
+            {
+                bowRoomVisited = true;
+                Instantiate(keese, new Vector3(29, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(25, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(21, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(17, 59, 12), Quaternion.identity);
+            }
+        }
     }
 
     static bool isEmptyList(List<GameObject> list)

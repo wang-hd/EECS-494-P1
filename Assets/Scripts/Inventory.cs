@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public List<GameObject> weapons; // Only for secondary weapons. Link always has the sword
     int secondary_index = 0;
     public GameObject sword_prefab; // This prefab stores swords
-    public GameObject bow_prefab;
+    public GameObject bow_prefab; // Stores arrow prefab (not bow)
     public GameObject boomerang_prefab;
     public GameObject bomb_prefab;
 
@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        weapons.Add(boomerang_prefab);
+        weapons.Add(bomb_prefab);
     }
 
     void Update() {
@@ -74,5 +74,15 @@ public class Inventory : MonoBehaviour
     {
         if (weapons.Count == 0) return null;
         return weapons[secondary_index];
+    }
+
+    public void add_bow()
+    {
+        weapons.Add(bow_prefab);
+    }
+
+    public void add_boomerang()
+    {
+        weapons.Add(boomerang_prefab);
     }
 }

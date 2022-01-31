@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public GameObject key;
     public GameObject lockDoor;
     public static GameObject pushableBlock;
+    public GameObject boomerang;
     static Vector3 initial_block_position;
     static List<GameObject> enemy_1_0 = new List<GameObject>();
     static List<GameObject> enemy_1_2 = new List<GameObject>();
@@ -25,7 +26,11 @@ public class GameController : MonoBehaviour
     static List<GameObject> enemy_2_4 = new List<GameObject>();
     static List<GameObject> enemy_2_5 = new List<GameObject>();
     static List<GameObject> enemy_4_4 = new List<GameObject>();
+    static List<GameObject> enemy_3_3 = new List<GameObject>();
     static List<bool> key_is_taken;
+    static bool boomerang_spawned = false;
+    static Vector3 bowRoom = new Vector3(23.5f, 61, 7.5f);
+    static bool bowRoomVisited = false;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
 
@@ -190,9 +195,15 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(goriya, new Vector3 (52, 41, 0), Quaternion.identity);
-                Instantiate(goriya, new Vector3 (53, 36, 0), Quaternion.identity);
-                Instantiate(goriya, new Vector3 (61, 38, 0), Quaternion.identity);
+                enemy_3_3.Add(Instantiate(goriya, new Vector3 (52, 41, 0), Quaternion.identity));
+                enemy_3_3.Add(Instantiate(goriya, new Vector3 (53, 36, 0), Quaternion.identity));
+                enemy_3_3.Add(Instantiate(goriya, new Vector3 (61, 38, 0), Quaternion.identity));
+            }
+
+            if (isEmptyList(enemy_3_3) && !boomerang_spawned)
+            {
+                Instantiate(boomerang, new Vector3(56, 40, 0), Quaternion.identity);
+                boomerang_spawned = true;
             }
         }
         else if (currentRoom == new Vector2 (2, 4))
@@ -236,6 +247,17 @@ public class GameController : MonoBehaviour
                 
                 enemy_4_4.Add( Instantiate(Aquamentus, new Vector3 (75, 49, 0), Quaternion.identity));
 
+            }
+        }
+        else if (cam.transform.position == bowRoom)
+        {
+            if (!bowRoomVisited)
+            {
+                bowRoomVisited = true;
+                Instantiate(keese, new Vector3(29, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(25, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(21, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(17, 59, 12), Quaternion.identity);
             }
         }
     }

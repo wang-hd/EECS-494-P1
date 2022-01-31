@@ -11,7 +11,6 @@ public class PlayerAttack : MonoBehaviour
     public static int sword_projectiles = 0; // Ensures only one sword at a time
     public static int bow_projectiles = 0; // Only one arrow at a time
     public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
-    public LayerMask enemyLayer;
     Inventory inventory;
     PlayerMovement playerMovement;
     int melee_damage = 1;
@@ -66,7 +65,7 @@ public class PlayerAttack : MonoBehaviour
         //TODO: This function performs a melee attack in the current direction the player is facing
         Vector3 attack_dir = GetDirection(PlayerMovement.direction);
 
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 0.5f, enemyLayer);
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 0.5f);
         foreach (RaycastHit hit in hits)
         {
             GameObject object_collided = hit.collider.gameObject;

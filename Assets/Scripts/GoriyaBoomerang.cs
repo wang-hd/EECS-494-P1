@@ -24,6 +24,11 @@ public class GoriyaBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (goriya == null)
+        {
+            Destroy(gameObject);
+        }
+        
         transform.Rotate(0,0,10);
         boomerang_move();
         if (is_fly_out)

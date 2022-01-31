@@ -30,26 +30,29 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && !animator.GetBool("is_attack") && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
+        if (!animator.GetBool("is_attack"))
         {
-            Attack("sword");
-            return;
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && !animator.GetBool("is_attack") && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
-        {
-            if (player_inventory.get_secondary_weapon() != null)
+            if (Input.GetKeyDown(KeyCode.X) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
             {
-                Debug.Log(player_inventory.get_secondary_weapon().name);
-                Attack(player_inventory.get_secondary_weapon().name);
+                Attack("sword");
                 return;
             }
-        }
+            else if (Input.GetKeyDown(KeyCode.Z) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
+            {
+                if (player_inventory.get_secondary_weapon() != null)
+                {
+                    Debug.Log(player_inventory.get_secondary_weapon().name);
+                    Attack(player_inventory.get_secondary_weapon().name);
+                    return;
+                }
+            }
 
-        // If not attacking, move around
-        Vector2 current_input = GetMovementInput();
-        rb.velocity = current_input * Movement_speed;
-        SetAnimationAndDirection(current_input.x, current_input.y);
-        grid.AdjustPosition(direction);
+            // If not attacking, move around
+            Vector2 current_input = GetMovementInput();
+            rb.velocity = current_input * Movement_speed;
+            SetAnimationAndDirection(current_input.x, current_input.y);
+            grid.AdjustPosition(direction);
+        }
     }
 
     Vector2 GetMovementInput()
@@ -78,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 created_weapon = player_attack.createNewWeapon("sword");
                 StartCoroutine(SetAttacking(1));
                 break;
-            case "bomb":
+            case "Bomb":
                 created_weapon = player_attack.createNewWeapon("bomb");
                 if(created_weapon!=null)
                 {
@@ -111,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetAttacking(int number)
     {
+        rb.velocity = Vector3.zero;
         animator.SetInteger("no_of_weapon", number);
         animator.SetBool("is_attack", true);
         yield return new WaitForSeconds(0.25f);

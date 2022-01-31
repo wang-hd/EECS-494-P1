@@ -58,11 +58,13 @@ public class Collector : MonoBehaviour
         }
         else if (object_collide_with.tag == "bow")
         {
-            // add bow
+            if (inventory != null) inventory.add_bow();
+            Destroy(object_collide_with);
         }
         else if (object_collide_with.tag == "boomerang")
         {
-            // add boomerang
+            if (inventory != null) inventory.add_boomerang();
+            Destroy(object_collide_with);
         }
     }
 }

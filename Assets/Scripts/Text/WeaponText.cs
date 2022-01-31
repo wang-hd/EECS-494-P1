@@ -8,18 +8,22 @@ public class WeaponText : MonoBehaviour
     Inventory inventory;
     //Text text_content;
     GameObject weapon;
-    GameObject bow;
-    GameObject boomerang;
-    GameObject bomb;
+    Image bow;
+    Image boomerang;
+    Image bomb;
 
     void Start()
     {
         //text_content = GetComponent<Text>();
         inventory = GameObject.Find("Player").GetComponent<Inventory>();
 
-        bow = GameObject.Find("BowImage");
-        boomerang = GameObject.Find("BoomerangImage");
-        bomb = GameObject.Find("BombImage");
+        bow = GameObject.Find("BowImage").GetComponent<Image>();
+        boomerang = GameObject.Find("BoomerangImage").GetComponent<Image>();
+        bomb = GameObject.Find("BombImage").GetComponent<Image>();
+
+        bow.enabled = false;
+        boomerang.enabled = false;
+        bomb.enabled = false;
     }
 
     // TODO: This function updates the name of weapon and shows it on the screen
@@ -31,21 +35,21 @@ public class WeaponText : MonoBehaviour
             string weaponName = inventory.get_secondary_weapon().name;
             if (weaponName == "bow")
             {
-                bow.SetActive(true);
-                boomerang.SetActive(false);
-                bomb.SetActive(false);
+                bow.enabled = true;
+                boomerang.enabled = false;
+                bomb.enabled = false;
             }
             else if (weaponName == "boomerang")
             {
-                bow.SetActive(false);
-                boomerang.SetActive(true);
-                bomb.SetActive(false);
+                bow.enabled = false;
+                boomerang.enabled = true;
+                bomb.enabled = false;
             }
             else if (weaponName == "Bomb")
             {
-                bow.SetActive(false);
-                boomerang.SetActive(false);
-                bomb.SetActive(true);
+                bow.enabled = false;
+                boomerang.enabled = false;
+                bomb.enabled = true;
             }
         }
     }

@@ -9,7 +9,7 @@ public class BladeController : MonoBehaviour
     public int rayDirectionInt2;
     public Vector3 destination2;
     Vector3 destination;
-    float attackSpeed = 8f;
+    float attackSpeed = 5f;
     float returnSpeed = 2f;
     Vector2 rayDirection1;
     Vector2 rayDirection2;

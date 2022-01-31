@@ -15,18 +15,36 @@ public class GameController : MonoBehaviour
     public GameObject goriya;
     public GameObject Aquamentus;
     public GameObject key;
-    List<GameObject> enemy_1_0 = new List<GameObject>();
-    List<GameObject> enemy_2_2 = new List<GameObject>();
-    List<GameObject> enemy_2_4 = new List<GameObject>();
-    List<GameObject> enemy_2_5 = new List<GameObject>();
-    List<bool> key_is_taken;
+    public GameObject lockDoor;
+    public static GameObject pushableBlock;
+    static Vector3 initial_block_position;
+    static List<GameObject> enemy_1_0 = new List<GameObject>();
+    static List<GameObject> enemy_1_2 = new List<GameObject>();
+    static List<GameObject> enemy_1_3 = new List<GameObject>();
+    static List<GameObject> enemy_2_2 = new List<GameObject>();
+    static List<GameObject> enemy_2_4 = new List<GameObject>();
+    static List<GameObject> enemy_2_5 = new List<GameObject>();
+    static List<bool> key_is_taken;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
+
+    public AudioClip doorCloseSound;
+    public AudioClip keySpawnSound;
+
+    GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
+        
         init_camera_pos = cam.transform.position;
         key_is_taken = new List<bool>() {false, false, false, false};
+
+        pushableBlock = GameObject.Find("OldManRoomBlock");
+        initial_block_position = pushableBlock.transform.position;
+        pushableBlock.GetComponent<MovableBlock>().enabled = false;
+        Debug.Log(initial_block_position.ToString());
     }
 
     // Update is called once per frame
@@ -65,8 +83,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_1_0) && !key_is_taken[0])
             {
-                Instantiate(key, new Vector3 (24, 5, 0), Quaternion.identity);
-                key_is_taken[0] = true;
+                SpawnKey(new Vector3 (24, 5, 0), 0);
             }
         }
         else if (currentRoom == new Vector2 (3, 0))
@@ -96,12 +113,18 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(stalfo, new Vector3 (18, 27, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (19, 25, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (19, 29, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (21, 26, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (26, 30, 0), Quaternion.identity);
-                Instantiate(stalfo, new Vector3 (26, 24, 0), Quaternion.identity);
+                
+                StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, 
+                new Vector3 (30, 27, 0), new Vector3 (29, 27, 0), 0.5f));
+                Instantiate(lockDoor, new Vector3 (30, 27, 0), Quaternion.identity);
+                AudioSource.PlayClipAtPoint(doorCloseSound, Camera.main.transform.position);
+
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (18, 27, 0), Quaternion.identity));
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (19, 25, 0), Quaternion.identity));
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (19, 29, 0), Quaternion.identity));
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (21, 26, 0), Quaternion.identity));
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (26, 30, 0), Quaternion.identity));
+                enemy_1_2.Add( Instantiate(keese, new Vector3 (26, 24, 0), Quaternion.identity));
             }
         }
         else if (currentRoom == new Vector2 (2, 2))
@@ -117,8 +140,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_2) && !key_is_taken[1])
             {
-                Instantiate(key, new Vector3 (40, 27, 0), Quaternion.identity);
-                key_is_taken[1] = true;
+                SpawnKey(new Vector3 (40, 27, 0), 1);
             }
         }
         else if (currentRoom == new Vector2 (3, 2))
@@ -141,9 +163,13 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(gel, new Vector3 (20, 39, 0), Quaternion.identity);
-                Instantiate(gel, new Vector3 (22, 40, 0), Quaternion.identity);
-                Instantiate(gel, new Vector3 (27, 40, 0), Quaternion.identity);
+                enemy_1_3.Add( Instantiate(gel, new Vector3 (20, 39, 0), Quaternion.identity));
+                enemy_1_3.Add( Instantiate(gel, new Vector3 (22, 40, 0), Quaternion.identity));
+                enemy_1_3.Add( Instantiate(gel, new Vector3 (27, 40, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_1_3))
+            {
+                pushableBlock.GetComponent<MovableBlock>().enabled = true;
             }
         }
         else if (currentRoom == new Vector2 (2, 3))
@@ -179,8 +205,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_4) && !key_is_taken[2])
             {
-                Instantiate(key, new Vector3 (39, 49, 0), Quaternion.identity);
-                key_is_taken[2] = true;
+                SpawnKey(new Vector3 (39, 49, 0), 2);
             }
         }
         else if (currentRoom == new Vector2 (2, 5))
@@ -194,8 +219,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_5) && !key_is_taken[3])
             {
-                Instantiate(key, new Vector3 (39, 61, 0), Quaternion.identity);
-                key_is_taken[3] = true;
+                SpawnKey(new Vector3 (39, 61, 0), 3);
             }
         }
         else if (currentRoom == new Vector2 (4, 4))
@@ -208,12 +232,38 @@ public class GameController : MonoBehaviour
         }
     }
 
-    bool isEmptyList(List<GameObject> list)
+    static bool isEmptyList(List<GameObject> list)
     {
         foreach (GameObject enemy in list)
         {
             if (enemy != null) return false;
         }
         return true;
+    }
+    
+    public static bool isEnemyCleared(int roomNumber)
+    {
+        if (roomNumber == 1) return isEmptyList(enemy_1_2);
+        else if (roomNumber == 2) return isEmptyList(enemy_1_3);
+        return false;
+    }
+    public static bool RequirementAchieved(int roomNumber)
+    {
+        if (roomNumber == 1) return true;
+        else if (roomNumber == 2)
+        {
+            if (pushableBlock.transform.position != initial_block_position)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void SpawnKey(Vector3 position, int roomNumber)
+    {
+        Instantiate(key, position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(keySpawnSound, Camera.main.transform.position);
+        key_is_taken[roomNumber] = true;
     }
 }

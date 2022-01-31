@@ -14,6 +14,8 @@ public class MovableBlock : MonoBehaviour
     protected float holdTime = 1.0f;
     protected Camera cam;
     protected Vector3 ori_pos;
+    
+    public AudioClip quizSolvedSound;
 
     protected virtual void Start()
     {
@@ -48,6 +50,7 @@ public class MovableBlock : MonoBehaviour
             default:
               break;
         }
+        AudioSource.PlayClipAtPoint(quizSolvedSound, Camera.main.transform.position);
     }
 
 

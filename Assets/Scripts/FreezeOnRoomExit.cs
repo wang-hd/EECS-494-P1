@@ -18,7 +18,6 @@ public class FreezeOnRoomExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        init_camera_pos = Camera.main.transform.position;
         if (CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
             if (!sprite.enabled)

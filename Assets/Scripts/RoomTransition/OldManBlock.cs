@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OldManBlock : MovableBlock
 {
-    public GameObject locked_door;
+    //public GameObject locked_door;
     protected float distance = 1f;
     protected override void Start()
     {
@@ -76,10 +76,10 @@ public class OldManBlock : MovableBlock
         if(is_collision&&is_key_down&&Time.time>startKeyDownTime+holdTime&&Time.time>startCollisionTime+holdTime&&could_move)
         {
             could_move = false;
-            if(locked_door!=null)
+            /*if(locked_door!=null)
             {
                 Destroy(locked_door);
-            }
+            }*/
             base.MoveBlock(direction, transform);
         }
         base.Update();

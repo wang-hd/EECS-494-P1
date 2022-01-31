@@ -35,7 +35,7 @@ public class BowRoomBlock : MovableBlock
         {
             is_collision = false;
         }
-        if(is_collision&&Input.GetKey(KeyCode.S))
+        if(is_collision&&(Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.DownArrow)))
         {
             if(direction==0&&!is_key_down)
             {
@@ -43,7 +43,7 @@ public class BowRoomBlock : MovableBlock
               startKeyDownTime = Time.time;
             }
         }
-        else if(is_collision&&Input.GetKey(KeyCode.W))
+        else if(is_collision&&(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow)))
         {
             if(direction==2&&!is_key_down)
             {

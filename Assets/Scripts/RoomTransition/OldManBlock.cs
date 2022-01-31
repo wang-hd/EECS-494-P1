@@ -54,24 +54,41 @@ public class OldManBlock : MovableBlock
         {
             is_collision = false;
         }
-        if(is_collision&&direction==0&&!is_key_down&&Input.GetKey(KeyCode.S))
+        if(is_collision&&(Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.DownArrow)))
         {
-            is_key_down = true;
-            startKeyDownTime = Time.time;
+            if(direction==0&&!is_key_down)
+            {
+                is_key_down = true;
+                startKeyDownTime = Time.time;
+            }
         }
-        else if(is_collision&&direction==2&&!is_key_down&&Input.GetKey(KeyCode.W))
+        else if(is_collision&&(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow)))
         {
-            is_key_down = true;
-            startKeyDownTime = Time.time;
+            if(direction==2&&!is_key_down)
+            {
+                is_key_down = true;
+                startKeyDownTime = Time.time;
+            }
         }
-        else if(is_collision&&direction==1&&!is_key_down&&Input.GetKey(KeyCode.A))
+        else if(is_collision&&(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.LeftArrow)))
         {
-            is_key_down = true;
-            startKeyDownTime = Time.time;
-        }else if(is_collision&&direction==3&&!is_key_down&&Input.GetKey(KeyCode.D))
+            if(direction==1&&!is_key_down)
+            {
+                is_key_down = true;
+                startKeyDownTime = Time.time;
+            }
+        }
+        else if(is_collision&&(Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow)))
         {
-          is_key_down = true;
-          startKeyDownTime = Time.time;
+            if(direction==3&&!is_key_down)
+            {
+                is_key_down = true;
+                startKeyDownTime = Time.time;
+            }
+        }
+        else
+        {
+              is_key_down = false;
         }
         if(is_collision&&is_key_down&&Time.time>startKeyDownTime+holdTime&&Time.time>startCollisionTime+holdTime&&could_move)
         {

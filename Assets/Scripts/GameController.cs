@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     static List<GameObject> enemy_2_2 = new List<GameObject>();
     static List<GameObject> enemy_2_4 = new List<GameObject>();
     static List<GameObject> enemy_2_5 = new List<GameObject>();
+    static List<GameObject> enemy_4_4 = new List<GameObject>();
     static List<bool> key_is_taken;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
@@ -66,7 +67,7 @@ public class GameController : MonoBehaviour
     void checkVisitedRooms()
     {
         
-        if (currentRoom == new Vector2 (2, 0))
+        if (currentRoom == new Vector2 (2f, 0f))
         {
             // initial room
             if (!visitedRooms.Contains(currentRoom)) visitedRooms.Add(currentRoom);
@@ -227,7 +228,14 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(Aquamentus, new Vector3 (75, 49, 0), Quaternion.identity);
+                
+                StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, 
+                new Vector3 (71.5f, 45, 0), new Vector3 (71.5f, 46, 0), 0.5f));
+                Instantiate(lockDoor, new Vector3 (71.5f, 45, 0), Quaternion.identity);
+                AudioSource.PlayClipAtPoint(doorCloseSound, Camera.main.transform.position);
+                
+                enemy_4_4.Add( Instantiate(Aquamentus, new Vector3 (75, 49, 0), Quaternion.identity));
+
             }
         }
     }
@@ -245,11 +253,12 @@ public class GameController : MonoBehaviour
     {
         if (roomNumber == 1) return isEmptyList(enemy_1_2);
         else if (roomNumber == 2) return isEmptyList(enemy_1_3);
+        else if (roomNumber == 3) return isEmptyList(enemy_4_4);
         return false;
     }
     public static bool RequirementAchieved(int roomNumber)
     {
-        if (roomNumber == 1) return true;
+        if (roomNumber == 1 || roomNumber == 3) return true;
         else if (roomNumber == 2)
         {
             if (pushableBlock.transform.position != initial_block_position)
@@ -266,4 +275,5 @@ public class GameController : MonoBehaviour
         AudioSource.PlayClipAtPoint(keySpawnSound, Camera.main.transform.position);
         key_is_taken[roomNumber] = true;
     }
+
 }

@@ -65,9 +65,9 @@ public class WallmasterController : EnemyMovement
                     PlayerInteraction.setPlayerInvincible(false);
                     Camera.main.transform.position = GameController.init_camera_pos;
                     player.transform.position = new Vector3 (39.5f, 2f, 0);
-                    Destroy(gameObject);
                 }
                 
+                Destroy(gameObject);
             }
         }
     }

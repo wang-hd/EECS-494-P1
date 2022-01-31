@@ -60,11 +60,15 @@ public class Collector : MonoBehaviour
         {
             if (inventory != null) inventory.add_bow();
             Destroy(object_collide_with);
+
+            AudioSource.PlayClipAtPoint(keyCollectSound, Camera.main.transform.position);
         }
         else if (object_collide_with.tag == "boomerang")
         {
             if (inventory != null) inventory.add_boomerang();
             Destroy(object_collide_with);
+
+            AudioSource.PlayClipAtPoint(bomb_collection_sound_clip, Camera.main.transform.position);
         }
     }
 }

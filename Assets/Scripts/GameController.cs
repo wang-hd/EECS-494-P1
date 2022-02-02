@@ -211,7 +211,7 @@ public class GameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                enemy_2_4.Add( Instantiate(stalfo, new Vector3 (35, 49, 0), Quaternion.identity));
+                enemy_2_4.Add( Instantiate(stalfo_with_key, new Vector3 (35, 49, 0), Quaternion.identity));
                 enemy_2_4.Add( Instantiate(stalfo, new Vector3 (41, 51, 0), Quaternion.identity));
                 enemy_2_4.Add( Instantiate(stalfo, new Vector3 (44, 51, 0), Quaternion.identity));
             }
@@ -234,30 +234,25 @@ public class GameController : MonoBehaviour
                 SpawnKey(new Vector3 (39, 61, 0), 3);
             }
         }
+        else if (currentRoom == new Vector2(4, 3))
+        {
+            if (!visitedRooms.Contains(currentRoom))
+            {
+                visitedRooms.Add(currentRoom);
+                Instantiate(key, new Vector3(74, 35, 0), Quaternion.identity);
+            }
+        }
         else if (currentRoom == new Vector2 (4, 4))
         {
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
                 
-                StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, 
-                new Vector3 (71.5f, 45, 0), new Vector3 (71.5f, 46, 0), 0.5f));
-                Instantiate(lockDoor, new Vector3 (71.5f, 45, 0), Quaternion.identity);
+                Instantiate(lockDoor, new Vector3 (78, 49, 0), Quaternion.identity);
                 AudioSource.PlayClipAtPoint(doorCloseSound, Camera.main.transform.position);
                 
                 enemy_4_4.Add( Instantiate(Aquamentus, new Vector3 (75, 49, 0), Quaternion.identity));
 
-            }
-        }
-        else if (cam.transform.position == bowRoom)
-        {
-            if (!bowRoomVisited)
-            {
-                bowRoomVisited = true;
-                Instantiate(keese, new Vector3(29, 59, 12), Quaternion.identity);
-                Instantiate(keese, new Vector3(25, 59, 12), Quaternion.identity);
-                Instantiate(keese, new Vector3(21, 59, 12), Quaternion.identity);
-                Instantiate(keese, new Vector3(17, 59, 12), Quaternion.identity);
             }
         }
         else if (cam.transform.position == bowRoom)
@@ -294,7 +289,7 @@ public class GameController : MonoBehaviour
         if (roomNumber == 1 || roomNumber == 3) return true;
         else if (roomNumber == 2)
         {
-            if (pushableBlock.transform.position != initial_block_position)
+            if (pushableBlock != null && pushableBlock.transform.position != initial_block_position)
             {
                 return true;
             }

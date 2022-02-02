@@ -5,6 +5,7 @@ using UnityEngine;
 public class FreezeOnRoomExit : MonoBehaviour
 {
     public Vector3 init_camera_pos;
+    public bool override_camera = false;
     EnemyMovement enemyMovement;
     SpriteRenderer sprite;
     // Start is called before the first frame update
@@ -12,7 +13,7 @@ public class FreezeOnRoomExit : MonoBehaviour
     {
         enemyMovement = GetComponent<EnemyMovement>();
         sprite = GetComponent<SpriteRenderer>();
-        init_camera_pos = Camera.main.transform.position;
+        if (!override_camera) init_camera_pos = Camera.main.transform.position;
     }
 
     // Update is called once per frame

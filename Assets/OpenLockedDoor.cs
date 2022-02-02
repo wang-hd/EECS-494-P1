@@ -12,7 +12,7 @@ public class OpenLockedDoor : MonoBehaviour
     {
         if (transform.position == new Vector3 (30f, 27f, 0f)) roomNumber = 1;
         else if (transform.position == new Vector3 (17f, 38f, 0f)) roomNumber = 2;
-        else if (transform.position == new Vector3(71.5f, 45f, 0f)) roomNumber = 3;
+        else if (transform.position == new Vector3(78f, 49f, 0f)) roomNumber = 3;
         else roomNumber = 0;
         Debug.Log(roomNumber);
     }

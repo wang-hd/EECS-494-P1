@@ -18,7 +18,7 @@ public class Bombs : Weapon
         Debug.Log("got here");
         Vector3[] cloud_position;
         //wait for seconds
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         //begin to attack and damage enemies
         enemies = GameObject.FindGameObjectsWithTag("enemy");
         cloud_position = new Vector3[]{new Vector3(0,0,0), new Vector3(0.6f,0,0), new Vector3(-0.6f,0,0), new Vector3(0.3f,0.5f,0), new Vector3(0.3f,-0.5f,0), new Vector3(-0.3f,0.5f,0), new Vector3(-0.3f,-0.5f,0)};

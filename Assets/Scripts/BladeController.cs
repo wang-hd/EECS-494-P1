@@ -68,7 +68,7 @@ public class BladeController : MonoBehaviour
         RaycastHit hit2;
         Ray ray1 = new Ray (transform.position, rayDirection1);
         Ray ray2 = new Ray (transform.position, rayDirection2);
-        if (Physics.Raycast(ray1, out hit1, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(ray1, out hit1, 10f, layerMask))
         {
             if (hit1.collider.gameObject.CompareTag("player"))
             {
@@ -76,7 +76,7 @@ public class BladeController : MonoBehaviour
                 motion = 1;
             }
         }
-        else if (Physics.Raycast(ray2, out hit2, Mathf.Infinity, layerMask))
+        else if (Physics.Raycast(ray2, out hit2, 10f, layerMask))
         {
             if (hit2.collider.gameObject.CompareTag("player"))
             {

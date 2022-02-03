@@ -9,10 +9,13 @@ public class GridBasedMovement : MonoBehaviour
     public static readonly int right = 1;
     public static readonly int down = 2;
     public static readonly int left = 3;
+    public bool adjust = true;
 
     // When collider with an object, the player will adjust to the nearest half-tile
     public void AdjustPosition(int curr_direction)
     {
+        if (!adjust) return;
+        
         // original position of player
         float horizontal_position = transform.position.x;
         float vertical_position = transform.position.y;

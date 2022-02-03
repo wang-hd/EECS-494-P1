@@ -38,6 +38,7 @@ public class TunnelRoom : RoomTransition
 
                 if (this.CompareTag("UpDoor"))
                 {
+                    player.GetComponent<GridBasedMovement>().adjust = true;
                     StartCoroutine(CameraTurnBlack());
                     StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, player.transform.position, playerUp, 0.4f));
                     StartCoroutine(base.CameraRoomTransition(cameraUp));
@@ -45,6 +46,7 @@ public class TunnelRoom : RoomTransition
                 }
                 else if (this.CompareTag("DownDoor"))
                 {
+                    player.GetComponent<GridBasedMovement>().adjust = false;
                     StartCoroutine(CameraTurnBlack());
                     StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, player.transform.position, playerDown, 0.4f));
                     StartCoroutine(base.CameraRoomTransition(cameraDown));

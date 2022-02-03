@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public GameObject key;
     public GameObject lockDoor;
     public static GameObject pushableBlock;
+    public AudioClip boomerangSpawnSound;
     public GameObject boomerang;
     static Vector3 initial_block_position;
     static List<GameObject> enemy_1_0 = new List<GameObject>();
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour
     static bool boomerang_spawned = false;
     static Vector3 bowRoom = new Vector3(23.5f, 61, 7.5f);
     static bool bowRoomVisited = false;
+    AudioSource aquamentusAudioSource;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
 
@@ -43,6 +45,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        aquamentusAudioSource = GetComponent<AudioSource>();
         
         init_camera_pos = cam.transform.position;
         key_is_taken = new List<bool>() {false, false, false, false};
@@ -58,6 +61,10 @@ public class GameController : MonoBehaviour
     {
         detectCurrentRoom();
         checkVisitedRooms();
+        if (currentRoom != new Vector2(4, 3))
+        {
+            aquamentusAudioSource.Stop();
+        }
     }
 
     void detectCurrentRoom()
@@ -186,7 +193,7 @@ public class GameController : MonoBehaviour
                 Instantiate(gel, new Vector3 (38, 38, 0), Quaternion.identity);
                 Instantiate(gel, new Vector3 (43, 38, 0), Quaternion.identity);
                 Instantiate(gel, new Vector3 (39, 40, 0), Quaternion.identity);
-                Instantiate(gel, new Vector3 (43, 40, 0), Quaternion.identity);
+                Instantiate(gel, new Vector3 (43, 39, 0), Quaternion.identity);
                 Instantiate(gel, new Vector3 (44, 41, 0), Quaternion.identity);
             }
         }
@@ -204,6 +211,7 @@ public class GameController : MonoBehaviour
             {
                 Instantiate(boomerang, new Vector3(56, 40, 0), Quaternion.identity);
                 boomerang_spawned = true;
+                AudioSource.PlayClipAtPoint(boomerangSpawnSound, Camera.main.transform.position);
             }
         }
         else if (currentRoom == new Vector2 (2, 4))
@@ -214,10 +222,6 @@ public class GameController : MonoBehaviour
                 enemy_2_4.Add( Instantiate(stalfo_with_key, new Vector3 (35, 49, 0), Quaternion.identity));
                 enemy_2_4.Add( Instantiate(stalfo, new Vector3 (41, 51, 0), Quaternion.identity));
                 enemy_2_4.Add( Instantiate(stalfo, new Vector3 (44, 51, 0), Quaternion.identity));
-            }
-            if (isEmptyList(enemy_2_4) && !key_is_taken[2])
-            {
-                SpawnKey(new Vector3 (39, 49, 0), 2);
             }
         }
         else if (currentRoom == new Vector2 (2, 5))
@@ -241,6 +245,10 @@ public class GameController : MonoBehaviour
                 visitedRooms.Add(currentRoom);
                 Instantiate(key, new Vector3(74, 35, 0), Quaternion.identity);
             }
+            if (!visitedRooms.Contains(new Vector2(4, 4)) || GameObject.Find("Aquamentus") != null)
+            {
+                aquamentusAudioSource.Play();
+            }
         }
         else if (currentRoom == new Vector2 (4, 4))
         {
@@ -263,7 +271,7 @@ public class GameController : MonoBehaviour
                 Instantiate(keese, new Vector3(29, 59, 12), Quaternion.identity);
                 Instantiate(keese, new Vector3(25, 59, 12), Quaternion.identity);
                 Instantiate(keese, new Vector3(21, 59, 12), Quaternion.identity);
-                Instantiate(keese, new Vector3(17, 59, 12), Quaternion.identity);
+                Instantiate(keese, new Vector3(25, 57, 12), Quaternion.identity);
             }
         }
     }

@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
             case "arrow":
                 if (bow_projectiles <= 0 && inventory != null && inventory.get_rupees() > 0)
                 {
-                    inventory.add_rupees(-1);
+                    if (!Inventory.god_mode) inventory.add_rupees(-1);
                     StartCoroutine(bowAnimation());
                     return Instantiate(bow_prefab, weapon_pos, Quaternion.identity);
                 }
@@ -53,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
             case "bomb":
                 if (inventory != null && inventory.get_bombs() > 0)
                 {
-                    inventory.add_bombs(-1);
+                    if (!Inventory.god_mode) inventory.add_bombs(-1);
                     return Instantiate(bomb_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;

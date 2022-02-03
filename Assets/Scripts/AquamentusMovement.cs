@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AquamentusMovement : EnemyMovement
 {
-    AudioSource audioSource;
     // Start is called before the first frame update
     public override void Start()
     {

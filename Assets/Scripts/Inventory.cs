@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     int rupees  = 0;
     int bombs = 0;
     int keys = 0;
+    public bool bomb_acquired = false;
     public List<GameObject> weapons; // Only for secondary weapons. Link always has the sword
     int secondary_index = 0;
     public GameObject sword_prefab; // This prefab stores swords
@@ -18,7 +19,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        weapons.Add(bomb_prefab);
+        
     }
 
     void Update() {
@@ -84,5 +85,10 @@ public class Inventory : MonoBehaviour
     public void add_boomerang()
     {
         weapons.Add(boomerang_prefab);
+    }
+
+    public void add_bomb_weapon()
+    {
+        weapons.Add(bomb_prefab);
     }
 }

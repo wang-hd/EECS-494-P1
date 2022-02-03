@@ -34,6 +34,11 @@ public class Collector : MonoBehaviour
 
             AudioSource.PlayClipAtPoint (rupee_collection_sound_clip, Camera.main.transform.position);
         }
+        else if (object_collide_with.tag == "blue_rupee")
+        {
+            if (inventory != null) inventory.add_rupees(5);
+            Destroy(object_collide_with);
+        }
         else if (object_collide_with.tag == "health")
         {
             player_health.add_health(1);
@@ -44,7 +49,15 @@ public class Collector : MonoBehaviour
         else if (object_collide_with.tag == "bomb")
         {
             if (inventory != null)
+            {
+                if (!inventory.bomb_acquired)
+                {
+                    inventory.add_bomb_weapon();
+                    inventory.bomb_acquired = true;
+                }
                 inventory.add_bombs(4);
+            }
+                
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (bomb_collection_sound_clip, Camera.main.transform.position);

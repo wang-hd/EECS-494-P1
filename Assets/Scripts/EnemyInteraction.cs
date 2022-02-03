@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyInteraction : HitInteraction
 {
     public AudioClip enemy_death_sound;
+    public AudioClip enemy_hit_sound;
     public bool ignore_hit = false;
     HasHealth health;
     EnemyMovement movement;
@@ -26,6 +27,7 @@ public class EnemyInteraction : HitInteraction
         {
             last_hit = Time.time;
             health.lose_health(damage);
+            AudioSource.PlayClipAtPoint(enemy_hit_sound, Camera.main.transform.position);
             if (health.is_dead())
             {
                 StartCoroutine(EnemyDeath());

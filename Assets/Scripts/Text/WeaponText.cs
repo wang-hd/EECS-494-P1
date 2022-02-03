@@ -33,7 +33,7 @@ public class WeaponText : MonoBehaviour
         if (inventory != null && this.CompareTag("weapon_b") && inventory.get_secondary_weapon() != null)
         {
             string weaponName = inventory.get_secondary_weapon().name;
-            if (weaponName == "bow")
+            if (weaponName == "arrow")
             {
                 bow.enabled = true;
                 boomerang.enabled = false;

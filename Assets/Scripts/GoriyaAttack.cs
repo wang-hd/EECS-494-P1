@@ -13,7 +13,7 @@ public class GoriyaAttack : EnemyAttack
         GameObject boomerang = Instantiate(boomerang_prefab, transform.position, Quaternion.identity);
         boomerang.GetComponent<GoriyaBoomerang>().SetParentGoriya(gameObject);
         
-        while (!returned)
+        while (!returned && boomerang != null)
         {
             yield return new WaitForSeconds(0.1f);
         }

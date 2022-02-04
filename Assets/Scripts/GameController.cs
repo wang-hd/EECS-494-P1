@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -63,6 +64,10 @@ public class GameController : MonoBehaviour
     {
         detectCurrentRoom();
         checkVisitedRooms();
+        if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            SceneManager.LoadScene("custom level");
+        }
     }
 
     void detectCurrentRoom()

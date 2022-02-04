@@ -83,7 +83,7 @@ public class Boomerang : Weapon
             EnemyInteraction enemyInteraction = other.gameObject.GetComponent<EnemyInteraction>();
             if (enemyHealth != null && enemyHealth.max_health == 1)
             {
-                if (enemyInteraction != null) enemyInteraction.getHit(player, 1);
+                if (enemyInteraction != null) enemyInteraction.getHit(player, damage);
             }
             else
             {

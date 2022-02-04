@@ -85,7 +85,24 @@ public class GoriyaBoomerang : MonoBehaviour
         //if other's tag is enemy
         if (other.CompareTag("player"))
         {
-            other.gameObject.GetComponent<PlayerInteraction>().getHit(goriya);
+            int playerDirection = PlayerMovement.direction;
+            Animator playerAnimator = other.gameObject.GetComponent<Animator>();
+            if (direction == 0 && playerDirection != 2 && !playerAnimator.GetBool("is_attack"))
+            {
+                other.gameObject.GetComponent<PlayerInteraction>().getHit(goriya);
+            }
+            else if (direction == 1 && playerDirection != 3 && !playerAnimator.GetBool("is_attack"))
+            {
+                other.gameObject.GetComponent<PlayerInteraction>().getHit(goriya);
+            }
+            else if (direction == 2 && playerDirection != 0 && !playerAnimator.GetBool("is_attack"))
+            {
+                other.gameObject.GetComponent<PlayerInteraction>().getHit(goriya);
+            }
+            else if (direction == 3 && playerDirection != 1 && !playerAnimator.GetBool("is_attack"))
+            {
+                other.gameObject.GetComponent<PlayerInteraction>().getHit(goriya);
+            }
 
             if (is_fly_out)
             {

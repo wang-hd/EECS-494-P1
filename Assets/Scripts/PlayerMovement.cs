@@ -59,10 +59,29 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal_input = Input.GetAxisRaw("Horizontal");
         float vertical_input = Input.GetAxisRaw("Vertical");
+        if (!CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
+        {
+            if (transform.position.x > Camera.main.transform.position.x + CoroutineUtilities.room_x_upper_bound)
+            {
+                if (vertical_input != 0) vertical_input = 0;
+            }
+            else if (transform.position.x < Camera.main.transform.position.x + CoroutineUtilities.room_x_lower_bound)
+            {
+                if (vertical_input != 0) vertical_input = 0;
+            }
+            else if (transform.position.y > Camera.main.transform.position.y + CoroutineUtilities.room_y_upper_bound)
+            {
+                if (horizontal_input != 0) horizontal_input = 0;
+            }
+            else if (transform.position.y < Camera.main.transform.position.y + CoroutineUtilities.room_y_lower_bound)
+            {
+                if (horizontal_input != 0) horizontal_input = 0;
+            }
+        }
         if (Mathf.Abs(horizontal_input) > 0.0f) {
             vertical_input = 0.0f;
         }
-
+        
         return new Vector2(horizontal_input, vertical_input);
     }
 

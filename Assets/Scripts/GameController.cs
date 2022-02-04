@@ -54,6 +54,8 @@ public class GameController : MonoBehaviour
         initial_block_position = pushableBlock.transform.position;
         pushableBlock.GetComponent<MovableBlock>().enabled = false;
         Debug.Log(initial_block_position.ToString());
+
+        StartCoroutine(PlayAquamentusAudio());
     }
 
     // Update is called once per frame
@@ -61,10 +63,6 @@ public class GameController : MonoBehaviour
     {
         detectCurrentRoom();
         checkVisitedRooms();
-        if (currentRoom != new Vector2(4, 3))
-        {
-            aquamentusAudioSource.Stop();
-        }
     }
 
     void detectCurrentRoom()
@@ -96,7 +94,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_1_0) && !key_is_taken[0])
             {
-                SpawnKey(new Vector3 (24, 5, 0), 0);
+                SpawnKey(new Vector3 (26, 2, 0), 0);
             }
         }
         else if (currentRoom == new Vector2 (3, 0))
@@ -153,7 +151,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_2) && !key_is_taken[1])
             {
-                SpawnKey(new Vector3 (40, 27, 0), 1);
+                SpawnKey(new Vector3 (40, 29, 0), 1);
             }
         }
         else if (currentRoom == new Vector2 (3, 2))
@@ -235,7 +233,7 @@ public class GameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_5) && !key_is_taken[3])
             {
-                SpawnKey(new Vector3 (39, 61, 0), 3);
+                SpawnKey(new Vector3 (40, 62, 0), 3);
             }
         }
         else if (currentRoom == new Vector2(4, 3))
@@ -244,10 +242,6 @@ public class GameController : MonoBehaviour
             {
                 visitedRooms.Add(currentRoom);
                 Instantiate(key, new Vector3(74, 35, 0), Quaternion.identity);
-            }
-            if (!visitedRooms.Contains(new Vector2(4, 4)) || GameObject.Find("Aquamentus") != null)
-            {
-                aquamentusAudioSource.Play();
             }
         }
         else if (currentRoom == new Vector2 (4, 4))
@@ -312,4 +306,15 @@ public class GameController : MonoBehaviour
         key_is_taken[roomNumber] = true;
     }
 
+    IEnumerator PlayAquamentusAudio()
+    {
+        while (true)
+        {
+            if (currentRoom == new Vector2(4, 3) && (!visitedRooms.Contains(new Vector2(4, 4)) || GameObject.Find("Aquamentus(Clone)") != null))
+            {
+                aquamentusAudioSource.Play();
+            }
+            yield return new WaitForSeconds(2.25f);
+        }
+    }
 }

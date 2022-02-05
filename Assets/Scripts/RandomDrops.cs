@@ -5,10 +5,10 @@ using UnityEngine;
 public class RandomDrops : MonoBehaviour
 {
     public GameObject rupee;
-    public GameObject blue_rupee;
     public GameObject heart;
     public GameObject bomb;
     public string enemyType = "X";
+    public int threshold = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class RandomDrops : MonoBehaviour
     // Update is called once per frame
     private void OnDestroy() 
     {
-        if (Random.Range(0, 10) <= 0)
+        if (Random.Range(0, 10) <= threshold)
         {
             GameObject loot = GetLoot();
             if (loot != null)
@@ -64,7 +64,7 @@ public class RandomDrops : MonoBehaviour
             }
             else
             {
-                return blue_rupee;
+                return bomb;
             }
         }
         else if (enemyType == "D")

@@ -101,7 +101,7 @@ public class WallmasterController : EnemyMovement
 
     private void OnCollisionEnter(Collision other) 
     {
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("player") && !Inventory.god_mode)
         {
             playerControl.enabled = false;
             grabPlayer = true;

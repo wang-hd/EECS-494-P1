@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bombs : Weapon
 {
-    public float attacking_distance = 0.003f;
+    public float attacking_distance = 0.001f;
     public GameObject cloud_prefab;
     GameObject[] enemies;
 

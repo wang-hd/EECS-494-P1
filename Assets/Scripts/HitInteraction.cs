@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HitInteraction : MonoBehaviour
 {
-    public float hit_force = 5f;
+    public float hit_force = 100f;
     public Rigidbody rb;
     public SpriteRenderer sprite;
     public float last_hit = 0;
@@ -20,6 +20,7 @@ public class HitInteraction : MonoBehaviour
     {
         if (rb != null && hit_force > 0)
         {
+            rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.Normalize(returnDirection(enemy)) * (-hit_force), ForceMode.Impulse);
             // Debug.Log("add force" + Vector3.Normalize(returnDirection(enemy)).ToString());
         }
@@ -87,7 +88,7 @@ public class HitInteraction : MonoBehaviour
     }
     */
 
-    IEnumerator change_color(SpriteRenderer sprite)
+    public IEnumerator change_color(SpriteRenderer sprite)
     {
         Color origin_color = sprite.color;
         sprite.color = new Color(1, 0, 0, 1);

@@ -39,6 +39,6 @@ public class HasHealth : MonoBehaviour
     
     public bool is_dead()
     {
-        return curr_health <= 0f;
+        return curr_health <= 0;
     }
 }

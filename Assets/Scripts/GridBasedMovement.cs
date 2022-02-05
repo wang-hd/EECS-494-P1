@@ -73,4 +73,17 @@ public class GridBasedMovement : MonoBehaviour
             transform.position = new Vector3(new_horizontal_position, vertical_position, transform.position.z);
         }
     }
+
+    public void AdjustToNearestTile()
+    {
+        // Debug.Log("adjusting to nearest tile");
+        float horizontal_position = transform.position.x;
+        float vertical_position = transform.position.y;
+
+        float new_horizontal_position = Mathf.RoundToInt(horizontal_position);        
+        float new_vertical_position = Mathf.RoundToInt(vertical_position);
+
+        // CoroutineUtilities.MoveObjectOverTime(transform, new Vector3(horizontal_position, vertical_position, transform.position.z), new Vector3(new_horizontal_position, new_vertical_position, transform.position.z), 0.1f);
+        transform.position = new Vector3(new_horizontal_position, new_vertical_position, transform.position.z);
+    }
 }

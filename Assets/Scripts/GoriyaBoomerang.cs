@@ -24,7 +24,7 @@ public class GoriyaBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (goriya == null)
+        if (goriya == null || Camera.main.transform.position != init_camera_pos)
         {
             Destroy(gameObject);
         }

@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
     Inventory inventory;
     PlayerMovement playerMovement;
-    int melee_damage = 0;
+    public int melee_damage = 1;
 
     void Start()
     {

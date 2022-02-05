@@ -189,6 +189,14 @@ public class GameController : MonoBehaviour
             {
                 pushableBlock.GetComponent<MovableBlock>().enabled = true;
             }
+
+            if (player.transform.position.x < Camera.main.transform.position.x + CoroutineUtilities.room_x_lower_bound && PlayerMovement.direction == 1)
+            {
+                StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, 
+                new Vector3 (17, 38, 0), new Vector3 (18, 38, 0), 0.5f));
+                Instantiate(lockDoor, new Vector3 (17, 38, 0), Quaternion.identity);
+                AudioSource.PlayClipAtPoint(doorCloseSound, Camera.main.transform.position);
+            }
         }
         else if (currentRoom == new Vector2 (2, 3))
         {

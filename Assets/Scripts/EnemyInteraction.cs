@@ -58,9 +58,11 @@ public class EnemyInteraction : HitInteraction
         if (!ignore_hit) movement.enabled = false;
 
         base.hit_stun(player);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
+        if (!ignore_hit) GetComponent<Rigidbody>().velocity = Vector3.zero;
         if (!ignore_hit) movement.enabled = true;
+        if (!ignore_hit && GetComponent<EnemyGridMovement>() != null) GetComponent<EnemyGridMovement>().grid.AdjustToNearestTile();
         if (!ignore_hit) movement.SetNewDestination();
     }
 

@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     static bool boomerang_spawned = false;
     static Vector3 bowRoom = new Vector3(23.5f, 61, 7.5f);
     static bool bowRoomVisited = false;
+    static bool oldManLocked = true;
     AudioSource aquamentusAudioSource;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
@@ -83,7 +84,6 @@ public class GameController : MonoBehaviour
 
     void checkVisitedRooms()
     {
-        
         if (currentRoom == new Vector2 (2f, 0f))
         {
             // initial room
@@ -190,8 +190,9 @@ public class GameController : MonoBehaviour
                 pushableBlock.GetComponent<MovableBlock>().enabled = true;
             }
 
-            if (player.transform.position.x < Camera.main.transform.position.x + CoroutineUtilities.room_x_lower_bound && PlayerMovement.direction == 1)
+            if (player.transform.position.x < Camera.main.transform.position.x + CoroutineUtilities.room_x_lower_bound && PlayerMovement.direction == 1 && !oldManLocked)
             {
+                oldManLocked = true;
                 StartCoroutine(CoroutineUtilities.MoveObjectOverTime(player.transform, 
                 new Vector3 (17, 38, 0), new Vector3 (18, 38, 0), 0.5f));
                 Instantiate(lockDoor, new Vector3 (17, 38, 0), Quaternion.identity);
@@ -282,6 +283,10 @@ public class GameController : MonoBehaviour
                 Instantiate(keese, new Vector3(21, 59, 12), Quaternion.identity);
                 Instantiate(keese, new Vector3(25, 57, 12), Quaternion.identity);
             }
+        }
+        else if (currentRoom == new Vector2 (0, 3))
+        {
+            oldManLocked = false;
         }
     }
 

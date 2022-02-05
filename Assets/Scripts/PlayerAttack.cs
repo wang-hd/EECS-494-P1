@@ -72,8 +72,8 @@ public class PlayerAttack : MonoBehaviour
     public void attack() {
         //TODO: This function performs a melee attack in the current direction the player is facing
         Vector3 attack_dir = GetDirection(PlayerMovement.direction);
-
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, transform.localScale, attack_dir, Quaternion.identity, 0.5f);
+        Vector3 attack_size = new Vector3(0.5f, 0.5f, 0.5f);
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, attack_size, attack_dir, Quaternion.identity, 0.5f);
         foreach (RaycastHit hit in hits)
         {
             GameObject object_collided = hit.collider.gameObject;

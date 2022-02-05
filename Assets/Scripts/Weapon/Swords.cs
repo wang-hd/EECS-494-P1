@@ -29,7 +29,7 @@ public class Swords : Weapon
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-        if (other.CompareTag("enemy"))
+        if (other.CompareTag("enemy") || other.CompareTag("projectilehit"))
         {
             Destroy(gameObject);
         }

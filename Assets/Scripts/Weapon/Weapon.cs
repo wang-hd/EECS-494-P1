@@ -17,5 +17,9 @@ public class Weapon : MonoBehaviour
         {
            other.gameObject.GetComponent<EnemyInteraction>().getHit(GameObject.Find("Player"), damage);
         }
+        else if (other.CompareTag("projectilehit"))
+        {
+            other.gameObject.GetComponentInParent<EnemyInteraction>().getHit(GameObject.Find("Player"), damage);
+        }
     }
 }

@@ -26,7 +26,6 @@ public class CustomGameController : MonoBehaviour
     static List<GameObject> enemy_2_0 = new List<GameObject>();
 
     static List<bool> key_is_taken;
-    static bool boomerang_spawned = false;
     Vector2 currentRoom = new Vector2 (1, 0);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
     

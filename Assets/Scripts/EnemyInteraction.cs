@@ -39,7 +39,7 @@ public class EnemyInteraction : HitInteraction
 
     public void stun(float time)
     {
-        if (movement != null)
+        if (movement != null && !ignore_hit)
         {
             stun_duration += time;
             if (stun_duration > max_duration) stun_duration = max_duration;

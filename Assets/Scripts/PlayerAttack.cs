@@ -5,15 +5,17 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject sword_prefab; //This prefab stores swords
+    public GameObject leaf_prefab;
     public GameObject bow_prefab;
     public GameObject boomerang_prefab;
     public GameObject bomb_prefab;
     public static int sword_projectiles = 0; // Ensures only one sword at a time
+    public static int leaf_projectiles = 0;
     public static int bow_projectiles = 0; // Only one arrow at a time
     public static int boomerang_projectiles = 0; // Only one (player) boomerang at a time
     Inventory inventory;
     PlayerMovement playerMovement;
-    int melee_damage = 1;
+    int melee_damage = 0;
 
     void Start()
     {
@@ -34,6 +36,12 @@ public class PlayerAttack : MonoBehaviour
                 if (sword_projectiles <= 0)
                 {
                     return Instantiate(sword_prefab, weapon_pos, Quaternion.identity);
+                }
+                break;
+            case "leaf":
+                if (leaf_projectiles <= 0)
+                {
+                    return Instantiate(leaf_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;
             case "arrow":

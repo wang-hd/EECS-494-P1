@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
     public static GameObject pushableBlock;
     public AudioClip boomerangSpawnSound;
     public GameObject boomerang;
+    public static int wallmasterCount = 8;
+
     static Vector3 initial_block_position;
     static List<GameObject> enemy_1_0 = new List<GameObject>();
     static List<GameObject> enemy_1_2 = new List<GameObject>();
@@ -36,7 +38,7 @@ public class GameController : MonoBehaviour
     AudioSource aquamentusAudioSource;
     Vector2 currentRoom = new Vector2 (2f, 0f);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
-
+    
     public AudioClip doorCloseSound;
     public AudioClip keySpawnSound;
 
@@ -302,6 +304,11 @@ public class GameController : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public static void alterWallmasterCount(int number)
+    {
+        wallmasterCount += number;
     }
 
     void SpawnKey(Vector3 position, int roomNumber)

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Movement_speed = 4;
     public static int direction;
+    public bool isCustomLevel = false;
     GridBasedMovement grid;
     Rigidbody rb;
     Inventory player_inventory;
@@ -34,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
             {
-                Attack("sword");
+                if (isCustomLevel) Attack("leaf");
+                else Attack("sword");
                 return;
             }
             else if (Input.GetKeyDown(KeyCode.Z) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
@@ -95,6 +97,14 @@ public class PlayerMovement : MonoBehaviour
                     // Spawn full health sword projectile
                     player_attack.createNewWeapon("sword");
                 }
+                // Attack with melee sword always
+                player_attack.attack();
+                // created_weapon = player_attack.createNewWeapon("sword");
+                StartCoroutine(SetAttacking(1));
+                break;
+            case "leaf":
+                player_attack.createNewWeapon("leaf");
+
                 // Attack with melee sword always
                 player_attack.attack();
                 // created_weapon = player_attack.createNewWeapon("sword");

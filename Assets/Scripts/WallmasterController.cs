@@ -67,7 +67,7 @@ public class WallmasterController : EnemyMovement
                     player.transform.position = new Vector3 (39.5f, 2f, 0);
                     playerControl.enabled = true;
                 }
-                
+                GameController.alterWallmasterCount(1);
                 Destroy(gameObject);
             }
         }

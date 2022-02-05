@@ -8,7 +8,7 @@ public class WallTriggerController : MonoBehaviour
     public int wallside = 0;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("player"))
+        if (GameController.wallmasterCount > 0 && other.CompareTag("player"))
         {
             Vector3 spawnPosition = other.transform.position;
             if (wallside == 0)
@@ -32,6 +32,7 @@ public class WallTriggerController : MonoBehaviour
                 spawnPosition.y += 3;
             }
             Instantiate(wallmaster, spawnPosition, Quaternion.identity);
+            GameController.alterWallmasterCount(-1);
         }
         
     }

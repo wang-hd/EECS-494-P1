@@ -36,6 +36,7 @@ public class EnemyAttack : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerInteraction>().getHit(gameObject);
         }
+        if (GetComponent<EnemyGridMovement>() != null) GetComponent<EnemyGridMovement>().grid.AdjustToNearestTile();
     }
 
     void attack()

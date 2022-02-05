@@ -31,7 +31,7 @@ public class PlayerInteraction : HitInteraction
 
     public void getHit(GameObject enemy)
     {
-        if (!is_invincible && enemy.GetComponent<EnemyAttack>() != null && Time.time > last_hit + 0.5f)
+        if (!is_invincible && enemy.GetComponent<EnemyAttack>() != null && Time.time > last_hit + 0.4f)
         {
             last_hit = Time.time;
             health.lose_health(enemy.GetComponent<EnemyAttack>().damage);
@@ -76,8 +76,9 @@ public class PlayerInteraction : HitInteraction
         base.hit_stun(enemy);
         AudioSource.PlayClipAtPoint(enemy_attack_sound_clip, Camera.main.transform.position);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
         player_control.enabled = true;
         Physics.IgnoreLayerCollision(6, 7, false);
     }

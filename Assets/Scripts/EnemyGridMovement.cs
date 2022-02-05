@@ -6,12 +6,12 @@ public class EnemyGridMovement : EnemyMovement
 {
     public int direction;
     public Vector2[] directions = {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
-    GridBasedMovement grid;
+    public GridBasedMovement grid;
 
     public override void Start()
     {
-        base.Start();
         grid = GetComponent<GridBasedMovement>();
+        base.Start();
     }
 
     public override void Update()
@@ -45,6 +45,7 @@ public class EnemyGridMovement : EnemyMovement
 
     public override void SetNewDestination()
     {
+        grid.AdjustToNearestTile();
         Vector2 new_direction = directions[Random.Range(0, 4)];
         RaycastHit hit;
         int move_distance =  0;

@@ -34,14 +34,9 @@ public class Collector : MonoBehaviour
 
             AudioSource.PlayClipAtPoint (rupee_collection_sound_clip, Camera.main.transform.position);
         }
-        else if (object_collide_with.tag == "blue_rupee")
-        {
-            if (inventory != null) inventory.add_rupees(5);
-            Destroy(object_collide_with);
-        }
         else if (object_collide_with.tag == "health")
         {
-            player_health.add_health(1);
+            player_health.add_health(2);
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (health_collection_sound_clip, Camera.main.transform.position);

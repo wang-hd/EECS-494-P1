@@ -27,8 +27,7 @@ public class MovableBlock : MonoBehaviour
     {
         if(!CoroutineUtilities.InCurrentRoom(transform.position, cam.transform.position))
         {
-            transform.position = ori_pos;
-            could_move = true;
+          StartCoroutine(MoveBack());
         }
     }
     protected void MoveBlock(int direction, Transform block)
@@ -53,5 +52,10 @@ public class MovableBlock : MonoBehaviour
         AudioSource.PlayClipAtPoint(quizSolvedSound, Camera.main.transform.position);
     }
 
-
+    IEnumerator MoveBack()
+    {
+      yield return new WaitForSeconds(1f);
+      transform.position = ori_pos;
+      could_move = true;
+    }
 }

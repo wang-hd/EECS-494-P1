@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(horizontal_input) > 0.0f) {
             vertical_input = 0.0f;
         }
-        
+
         return new Vector2(horizontal_input, vertical_input);
     }
 
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         switch(weapon_name)
         {
             case "sword":
-              if (player_health.is_full_health())
+              if (player_health.is_full_health() || Inventory.god_mode)
                 {
                     // Spawn full health sword projectile
                     player_attack.createNewWeapon("sword");

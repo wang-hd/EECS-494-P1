@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject sword_prefab; //This prefab stores swords
     public GameObject leaf_prefab;
+    public GameObject leaf_sprite;
     public GameObject bow_prefab;
     public GameObject boomerang_prefab;
     public GameObject bomb_prefab;
@@ -41,6 +42,9 @@ public class PlayerAttack : MonoBehaviour
             case "leaf":
                 if (leaf_projectiles <= 0)
                 {
+                    Quaternion rotation = Quaternion.Euler( new Vector3 (0, 0, 90) * DirectionTransferForLeaf( PlayerMovement.direction));
+                    GameObject leaf = Instantiate(leaf_sprite, weapon_pos, Quaternion.identity * rotation);
+                    StartCoroutine(displayWeaponForSeconds(leaf, 0.5f));
                     return Instantiate(leaf_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;
@@ -94,6 +98,12 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
     }
 
+    IEnumerator displayWeaponForSeconds(GameObject weapon, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(weapon);
+    }
+
     Vector3 GetDirection(int direction)
     {
         switch (direction)
@@ -108,5 +118,21 @@ public class PlayerAttack : MonoBehaviour
                 return Vector3.left;
         }
         return Vector3.zero;
+    }
+
+    int DirectionTransferForLeaf(int direction)
+    {
+        switch (direction)
+        {
+            case 0:
+                return 0;
+            case 1:
+                return 3;
+            case 2:
+                return 2;
+            case 3:
+                return 1;
+        }
+        return 0;
     }
 }

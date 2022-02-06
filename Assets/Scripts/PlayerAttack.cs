@@ -44,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
                 {
                     Quaternion rotation = Quaternion.Euler( new Vector3 (0, 0, 90) * DirectionTransferForLeaf( PlayerMovement.direction));
                     GameObject leaf = Instantiate(leaf_sprite, weapon_pos, Quaternion.identity * rotation);
-                    StartCoroutine(displayWeaponForSeconds(leaf, 0.5f));
+                    StartCoroutine(displayWeaponForSeconds(leaf, 0.25f));
                     return Instantiate(leaf_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;
@@ -52,7 +52,6 @@ public class PlayerAttack : MonoBehaviour
                 if (bow_projectiles <= 0 && inventory != null && inventory.get_rupees() > 0)
                 {
                     if (!Inventory.god_mode) inventory.add_rupees(-1);
-                    StartCoroutine(bowAnimation());
                     return Instantiate(bow_prefab, weapon_pos, Quaternion.identity);
                 }
                 break;
@@ -90,12 +89,6 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
         }
-    }
-
-    IEnumerator bowAnimation()
-    {
-        // TODO: spawn a bow sprite on top of the player
-        yield return new WaitForSeconds(0.2f);
     }
 
     IEnumerator displayWeaponForSeconds(GameObject weapon, float time)

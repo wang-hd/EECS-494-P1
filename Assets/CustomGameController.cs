@@ -11,6 +11,7 @@ public class CustomGameController : MonoBehaviour
     public GameObject keese;
     public GameObject stalfo;
     public GameObject stalfo_with_key;
+    public GameObject stalfo_for_trap;
     public GameObject gel;
     public GameObject goriya;
     public GameObject Aquamentus;
@@ -26,6 +27,7 @@ public class CustomGameController : MonoBehaviour
     static List<GameObject> enemy_2_0 = new List<GameObject>();
     static List<GameObject> enemy_3_0 = new List<GameObject>();
     static List<GameObject> enemy_4_0 = new List<GameObject>();
+    static List<GameObject> enemy_2_1 = new List<GameObject>();
 
     static List<bool> key_is_taken;
     Vector2 currentRoom = new Vector2 (1, 0);
@@ -42,7 +44,7 @@ public class CustomGameController : MonoBehaviour
         player = GameObject.Find("Player");
         
         init_camera_pos = cam.transform.position;
-        key_is_taken = new List<bool>() {false, false, false, false};
+        key_is_taken = new List<bool>() {false, false, false, false, false};
 
     }
 
@@ -112,6 +114,36 @@ public class CustomGameController : MonoBehaviour
             if (isEmptyList(enemy_4_0) && !key_is_taken[3])
             {
                 SpawnKey(new Vector3(60, 6, 0), 3);
+            }
+        }
+        else if (currentRoom == new Vector2(4, 1))
+        {
+            if (!visitedRooms.Contains(currentRoom))
+            {
+                visitedRooms.Add(currentRoom);
+                Instantiate(key, new Vector3(55.5f, 19, 0), Quaternion.identity);
+            }
+            
+        }
+        else if (currentRoom == new Vector2(3, 1))
+        {
+            if (!visitedRooms.Contains(currentRoom))
+            {
+                visitedRooms.Add(currentRoom);
+                Instantiate(key, new Vector3(39, 16, 0), Quaternion.identity);
+            }
+            
+        }
+        else if (currentRoom == new Vector2(2, 1))
+        {
+            if (!visitedRooms.Contains(currentRoom))
+            {
+                visitedRooms.Add(currentRoom);
+                enemy_2_1.Add(Instantiate(stalfo_for_trap, new Vector3(18, 16, 0), Quaternion.identity));
+            }
+            if (isEmptyList(enemy_2_1) && !key_is_taken[4])
+            {
+                SpawnKey(new Vector3(24, 16, 0), 4);
             }
         }
     }

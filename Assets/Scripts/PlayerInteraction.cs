@@ -11,7 +11,7 @@ public class PlayerInteraction : HitInteraction
     HasHealth health;
     Animator animator;
     AudioSource audioSource;
-    static bool is_invincible = false;
+    public static bool is_invincible = false;
 
     // Start is called before the first frame update
     public override void Start()

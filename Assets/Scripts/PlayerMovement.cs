@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Movement_speed = 4;
     public static int direction;
-    public bool isCustomLevel = false;
+    public static bool isCustomLevel = true;
     GridBasedMovement grid;
     Rigidbody rb;
     Inventory player_inventory;
@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Inventory.god_mode) Movement_speed = 10f;
+        else Movement_speed = 4f;
+
         if (!animator.GetBool("is_attack"))
         {
             if (Input.GetKeyDown(KeyCode.X) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))

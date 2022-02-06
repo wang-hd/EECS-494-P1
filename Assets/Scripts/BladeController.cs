@@ -20,6 +20,12 @@ public class BladeController : MonoBehaviour
 
     void Start() {
         originalPosition = transform.position;
+        if (PlayerMovement.isCustomLevel) 
+        {
+            layerMask = 1 << 6 | 1 << 11;
+            attackSpeed = 10f;
+            returnSpeed = 0.6f;
+        }
     }
 
     // Update is called once per frame
@@ -70,7 +76,7 @@ public class BladeController : MonoBehaviour
         Ray ray2 = new Ray (transform.position, rayDirection2);
         if (Physics.Raycast(ray1, out hit1, 10f, layerMask))
         {
-            if (hit1.collider.gameObject.CompareTag("player"))
+            if (hit1.collider.gameObject.CompareTag("player") || hit1.collider.gameObject.CompareTag("weapon"))
             {
                 destination = destination1;
                 motion = 1;

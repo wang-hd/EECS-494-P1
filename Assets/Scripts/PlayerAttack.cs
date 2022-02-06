@@ -80,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (RaycastHit hit in hits)
         {
             GameObject object_collided = hit.collider.gameObject;
-            if (object_collided.CompareTag("enemy"))
+            if (object_collided.CompareTag("enemy") && !PlayerMovement.isCustomLevel)
             {
                 Debug.Log("hit an enemy with melee");
                 if (object_collided.GetComponent<HasHealth>() != null)

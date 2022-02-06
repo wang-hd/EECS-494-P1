@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DrownEnemies : MonoBehaviour
 {
+    public AudioClip drownSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class DrownEnemies : MonoBehaviour
         if (other_gameObject.CompareTag("enemy"))
         {
             StartCoroutine(DrownEnemy(other_gameObject));
+            AudioSource.PlayClipAtPoint(drownSound, Camera.main.transform.position);
         }
     }
 

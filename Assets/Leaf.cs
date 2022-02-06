@@ -6,12 +6,16 @@ public class Leaf : Weapon
 {
     GameObject player;
     Vector3 init_camera_pos;
+
+    private void Reset() {
+        damage = 0;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerAttack.leaf_projectiles++;
         init_camera_pos = Camera.main.transform.position;
-        damage = 0;
         player = GameObject.Find("Player");
     }
 

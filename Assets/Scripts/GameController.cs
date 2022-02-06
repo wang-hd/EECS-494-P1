@@ -70,6 +70,7 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
         {
             SceneManager.LoadScene("custom level");
+            PlayerMovement.isCustomLevel = true;
         }
     }
 

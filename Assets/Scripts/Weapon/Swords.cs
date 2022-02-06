@@ -5,6 +5,10 @@ using UnityEngine;
 // TODO: This class is an inheritance of weapon class, which is for swords.
 public class Swords : Weapon
 {
+    public GameObject effect_1;
+    public GameObject effect_2;
+    public GameObject effect_3;
+    public GameObject effect_4;
     Vector3 init_camera_pos;
 
     void Start()
@@ -22,6 +26,7 @@ public class Swords : Weapon
     {
         if (!CoroutineUtilities.InCurrentRoom(transform.position, init_camera_pos))
         {
+            MakeAnimate();
             Destroy(gameObject);
         }
     }
@@ -31,7 +36,16 @@ public class Swords : Weapon
         base.OnTriggerEnter(other);
         if (other.CompareTag("enemy") || other.CompareTag("projectilehit"))
         {
+            MakeAnimate();
             Destroy(gameObject);
         }
+    }
+
+    void MakeAnimate()
+    {
+        Instantiate(effect_1, transform.position, Quaternion.identity);
+        Instantiate(effect_2, transform.position, Quaternion.identity);
+        Instantiate(effect_3, transform.position, Quaternion.identity);
+        Instantiate(effect_4, transform.position, Quaternion.identity);
     }
 }

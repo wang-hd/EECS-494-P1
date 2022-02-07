@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float Movement_speed = 4;
+    public AudioClip sword_attack_sound_clip;
     public static int direction;
     public static bool isCustomLevel = false;
     public static bool getLeaf = false;
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
             {
-                if (isCustomLevel) 
+                if (isCustomLevel)
                 {
                     if (getLeaf) Attack("leaf");
                     else return;
@@ -106,9 +107,10 @@ public class PlayerMovement : MonoBehaviour
                     player_attack.createNewWeapon("sword");
                 }
                 // Attack with melee sword always
+                AudioSource.PlayClipAtPoint (sword_attack_sound_clip, Camera.main.transform.position);
                 player_attack.attack();
                 // created_weapon = player_attack.createNewWeapon("sword");
-                StartCoroutine(SetAttacking(1));
+                StartCoroutine(SetAttacking(2));
                 break;
             case "leaf":
                 player_attack.createNewWeapon("leaf");
@@ -127,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             default:
                 player_attack.createNewWeapon(weapon_name);
-                StartCoroutine(SetAttacking(2));
+                StartCoroutine(SetAttacking(1));
                 break;
         }
 

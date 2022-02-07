@@ -11,9 +11,13 @@ public class Collector : MonoBehaviour
 
     Inventory inventory;
     HasHealth player_health;
+    AudioSource low_health;
+    bool is_play_music = false;
 
     void Start()
     {
+        low_health = GetComponent<AudioSource>();
+        low_health.Stop();
         inventory = GetComponent<Inventory>();
         player_health = GetComponent<HasHealth>();
         if (inventory == null)
@@ -22,6 +26,18 @@ public class Collector : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(!is_play_music&&player_health.get_health()<=1)
+        {
+            low_health.Play();
+            is_play_music = true;
+        }else if(is_play_music&&player_health.get_health()>1)
+        {
+            low_health.Stop();
+            is_play_music = false;
+        }
+    }
     void OnTriggerEnter(Collider coll)
     {
         GameObject object_collide_with = coll.gameObject;
@@ -52,7 +68,7 @@ public class Collector : MonoBehaviour
                 }
                 inventory.add_bombs(4);
             }
-                
+
             Destroy(object_collide_with);
 
             AudioSource.PlayClipAtPoint (bomb_collection_sound_clip, Camera.main.transform.position);

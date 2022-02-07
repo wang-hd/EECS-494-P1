@@ -34,6 +34,8 @@ public class RandomDrops : MonoBehaviour
         if (enemyType == "A")
         {
             // no enemies of this type
+            // reused to only drop hearts
+            return heart;
         }
         else if (enemyType == "B")
         {

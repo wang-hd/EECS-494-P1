@@ -8,6 +8,7 @@ public class BladeController : MonoBehaviour
     public Vector3 destination1;
     public int rayDirectionInt2;
     public Vector3 destination2;
+    public bool disableOnReturn = false;
     Vector3 destination;
     float attackSpeed = 5f;
     float returnSpeed = 2f;
@@ -42,6 +43,7 @@ public class BladeController : MonoBehaviour
         }
         else if (motion == 3)
         {
+            if (disableOnReturn) gameObject.GetComponent<BoxCollider>().enabled = false;
             Move(originalPosition, returnSpeed);
         }
         if (transform.position == destination)
@@ -51,6 +53,7 @@ public class BladeController : MonoBehaviour
         }
         else if (transform.position == originalPosition)
         {
+            if (disableOnReturn) gameObject.GetComponent<BoxCollider>().enabled = true;
             motion = 0;
         }
     }

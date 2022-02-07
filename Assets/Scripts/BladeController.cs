@@ -82,7 +82,7 @@ public class BladeController : MonoBehaviour
                 motion = 1;
             }
         }
-        else if (Physics.Raycast(ray2, out hit2, 10f, layerMask))
+        else if (!PlayerMovement.isCustomLevel && Physics.Raycast(ray2, out hit2, 10f, layerMask))
         {
             if (hit2.collider.gameObject.CompareTag("player"))
             {

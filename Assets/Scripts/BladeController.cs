@@ -42,6 +42,7 @@ public class BladeController : MonoBehaviour
         }
         else if (motion == 3)
         {
+            if (PlayerMovement.isCustomLevel) gameObject.GetComponent<BoxCollider>().enabled = false;
             Move(originalPosition, returnSpeed);
         }
         if (transform.position == destination)
@@ -51,6 +52,7 @@ public class BladeController : MonoBehaviour
         }
         else if (transform.position == originalPosition)
         {
+            if (PlayerMovement.isCustomLevel) gameObject.GetComponent<BoxCollider>().enabled = true;
             motion = 0;
         }
     }

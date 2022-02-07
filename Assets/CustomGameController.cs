@@ -60,7 +60,7 @@ public class CustomGameController : MonoBehaviour
         float roomX = cam.transform.position.x;
         float roomY = cam.transform.position.y;
 
-        currentRoom.x = 1 + (roomX - init_camera_pos.x) / room_length;
+        currentRoom.x = 0 + (roomX - init_camera_pos.x) / room_length;
         currentRoom.y = 0 + (roomY - init_camera_pos.y) / room_height;
     }
 
@@ -128,7 +128,7 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(key, new Vector3(55.5f, 19, 0), Quaternion.identity);
+                Instantiate(key, new Vector3(71.5f, 19, 0), Quaternion.identity);
             }
             
         }
@@ -137,7 +137,7 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                Instantiate(key, new Vector3(39, 16, 0), Quaternion.identity);
+                Instantiate(key, new Vector3(55, 16, 0), Quaternion.identity);
             }
             
         }
@@ -150,7 +150,7 @@ public class CustomGameController : MonoBehaviour
             }
             if (isEmptyList(enemy_2_1) && !key_is_taken[4])
             {
-                SpawnKey(new Vector3(24, 16, 0), 4);
+                SpawnKey(new Vector3(40, 16, 0), 4);
             }
         }
     }

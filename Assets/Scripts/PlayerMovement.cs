@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Movement_speed = 4;
     public AudioClip sword_attack_sound_clip;
     public static int direction;
-    public static bool isCustomLevel = true;
+    public static bool isCustomLevel = false;
     public static bool getLeaf = false;
     GridBasedMovement grid;
     Rigidbody rb;

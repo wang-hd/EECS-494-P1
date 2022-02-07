@@ -34,8 +34,10 @@ public class RandomDrops : MonoBehaviour
         if (enemyType == "A")
         {
             // no enemies of this type
-            // reused to only drop hearts
-            return heart;
+            // reused to only drop hearts, for purposes of custom level
+            // will drop hearts at player's current position, for lava tiles are impassable
+            Instantiate(heart, GameObject.Find("Player").transform.position, Quaternion.identity);
+            return null;
         }
         else if (enemyType == "B")
         {

@@ -31,7 +31,7 @@ public class DrownEnemies : MonoBehaviour
         StartCoroutine(KeepEnemy(enemy));
         SpriteRenderer sprite = enemy.GetComponent<SpriteRenderer>();
 
-        while (!enemy.GetComponent<HasHealth>().is_dead())
+        while (enemy != null && !enemy.GetComponent<HasHealth>().is_dead())
         {
             enemy.GetComponent<HasHealth>().lose_health(1);
             StartCoroutine(ChangeEnemyColor(sprite));
@@ -47,8 +47,9 @@ public class DrownEnemies : MonoBehaviour
         while (enemy != null)
         {
             enemy.GetComponent<EnemyMovement>().enabled = false;
-            CoroutineUtilities.MoveObjectOverTime(enemy.transform, enemy.transform.position, transform.position, 0.1f);
-            yield return new WaitForSeconds(0.1f);
+            enemy.GetComponent<BoxCollider>().enabled = false;
+            enemy.transform.position = transform.position;
+            yield return null;
         }
     }
 

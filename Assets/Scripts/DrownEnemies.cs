@@ -5,6 +5,7 @@ using UnityEngine;
 public class DrownEnemies : MonoBehaviour
 {
     public AudioClip enemy_hit_sound;
+    public AudioClip enemy_death_sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class DrownEnemies : MonoBehaviour
             AudioSource.PlayClipAtPoint(enemy_hit_sound, Camera.main.transform.position);
             yield return new WaitForSeconds(1f);
         }
+        AudioSource.PlayClipAtPoint(enemy_death_sound, Camera.main.transform.position);
         Destroy(enemy);
         yield return null;
     }

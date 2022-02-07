@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Movement_speed = 4;
     public static int direction;
     public static bool isCustomLevel = false;
+    public static bool getLeaf = false;
     GridBasedMovement grid;
     Rigidbody rb;
     Inventory player_inventory;
@@ -38,7 +39,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && CoroutineUtilities.InCurrentRoom(transform.position, Camera.main.transform.position))
             {
-                if (isCustomLevel) Attack("leaf");
+                if (isCustomLevel) 
+                {
+                    if (getLeaf) Attack("leaf");
+                    else return;
+                }
                 else Attack("sword");
                 return;
             }

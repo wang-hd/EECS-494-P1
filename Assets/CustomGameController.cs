@@ -66,18 +66,25 @@ public class CustomGameController : MonoBehaviour
 
     void checkVisitedRooms()
     {
-        
-        if (currentRoom == new Vector2 (1, 0))
+        if (currentRoom == new Vector2 (0, 0))
         {
             // initial room
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                enemy_1_0.Add(Instantiate(stalfo, new Vector3(10, 5, 0), Quaternion.identity));
+                
+            }
+        }
+        else if (currentRoom == new Vector2 (1, 0))
+        {
+            if (!visitedRooms.Contains(currentRoom))
+            {
+                visitedRooms.Add(currentRoom);
+                enemy_1_0.Add(Instantiate(stalfo, new Vector3(26, 5, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_1_0) && !key_is_taken[0])
             {
-                SpawnKey(new Vector3 (10, 6, 0), 0);
+                SpawnKey(new Vector3 (26, 6, 0), 0);
             }
         }
         else if (currentRoom == new Vector2 (2, 0))
@@ -85,11 +92,11 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom)) 
             {
                 visitedRooms.Add(currentRoom);
-                enemy_2_0.Add( Instantiate(stalfo, new Vector3 (28, 7, 0), Quaternion.identity));
+                enemy_2_0.Add( Instantiate(stalfo, new Vector3 (44, 7, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_2_0) && !key_is_taken[1])
             {
-                SpawnKey(new Vector3 (27, 5, 0), 1);
+                SpawnKey(new Vector3 (43, 5, 0), 1);
             }
         }
         else if (currentRoom == new Vector2(3, 0))
@@ -97,11 +104,11 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                enemy_3_0.Add(Instantiate(stalfo, new Vector3(40, 3, 0), Quaternion.identity));
+                enemy_3_0.Add(Instantiate(stalfo, new Vector3(56, 3, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_3_0) && !key_is_taken[2])
             {
-                SpawnKey(new Vector3(38, 7, 0), 2);
+                SpawnKey(new Vector3(54, 7, 0), 2);
             }
         }
         else if (currentRoom == new Vector2(4, 0))
@@ -109,11 +116,11 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                enemy_4_0.Add(Instantiate(stalfo, new Vector3(53, 7, 0), Quaternion.identity));
+                enemy_4_0.Add(Instantiate(stalfo, new Vector3(69, 7, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_4_0) && !key_is_taken[3])
             {
-                SpawnKey(new Vector3(60, 6, 0), 3);
+                SpawnKey(new Vector3(76, 6, 0), 3);
             }
         }
         else if (currentRoom == new Vector2(4, 1))

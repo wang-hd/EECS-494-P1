@@ -8,6 +8,7 @@ public class WeaponText : MonoBehaviour
     Inventory inventory;
     //Text text_content;
     GameObject weapon;
+    Image weapon_a;
     Image bow;
     Image boomerang;
     Image bomb;
@@ -17,10 +18,13 @@ public class WeaponText : MonoBehaviour
         //text_content = GetComponent<Text>();
         inventory = GameObject.Find("Player").GetComponent<Inventory>();
 
+        weapon_a = GameObject.Find("Weapon_A").GetComponent<Image>();
         bow = GameObject.Find("BowImage").GetComponent<Image>();
         boomerang = GameObject.Find("BoomerangImage").GetComponent<Image>();
         bomb = GameObject.Find("BombImage").GetComponent<Image>();
 
+        if (PlayerMovement.isCustomLevel) weapon_a.enabled = false;
+        else weapon_a.enabled = true;
         bow.enabled = false;
         boomerang.enabled = false;
         bomb.enabled = false;
@@ -29,6 +33,7 @@ public class WeaponText : MonoBehaviour
     // TODO: This function updates the name of weapon and shows it on the screen
     void Update()
     {
+        if (PlayerMovement.isCustomLevel && PlayerMovement.getLeaf) weapon_a.enabled = true;
         //if (inventory != null && text_content != null && this.CompareTag("weapon_b") && inventory.get_secondary_weapon() != null)
         if (inventory != null && this.CompareTag("weapon_b") && inventory.get_secondary_weapon() != null)
         {

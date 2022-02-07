@@ -9,12 +9,14 @@ public class Swords : Weapon
     public GameObject effect_2;
     public GameObject effect_3;
     public GameObject effect_4;
+    public AudioClip sword_projectile_sound_clip;
     Vector3 init_camera_pos;
 
     void Start()
     {
         PlayerAttack.sword_projectiles++;
         init_camera_pos = Camera.main.transform.position;
+        AudioSource.PlayClipAtPoint (sword_projectile_sound_clip, Camera.main.transform.position);
     }
 
     void OnDestroy()

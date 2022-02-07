@@ -13,6 +13,7 @@ public class CustomGameController : MonoBehaviour
     public GameObject stalfo_with_key;
     public GameObject stalfo_for_trap;
     public GameObject stalfo_can_be_pushed;
+    public GameObject stalfo_can_only_be_pushed;
     public GameObject gel;
     public GameObject goriya;
     public GameObject Aquamentus;
@@ -35,7 +36,7 @@ public class CustomGameController : MonoBehaviour
     static List<bool> key_is_taken;
     Vector2 currentRoom = new Vector2 (1, 0);
     HashSet<Vector2> visitedRooms = new HashSet<Vector2>();
-    
+
     public AudioClip doorCloseSound;
     public AudioClip keySpawnSound;
 
@@ -45,7 +46,7 @@ public class CustomGameController : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        
+
         init_camera_pos = cam.transform.position;
         key_is_taken = new List<bool>() {false, false, false, false, false, false};
 
@@ -75,7 +76,7 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                
+
             }
         }
         else if (currentRoom == new Vector2 (1, 0))
@@ -92,7 +93,7 @@ public class CustomGameController : MonoBehaviour
         }
         else if (currentRoom == new Vector2 (2, 0))
         {
-            if (!visitedRooms.Contains(currentRoom)) 
+            if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
                 enemy_2_0.Add( Instantiate(stalfo, new Vector3 (44, 7, 0), Quaternion.identity));
@@ -159,13 +160,14 @@ public class CustomGameController : MonoBehaviour
                 visitedRooms.Add(currentRoom);
                 Instantiate(key, new Vector3(55, 16, 0), Quaternion.identity);
             }
-            
+
         }
         else if (currentRoom == new Vector2(2, 1))
         {
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
+                enemy_2_1.Add(Instantiate(stalfo_can_only_be_pushed, new Vector3(39, 13, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_2_1) && !key_is_taken[4])
             {
@@ -194,7 +196,7 @@ public class CustomGameController : MonoBehaviour
         }
         return true;
     }
-    
+
     public static bool isEnemyCleared(int roomNumber)
     {
         if (roomNumber == 1) return isEmptyList(enemy_2_0);

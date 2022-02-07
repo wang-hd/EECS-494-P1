@@ -12,6 +12,7 @@ public class CustomGameController : MonoBehaviour
     public GameObject stalfo;
     public GameObject stalfo_with_key;
     public GameObject stalfo_for_trap;
+    public GameObject stalfo_can_be_pushed;
     public GameObject gel;
     public GameObject goriya;
     public GameObject Aquamentus;
@@ -81,6 +82,7 @@ public class CustomGameController : MonoBehaviour
             {
                 visitedRooms.Add(currentRoom);
                 enemy_1_0.Add(Instantiate(stalfo, new Vector3(26, 5, 0), Quaternion.identity));
+                Instantiate(stalfo_can_be_pushed, new Vector3 (24, 5, 0), Quaternion.identity);
             }
             if (isEmptyList(enemy_1_0) && !key_is_taken[0])
             {
@@ -146,7 +148,7 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                enemy_2_1.Add(Instantiate(stalfo_for_trap, new Vector3(18, 16, 0), Quaternion.identity));
+                enemy_2_1.Add(Instantiate(stalfo_for_trap, new Vector3(35, 16, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_2_1) && !key_is_taken[4])
             {

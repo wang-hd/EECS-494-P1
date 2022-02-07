@@ -91,4 +91,9 @@ public class BladeController : MonoBehaviour
             }
         }
     }
+
+    public int GetMotion()
+    {
+        return motion;
+    }
 }

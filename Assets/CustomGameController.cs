@@ -84,7 +84,6 @@ public class CustomGameController : MonoBehaviour
             {
                 visitedRooms.Add(currentRoom);
                 enemy_1_0.Add(Instantiate(gel, new Vector3(26, 5, 0), Quaternion.identity));
-                Instantiate(stalfo_can_be_pushed, new Vector3 (24, 5, 0), Quaternion.identity);
             }
             if (isEmptyList(enemy_1_0) && !key_is_taken[0])
             {
@@ -126,9 +125,7 @@ public class CustomGameController : MonoBehaviour
                 visitedRooms.Add(currentRoom);
                 enemy_4_0.Add(Instantiate(gel, new Vector3(73, 8, 0), Quaternion.identity));
                 enemy_4_0.Add(Instantiate(stalfo, new Vector3(73, 7, 0), Quaternion.identity));
-                enemy_4_0.Add(Instantiate(stalfo, new Vector3(70, 2, 0), Quaternion.identity));
                 enemy_4_0.Add(Instantiate(goriya, new Vector3(75, 6, 0), Quaternion.identity));
-                enemy_4_0.Add(Instantiate(goriya, new Vector3(68, 8, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_4_0) && !key_is_taken[3])
             {
@@ -144,7 +141,6 @@ public class CustomGameController : MonoBehaviour
                 enemy_5_0.Add(Instantiate(stalfo, new Vector3(88, 3, 0), Quaternion.identity));
                 enemy_5_0.Add(Instantiate(stalfo, new Vector3(85, 4, 0), Quaternion.identity));
                 enemy_5_0.Add(Instantiate(stalfo, new Vector3(83, 2, 0), Quaternion.identity));
-                enemy_5_0.Add(Instantiate(goriya, new Vector3(92, 8, 0), Quaternion.identity));
                 enemy_5_0.Add(Instantiate(goriya, new Vector3(87, 8, 0), Quaternion.identity));
             }
         }
@@ -170,7 +166,6 @@ public class CustomGameController : MonoBehaviour
             if (!visitedRooms.Contains(currentRoom))
             {
                 visitedRooms.Add(currentRoom);
-                enemy_2_1.Add(Instantiate(stalfo_for_trap, new Vector3(35, 16, 0), Quaternion.identity));
             }
             if (isEmptyList(enemy_2_1) && !key_is_taken[4])
             {

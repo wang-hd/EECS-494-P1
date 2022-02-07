@@ -24,7 +24,7 @@ public class BladeController : MonoBehaviour
         {
             layerMask = 1 << 6 | 1 << 11;
             attackSpeed = 10f;
-            returnSpeed = 0.6f;
+            returnSpeed = 1f;
         }
     }
 

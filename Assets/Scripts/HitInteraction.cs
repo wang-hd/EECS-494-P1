@@ -30,6 +30,15 @@ public class HitInteraction : MonoBehaviour
         }
     }
 
+    public void hit_stun_no_change(GameObject enemy)
+    {
+        if (rb != null && hit_force > 0)
+        {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(Vector3.Normalize(returnDirection(enemy)) * (-hit_force), ForceMode.Impulse);
+        }
+    }
+
     private Vector2 returnDirection( GameObject ObjectHit )
     {
         int direction = 0;

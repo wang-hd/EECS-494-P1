@@ -6,6 +6,7 @@ public class EnemyInteraction : HitInteraction
 {
     public AudioClip enemy_death_sound;
     public AudioClip enemy_hit_sound;
+    public AudioClip enemy_knockback_sound;
     public bool ignore_hit = false;
     HasHealth health;
     EnemyMovement movement;
@@ -34,6 +35,15 @@ public class EnemyInteraction : HitInteraction
                 return;
             }
             StartCoroutine(HitInteraction(player));
+        }
+    }
+
+    public void knockback(GameObject player)
+    {
+        if (health != null && Time.time > last_hit + 0.5f)
+        {
+            AudioSource.PlayClipAtPoint(enemy_knockback_sound, Camera.main.transform.position);
+            StartCoroutine(KnockbackInteraction(player));
         }
     }
 
@@ -79,5 +89,16 @@ public class EnemyInteraction : HitInteraction
             }
             yield return null;
         }
+    }
+
+    IEnumerator KnockbackInteraction(GameObject player)
+    {
+        movement.enabled = false;
+        base.hit_stun_no_change(player);
+        yield return new WaitForSeconds(0.25f);
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        movement.enabled = true;
+        if (GetComponent<EnemyGridMovement>() != null) GetComponent<EnemyGridMovement>().grid.AdjustToNearestTile();
+        movement.SetNewDestination();
     }
 }

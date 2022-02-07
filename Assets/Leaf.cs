@@ -31,9 +31,9 @@ public class Leaf : Weapon
 
     public override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other);
         if (other.CompareTag("enemy"))
         {
+            other.gameObject.GetComponent<EnemyInteraction>().knockback(GameObject.Find("Player"));
             Destroy(gameObject);
         }
     }

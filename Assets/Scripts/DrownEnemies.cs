@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DrownEnemies : MonoBehaviour
 {
+    public AudioClip enemy_hit_sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class DrownEnemies : MonoBehaviour
         {
             enemy.GetComponent<HasHealth>().lose_health(1);
             StartCoroutine(ChangeEnemyColor(sprite));
+            AudioSource.PlayClipAtPoint(enemy_hit_sound, Camera.main.transform.position);
             yield return new WaitForSeconds(1f);
         }
         Destroy(enemy);
